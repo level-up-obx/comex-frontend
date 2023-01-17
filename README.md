@@ -10,3 +10,10 @@ d. Typescript;
 e. Vue 3;
 f. Vue Router;
 g. Vuex.
+
+Desenvolvedor do projeto:
+nome: Danilo Araujo Godinho
+email: danilo.godinho@onebox.one
+status: Estudante de Analise e Desenvolvimento de Sistemas
+Senioridade: Estagiario
+UF: SP
