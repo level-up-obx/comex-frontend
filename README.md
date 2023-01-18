@@ -9,3 +9,6 @@ d.Typescript;
 e.Vue 3;
 f.Vue Router;
 g.Vuex.
+
+Nome: Rick Rios
+Email: rick.rios@dne.com.br/rick.rios@onebox.one
