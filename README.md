@@ -12,6 +12,6 @@ O projeto **Comex** é um sistema de _e-commerce marketplace_. Seu objetivo é p
 - Vuex
 
 ## Informações sobre o desenvolvedor.
-Nome: João Victor Bezerra da Silva
-Empresa: OneBox
-E-mail: joao.silva@onebox.one
+- Nome: João Victor Bezerra da Silva
+- Empresa: OneBox
+- E-mail: joao.silva@onebox.one
