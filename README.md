@@ -2,7 +2,7 @@
 
 O projeto **Comex** é um sistema de _e-commerce marketplace_. Seu objetivo é permitir que a sua base de clientes tenha acesso a vários vendedores e, assim, consolidar-se como o shopping eletrônico mais popular da internet.
 
-Tecnologias utilizadas no projeto:
+## Tecnologias utilizadas no projeto:
 
 - HTML, CSS e JavaScript;
 - Fetch API;
@@ -11,3 +11,11 @@ Tecnologias utilizadas no projeto:
 - Vue 3;
 - Vue Router;
 - Vuex.
+
+## Informações do desenvolvedor:
+
+- Nome: Bruno Gonçalves
+- email: bruno.goncalves@onebox.one
+- Graduação: Análise e Desenvolvimento de Sistemas - SENAC
+
+
