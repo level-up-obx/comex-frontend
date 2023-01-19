@@ -7,3 +7,5 @@ O projeto **Comex** é um sistema de _e-commerce marketplace_. Seu objetivo é p
 - Vue 3;
 - Vue Router;
 - Vuex.
+## Sobre o desenvolvedor
+Me chamo Kayky e curso Sistemas de Informação. As áreas de interesse em técnologia que tenho são front-end e mobile.
