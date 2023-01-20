@@ -10,3 +10,9 @@ Typescript;
 Vue 3;
 Vue Router;
 Vuex.
+
+Dados da desenvolvedora do projeto:
+
+Nome: Alana Auerbach Carsten
+email: alana.carsten@dne.com.br
+Vida longa e próspera!
