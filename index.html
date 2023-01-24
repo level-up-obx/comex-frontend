@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Comex</title>
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <header>
+          <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="offset-1">
+                    <img src="./imgs/icons/comex.png" alt="imagem-comex">
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse offset-1" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Promoções</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Categorias</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contato</a>
+                        </li>
+                    </ul>
+                    <div>
+                        <div class="item-search">
+                            <form class="pe-2">
+                                <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search">
+                            </form>
+                            <img class="pe-1 m-2" src="./imgs/icons/carrinho.png" alt="icon-carrinho">
+                            <img class="pe-1 m-2" src="./imgs/icons/user.png" alt="icon-usuario">
+                        </div>
+                    </div>
+                </div>
+          </nav>
+    </header>
+
+    <menu class="container mt-5">
+        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="./imgs/banner-img.png" class="d-block" height="430px">
+              </div>
+              <div class="carousel-item">
+                <img src="./imgs/banner-img.png" class="d-block" height="430px">
+              </div>
+              <div class="carousel-item">
+                <img src="./imgs/banner-img.png" class="d-block" height="430px">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon carousel-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon carousel-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+    </menu>
+
+    <section class="container">
+        <div class="tittle-banners">
+            <img class="pe-3" src="./imgs/icons/estrela.png">
+            <h2>Produtos mais vendidos</h2>
+        </div>
+        <ul class="mt-4">
+            <li class="purchase-item">
+                <div class="mt-3 mb-3">
+                    <img src="./imgs/placa-mae.png">
+                    <div>Placa-mãe</div>
+                    <div class="mb-3">$ 1,500</div>
+                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                </div>
+            </li>
+            <li class="purchase-item">
+                <div class="mt-3 mb-3">
+                    <img src="./imgs/controle-4.png">
+                    <div>Controle Super Nitendo</div>
+                    <div class="mb-3">$ 1,900</div>
+                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                </div>
+            </li>
+            <li class="purchase-item">
+                <div class="mt-3 mb-3">
+                    <img src="./imgs/memoria-ram.png">
+                    <div>Memória RAM</div>
+                    <div class="mb-3">$ 1,000</div>
+                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                </div>
+            </li>
+            <li class="purchase-item">
+                <div class="mt-3 mb-3">
+                    <img src="./imgs/fone.png">
+                    <div>Fone de Ouvido</div>
+                    <div class="mb-3">$ 1,000</div>
+                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                </div>
+            </li>
+            <li class="purchase-item">
+                <div class="mt-3 mb-3">
+                    <img src="./imgs/controle-1.png">
+                    <div>Controle PS (blue)</div>
+                    <div class="mb-3">$ 400</div>
+                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                </div>
+            </li>
+            <li class="purchase-item">
+                <div class="mt-3 mb-3">
+                    <img src="./imgs/controle-2.png">
+                    <div>Controle PS (Black)</div>
+                    <div class="mb-3">$ 450</div>
+                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                </div>
+            </li>
+            <li class="purchase-item">
+                <div class="mt-3 mb-3">
+                    <img src="./imgs/controle-3.png">
+                    <div>Controle X-Box</div>
+                    <div class="mb-3">$ 300</div>
+                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                </div>
+            </li>
+            <li class="purchase-item">
+                <div class="mt-3 mb-3">
+                    <img src="./imgs/processador.png">
+                    <div>Memória RYZEN</div>
+                    <div class="mb-3">$ 3,000</div>
+                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                </div>
+            </li>
+          </ul>
+    </section>
+
+    <footer>
+        <div>
+            <img src="./imgs/icons/comex.png" alt="imagem-comex">
+        </div>
+        <div>
+            <div class="address">Endereço: Rua tal, nº 50</div>
+            <div class="address">Contato: (11)99999-9999/(11)99999-9999</div>
+        </div>
+        <ul class="navbar-dark">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                    <img class="pe-3" src="./imgs/icons/tweter.svg">
+                    <img class="pe-3" src="./imgs/icons/instagram.svg">
+                    <img class="pe-3" src="./imgs/icons/linkedin.png">
+                </a>
+            </li>
+        </ul>
+    </footer>
+</body>
+</html>
