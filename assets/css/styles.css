@@ -1,0 +1,65 @@
+/*==================================== Reset CSS Master ====================================*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+body {
+  font-family: "Inter", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+div {
+  padding: 0;
+  margin: 0;
+}
+a,
+a:link,
+a:visited,
+a:focus,
+a:hover,
+a:active {
+  text-decoration: none;
+  color: inherit;
+}
+.container {
+  /* margin: 10px; */
+  /* padding: 10px; */
+}
+::placeholder {
+    color: #FFFFFF;
+}
+/*==================================== Navbar ====================================*/
+.navbar {
+    background-color: #8FA8FF;
+    padding: 10px 65px;
+    color: #FFFFFF;
+}
+.navbar .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+}
+.navbarLogo {
+
+}
+.navbarList {
+    display: flex;
+    gap: 40px;
+    flex-grow: 2;
+    padding: 0;
+    margin: 0 0 0 50px;
+}
+.navbarList-item {
+  list-style-type: none;
+}
+.navbarSearch {
+    color: #FFFFFF;
+    background-color: #8FA8FF;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    padding: 5px;
+    width: 170px;
+    outline: 0;
+}
+.navbarIcons {
+    display: flex;
+    gap: 10px;
+}
