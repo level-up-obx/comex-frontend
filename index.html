@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Inter:wght@300;400;500;700;800&family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+  <script src="./index.js" defer></script>
+  <title>Comex</title>
+</head>
+<body>  
+    <header>
+      <div class="container">
+        <img src="./assets/primaria.svg" alt="Logo Comex" class="logo" onclick="location.href = location.origin + '/index.html'">
+        <img src="./assets/menu.svg" alt="Logo Comex" id="menu-icon">
+        <div id="menu-desktop">
+          <div class="menu-link-container">
+            <a href="#">
+              <span>Promoções</span>
+            </a>
+            <a href="#">
+              <span>Categorias</span>
+            </a>
+            <a href="#">
+              <span>Contato</span>
+            </a>
+          </div>
+          <div>
+            <input type="text" placeholder="Pesquisar...">
+            <img src="./assets/carrinho.svg" alt="imagem do carrinho">
+            <img src="./assets/user.svg" alt="imagem de avatar genérico do usuário">
+          </div>
+        </div>
+      </div>
+    </header>
+    <nav id="nav">
+      <ul>
+        <a href="#">
+          <li>Promoções</li>
+        </a>
+        <a href="#">
+          <li>Categorias</li>
+        </a>
+        <a href="#">
+          <li>Buscar</li>
+        </a>
+        <a href="#">
+          <li>Contato</li>
+        </a>
+        <a href="#">
+          <li>Carrinho</li>
+        </a>
+        <a href="#">
+          <li>Entrar</li>
+        </a>
+      </ul>
+    </nav>
+
+    <section class="search-container">
+      <input type="text" name="" id="" class="search" placeholder="Pesquisar...">
+    </section>
+
+    <section class="carousel-container">
+      <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+          <div class="carousel-text-container">
+            <h1>Confira as Promoções</h1>
+            <h2>e monte seu staup</h2>
+            <a href="#produtos-mais-vendidos">
+              <img src="./assets/saiba mais.svg" alt="">
+            </a>
+          </div>
+          <div class="carousel-item active">
+            <img src="./assets/baner-img.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/baner-img.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="./assets/baner-img.jpg" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>    
+
+    <section id="produtos-mais-vendidos">
+      <div class="products-title-container">
+        <img src="./assets/estrela.svg" alt="">
+        <h3 class="products-title">Produtos mais vendidos</h3>
+      </div>
+      <div class="products-container container">
+
+          <article class="products">
+            <img src="./assets/placa-mae.jpg" alt="Imagem de uma placa mãe">
+            <p>
+              <span class="products-text">Placa Mãe</span><br>
+              <span class="products-price">1.500</span>
+            </p>
+            <button class="buy-btn">Comprar</button>
+          </article>        
+
+        <article class="products">
+          <img src="./assets/controle.jpg" alt="Imagem de uma placa mãe">
+          <p>
+            <span class="products-text">Controle Super Nintendo</span><br>
+            <span class="products-price">850</span>
+          </p>
+          <button class="buy-btn">Comprar</button>
+        </article>
+
+        <article class="products">
+          <img src="./assets/RAM.svg" alt="Imagem de uma placa mãe">
+          <p>
+            <span class="products-text">Memória RAM</span><br>
+            <span class="products-price">300</span>
+          </p>
+          <button class="buy-btn">Comprar</button>
+        </article>
+
+      </div>
+    </section>
+    
+    <footer>
+      <div class="container">
+        <img src="./assets/primaria.svg" alt="Logo Comex" class="logo" onclick="location.href = location.origin + '/index.html'">
+        <div class="footer-social-media">
+          <img src="./assets/Twitter.svg" alt="Logo Twitter">
+          <img src="./assets/_Instagram.svg" alt="Logo Instagram">
+          <img src="./assets/_Linkedin.svg" alt="Logo Linkedin">
+        </div>
+        <div class="footer-list-container">
+          <ul>
+            <li>Promoções</li>
+            <li>Categorias</li>
+            <li>Buscar</li>
+          </ul>
+  
+          <ul>
+            <li>Contato</li>
+            <li>Carrinho</li>
+            <li>Entrar</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>
