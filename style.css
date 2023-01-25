@@ -51,16 +51,6 @@ section ul {
 .purchase-item {
     border-radius: 6px;
     border: 2px solid #8FA8FF;
-    margin-left: 2%;
-    margin-bottom: 4%;
-    width: 23%;
-}
-
-.purchase-item div {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 }
 
 .btn-purchase {
