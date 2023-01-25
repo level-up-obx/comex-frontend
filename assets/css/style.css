@@ -1,0 +1,148 @@
+.navbar {
+    background-color: #8FA8FF;
+}
+
+.header__icone {
+    padding: .2em;
+    margin: .2em;
+}
+
+.navbar-brand img {
+    margin-left: 5rem;
+    margin-right: 3rem;
+}
+
+.promocoes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo-promocoes {
+    color: #8fa8ff;
+}
+
+.card {
+    height: 350px;
+}
+
+.cifrao {
+    color: #8FA8FF;
+}
+
+.botao {
+    background-color: #8FA8FF;
+    color: #FFF;
+    margin-bottom: 2px;
+}
+
+footer {
+    background-color: #8FA8FF;
+    margin-top: 150px;
+}
+
+.rodape {
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.esquerda-logo {
+    margin-top: 10px;
+}
+
+.rodape-direita {
+    display: none;
+}
+
+.rodape-esquerda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.direita-info--direita,
+.direita-info--esquerda {
+    display: flex;
+    flex-direction: column;
+}
+
+.direita-info--direita a,
+.direita-info--esquerda a {
+    text-decoration: none;
+    color: #FFF;
+    margin: 2px 6px;
+}
+
+.direita-info--direita {
+    text-align: right;
+}
+
+.direita-info--esquerda {
+    text-align: left;
+}
+
+/* Celular */
+@media (max-width: 650px) {
+    .formulario {
+        margin-bottom: 10px;
+    }
+
+    .card {
+        height: auto;
+    }
+
+    .rodape {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .rodape-direita {
+        display: flex;
+    }
+
+    .rodape-esquerda {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+    }
+
+    .esquerda-logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+}
+
+/* Tablet */
+@media (min-width: 651px) and (max-width: 1023px) {
+    .card {
+        height: auto;
+    }
+
+    .cardItens:nth-child(4),
+    .linha2 {
+        display: none;
+    }
+
+    .rodape-direita {
+        display: flex;
+    }
+
+    .rodape {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .rodape-esquerda {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
+    }
+}
