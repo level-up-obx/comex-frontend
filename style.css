@@ -1,5 +1,5 @@
 header .container, footer,
-nav, button, .carousel-icon {
+nav, button {
     background-color: #8FA8FF;
 }
 
@@ -33,7 +33,7 @@ footer {
 }
 
 .carousel-inner {
-    margin-left: 10%;
+    margin-left: 25%;
 }
 
 .tittle-banners {
@@ -68,4 +68,19 @@ section ul {
     border: none;
     width: 50%;
     color: white;
+}
+
+.imgs-purchase {
+    width: 8rem;
+    height: 6rem;
+}
+
+.carousel-icon {
+    border-radius: 10px;
+    background-color: #8FA8FF;
+    padding: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+
 }
