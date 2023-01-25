@@ -3,6 +3,7 @@
 /*============================== Variáveis ==============================*/
 :root {
   --background: #8fa8ff;
+  --white: #ffffff;
   --inter: "Inter", sans-serif;
 }
 /*============================== Reset ==============================*/
@@ -17,9 +18,7 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  margin-bottom: 1.1rem;
 }
-
 .navbar {
   display: flex;
   align-items: center;
@@ -27,7 +26,7 @@ body {
   padding: 0 1.5rem;
   height: 3rem;
   background-color: var(--background);
-  color: white;
+  color: var(--white);
 }
 .navbarMenu {
   display: flex;
@@ -38,13 +37,28 @@ body {
   display: none;
 }
 .navbarMenu-hamburger {
-  background-color: white;
+  background-color: var(--white);
   width: 20px;
   height: 3px;
   border-radius: 5px;
 }
-.searchProduct-mobile {
-  background-color: white;
+.navbarSearch-icons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  align-self: center;
+}
+.navbarCard-icon {
+  display: none;
+}
+.navbarUser-icon {
+  display: none;
+}
+::placeholder {
+  color: var(--background);
+}
+.searchProduct {
+  background-color: var(--white);
   color: var(--background);
   align-self: center;
   outline: 0;
@@ -53,6 +67,8 @@ body {
   padding: 0.5rem;
   box-sizing: border-box;
   width: 80%;
+  max-width: 300px;
+  flex-grow: 1;
 }
 
 /*============================== Home Page ==============================*/
@@ -105,8 +121,17 @@ body {
   align-items: center;
   border: 2px solid var(--background);
   border-radius: 5px;
-  padding: 2rem;
+  padding: 10px;
+  width: 170px;
 }
+.productItem:nth-child(4),
+.productItem:nth-child(5),
+.productItem:nth-child(6),
+.productItem:nth-child(7),
+.productItem:nth-child(8) {
+  display: none;
+}
+
 .productName {
   font-weight: 500;
 }
@@ -123,20 +148,21 @@ body {
   padding: 0.5rem;
   margin: 0;
   background-color: var(--background);
-  color: white;
+  color: var(--white);
   border: 2px solid var(--background);
   border-radius: 5px;
+  transition: 0.3s;
 }
 .productShop:hover {
   color: var(--background);
-  background-color: white;
+  background-color: var(--white);
   border-color: var(--background);
 }
-/*============================== Tablet ==============================*/
+/*============================== Footer ==============================*/
 footer {
   background-color: var(--background);
   padding: 1.5rem;
-  color: white;
+  color: var(--white);
 }
 
 footer .container {
@@ -170,13 +196,18 @@ footer .container {
 }
 /*============================== Tablet ==============================*/
 @media (min-width: 768px) {
+  /*============== Produtos ==============*/
   .products {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
     padding: 0rem 2rem;
   }
-  /* footer  */
+  /*============== Banner ==============*/
+  .bannerImage {
+    border-radius: 5px;
+  }
+  /*============== Footer ==============*/
   footer .container {
     flex-direction: row;
     justify-content: space-between;
@@ -187,6 +218,13 @@ footer .container {
 }
 /*============================== Desktop ==============================*/
 @media (min-width: 1024px) {
+  /*============== Navbar ==============*/
+  .header .container {
+    flex-direction: row;
+    background-color: var(--background);
+    justify-content: space-between;
+    padding-right: 1rem;
+  }
   .navbarMenu {
     flex-direction: row;
   }
@@ -205,7 +243,39 @@ footer .container {
   .navbarMenu-hamburger {
     display: none;
   }
-
+  .navbarCard-icon {
+    display: block;
+  }
+  .navbarUser-icon {
+    display: block;
+  }
+  ::placeholder {
+    color: var(--white);
+  }
+  .searchProduct {
+    background-color: var(--background);
+    color: var(--white);
+    align-self: center;
+    outline: 0;
+    border: 2px solid var(--white);
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    /* width: 80%; */
+    width: 250px;
+  }
+  /*============== Produtos ==============*/
+  .products {
+    width: 960px;
+  }
+  .productItem:nth-child(4),
+  .productItem:nth-child(5),
+  .productItem:nth-child(6),
+  .productItem:nth-child(7),
+  .productItem:nth-child(8) {
+    display: block;
+  }
+  /*============== Footer ==============*/
   footer {
     padding: 3rem;
   }
