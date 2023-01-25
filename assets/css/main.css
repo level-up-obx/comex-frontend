@@ -1,0 +1,73 @@
+/*============================== Variáveis ==============================*/
+:root {
+    --background: #8FA8FF;
+}
+/*============================== Reset ==============================*/
+body {
+    margin: 0;
+    padding: 0;
+}
+/*============================== Navbar ==============================*/
+header .container {
+    margin-bottom: 1.1rem;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+.navbar {
+    background-color: var(--background);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5rem;
+    color: white;
+}
+.searchProduct-mobile {
+    background-color: white;
+    color: var(--background);
+    align-self: center;
+    outline: 0;
+    border: 2px solid var(--background);
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    width: 80%;
+}
+/*============================== Banner ==============================*/
+.bannerImage {
+    /* box-shadow: 0px 0px 5px 0px #000000; */
+}
+/*============================== Produtos ==============================*/
+.product .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.productBest-seller {
+    color: var(--background);
+    font-weight: 700;
+    margin: 0;
+    background: url("/assets/images/icons/bestSeller.svg");
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    background-size: 16px 16px;
+    margin: 1rem;
+}
+.productItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 2px solid var(--background);
+    border-radius: 5px;
+    padding: 1rem;
+}
+.productName{
+    font-weight: 700;
+}   
+.productPrice {
+    font-weight: 500;
+}
