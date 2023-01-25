@@ -9,9 +9,9 @@
     <title>Comex | Home</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="container">
-        <nav class="navbar">
+        <section class="navbar">
           <img
             src="./assets/images/comex-logo-vertical.svg"
             alt="Logo Comex"
@@ -20,8 +20,20 @@
             class="navbarLogo"
             title="Logo"
           />
-          <p class="navbarMenu">Menu</p>
-        </nav>
+          <nav class="navbarMenu">
+            <ul class="navbarMenu-list">
+              <li class="navbarMenu-listItem">Promoções</li>
+              <li class="navbarMenu-listItem">Categorias</li>
+              <li class="navbarMenu-listItem">Buscar</li>
+              <li class="navbarMenu-listItem">Contato</li>
+              <li class="navbarMenu-listItem">Carrinho</li>
+              <li class="navbarMenu-listItem">Entrar</li>
+            </ul>
+            <div class="navbarMenu-hamburger"></div>
+            <div class="navbarMenu-hamburger"></div>
+            <div class="navbarMenu-hamburger"></div>
+          </nav>
+        </section>
         <input
           type="text"
           name="searchProduct-mobile"
@@ -44,29 +56,43 @@
       <section class="product">
         <div class="container">
           <p class="productBest-seller">Produtos mais vendidos</p>
-          <div class="productItem">
-            <img
-              src="./assets/images/products/placa-mae.png"
-              width="150"
-              height="100"
-              alt="Placa mãe"
-              class="productImage"
-            />
-            <p class="productName">Placa Mãe</p>
-            <p class="productPrice">R$1000</p>
-            <button class="productShop">Comprar</button>
-          </div>
-          <div class="productItem">
-            <img
-              src="./assets/images/products/placa-mae.png"
-              width="150"
-              height="100"
-              alt="Placa mãe"
-              class="productImage"
-            />
-            <p class="productName">Placa Mãe</p>
-            <p class="productPrice">R$1000</p>
-            <button class="productShop">Comprar</button>
+          <div class="products">
+            <div class="productItem">
+              <img
+                src="./assets/images/products/placa-mae.png"
+                width="150"
+                height="100"
+                alt="Placa mãe"
+                class="productImage"
+              />
+              <p class="productName">Placa Mãe</p>
+              <p class="productPrice">1,500</p>
+              <button class="productShop">Comprar</button>
+            </div>
+            <div class="productItem">
+              <img
+                src="./assets/images/products/controleNintendo.png"
+                width="150"
+                height="100"
+                alt="Placa mãe"
+                class="productImage"
+              />
+              <p class="productName">Controle Nintendo</p>
+              <p class="productPrice">1,900</p>
+              <button class="productShop">Comprar</button>
+            </div>
+            <div class="productItem">
+              <img
+                src="./assets/images/products/memoriaRam.png"
+                width="150"
+                height="100"
+                alt="Placa mãe"
+                class="productImage"
+              />
+              <p class="productName">Placa Mãe</p>
+              <p class="productPrice">1,000</p>
+              <button class="productShop">Comprar</button>
+            </div>
           </div>
         </div>
       </section>

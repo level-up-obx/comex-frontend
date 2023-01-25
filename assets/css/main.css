@@ -1,73 +1,156 @@
+/*============================== Fonte ==============================*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 /*============================== Variáveis ==============================*/
 :root {
-    --background: #8FA8FF;
+  --background: #8fa8ff;
+  --inter: "Inter", sans-serif;
 }
 /*============================== Reset ==============================*/
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
+  font-family: var(--inter);
+  width: 100%;
 }
 /*============================== Navbar ==============================*/
-header .container {
-    margin-bottom: 1.1rem;
+.header .container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.1rem;
 }
-.container {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    gap: 1rem;
-}
+
 .navbar {
-    background-color: var(--background);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 1.5rem;
-    color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.5rem;
+  height: 3rem;
+  background-color: var(--background);
+  color: white;
+}
+.navbarMenu {
+display: flex;
+flex-direction: column;
+gap: 2px;
+}
+.navbarMenu-list {
+    display: none;
+}
+.navbarMenu-hamburger {
+    background-color: white;
+    width: 20px;
+    height: 3px;
+    border-radius: 5px;
 }
 .searchProduct-mobile {
-    background-color: white;
-    color: var(--background);
-    align-self: center;
-    outline: 0;
-    border: 2px solid var(--background);
-    border-radius: 5px;
-    padding: 0.5rem;
-    box-sizing: border-box;
-    width: 80%;
+  background-color: white;
+  color: var(--background);
+  align-self: center;
+  outline: 0;
+  border: 2px solid var(--background);
+  border-radius: 5px;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  width: 80%;
 }
+
+.homePage {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 1rem 0;
+}
+
 /*============================== Banner ==============================*/
 .bannerImage {
-    /* box-shadow: 0px 0px 5px 0px #000000; */
+  width: 100%;
 }
 /*============================== Produtos ==============================*/
+.product {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .product .container {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    gap: 1rem;
+}
+.products {
+    display: flex;
+    flex-direction: column;
     gap: 1rem;
 }
 .productBest-seller {
-    color: var(--background);
-    font-weight: 700;
-    margin: 0;
-    background: url("/assets/images/icons/bestSeller.svg");
-    background-repeat: no-repeat;
-    padding-left: 25px;
-    background-size: 16px 16px;
-    margin: 1rem;
+  color: var(--background);
+  font-weight: 700;
+  margin: 0;
+  background: url("/assets/images/icons/bestSeller.svg");
+  background-repeat: no-repeat;
+  padding-left: 22px;
+  background-size: 18px 18px;
 }
 .productItem {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border: 2px solid var(--background);
-    border-radius: 5px;
-    padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid var(--background);
+  border-radius: 5px;
+  padding: 2rem;
 }
-.productName{
-    font-weight: 700;
-}   
+.productName {
+  font-weight: 500;
+}
 .productPrice {
-    font-weight: 500;
+  background-image: url('../images/icons/moneyIcon.svg');
+  background-size: 18px 18px;
+  background-repeat: no-repeat;
+  padding-left: 1rem;
+  padding-right: .7rem;
+  align-self: center;
+}
+.productShop {
+  width: 100%;
+  padding: 0.5rem;
+  margin: 0;
+  background-color: var(--background);
+  color: white;
+  border: 2px solid var(--background);
+  border-radius: 5px;
+}
+.productShop:hover {
+color: var(--background);
+background-color: white;
+border-color: var(--background);
+}
+
+@media (min-width: 768px) {
+    .products {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+}
+@media (min-width: 1024px) {
+    .navbarMenu {
+        flex-direction: row;
+    }
+    .navbarMenu-list {
+        display: flex;
+        gap: 20px;
+    }
+    .navbarMenu-listItem {
+        list-style-type: none;
+    }
+    .navbarMenu-listItem:nth-child(3),
+    .navbarMenu-listItem:nth-child(5),
+    .navbarMenu-listItem:nth-child(6) {
+        display: none;
+    }
+    .navbarMenu-hamburger {
+        display: none;
+    }
+
 }
