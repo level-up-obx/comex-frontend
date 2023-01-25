@@ -1,0 +1,14 @@
+.navbar-collapse {
+    justify-content: end;
+    margin-right: 2rem;
+}
+
+.frete {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+
+footer {
+    margin-top: 1.5rem;
+}
