@@ -38,7 +38,7 @@
 
 footer {
     background-color: #8FA8FF;
-    margin-top: 200px;
+    margin-top: 150px;
 }
 
 .rodape {
@@ -53,7 +53,14 @@ footer {
 }
 
 .rodape-direita {
+    display: none;
+}
+
+.rodape-esquerda {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 
 .direita-info--direita,
@@ -93,11 +100,16 @@ footer {
         align-items: center;
     }
 
+    .rodape-direita {
+        display: flex;
+    }
+
     .rodape-esquerda {
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        width: auto;
     }
 
     .esquerda-logo {
@@ -107,8 +119,30 @@ footer {
 }
 
 /* Tablet */
-@media (min-width: 651px) and (max-width: 767px) {
+@media (min-width: 651px) and (max-width: 1023px) {
     .card {
         height: auto;
+    }
+
+    .cardItens:nth-child(4),
+    .linha2 {
+        display: none;
+    }
+
+    .rodape-direita {
+        display: flex;
+    }
+
+    .rodape {
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .rodape-esquerda {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: auto;
     }
 }
