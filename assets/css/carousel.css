@@ -1,0 +1,58 @@
+@media (max-width: 768px) {
+    .carousel_box {
+        display: flex;
+        justify-content: center;
+        margin-top: 1%;
+      }
+      
+      .carousel-content {
+        position: absolute;
+        bottom: 40%;
+        left: 25%;
+        z-index: 20;
+        color: white;
+      }
+      
+      .carousel-content > h1 {
+        font-size: 1.5rem;
+        color: #8fa8ff;
+        text-align: center;
+      }
+      
+      .carousel-content > h5 {
+        font-size: 1rem;
+        text-align: center;
+      }
+}
+
+@media(min-width: 768px) {
+.carousel_box {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%;
+}
+
+.carousel-content {
+  position: absolute;
+  bottom: 40%;
+  left: 30%;
+  z-index: 20;
+  color: white;
+}
+
+.carousel-content > h1 {
+  font-size: 4rem;
+  color: #8fa8ff;
+  text-align: center;
+}
+
+.carousel-content > h5 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+}
+
+
+
+
