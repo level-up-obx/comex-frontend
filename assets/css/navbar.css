@@ -30,13 +30,6 @@
 }
 
 
-.btn-outline-secondary {
-    border-color: #8FA8FF;
-    border-style: solid; 
-    border-left:0px;
-    border-width: 0.2rem;
-}
-
 .input_container {
     display: flex;
     justify-content: center;
@@ -56,11 +49,6 @@
       
 }
 
-/* Precisa do disable_desktop */
-.logo-white {
-   /* margin-left: 3rem; */
-   margin-right: 3rem ;
-} 
 
 @media(max-width: 768px) {
     
