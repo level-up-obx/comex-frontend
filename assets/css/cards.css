@@ -1,7 +1,9 @@
 @media(max-width: 768px) {
     .panel_title{
         color: #8FA8FF;
-        margin-top: 2rem;   
+        margin-top: 2rem; 
+        display: flex;
+        justify-content: center;  
     }
     
     .product_section {
