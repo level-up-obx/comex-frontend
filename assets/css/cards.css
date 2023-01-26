@@ -1,9 +1,66 @@
+.panel_title{
+    color: #8FA8FF;
+    display: flex;
+    justify-content: center;
+    margin: 2rem; 
+    font-size: 1.2rem;
+
+}
+
+.product_section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlights_panel {
+    display: flex;
+    flex-direction: column; /*mudar direção do flex pra coluna*/
+    align-items: center;/*alinhar pra ficar no centro*/
+    border-color: #8FA8FF;
+    border-style: solid;    
+    border-width: 0.2rem;
+    border-radius: 5px;
+    width: 20%; /*largura caber elementos dentro*/
+    height: 23rem; 
+    margin: 1rem;
+}
+
+.panel_img {
+    width: 90%;
+    height: 90%;
+    margin-top: 5%;
+}
+
+.product_content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 100%;
+}
+
+.button_panel {
+    border-radius: 5px;
+    color: #FFFFFF;
+    background-color: #8FA8FF;
+    padding: 13px 53px;
+}
+
+.product_img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 206px;
+    height: 140px;
+}
+
+
 @media(max-width: 768px) {
     .panel_title{
-        color: #8FA8FF;
+        margin: 0rem;
         margin-top: 2rem; 
-        display: flex;
-        justify-content: center;  
     }
     
     .product_section {
@@ -26,34 +83,7 @@
         margin-bottom: 1rem;
     }
     
-    .product_img {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 206px;
-        height: 140px;
-    }
     
-    .panel_img {
-        width: 90%;
-        height: 90%;
-        margin-top: 5%;
-    }
     
-    .product_content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        height: 100%;
-    }
     
-    .button_panel {
-        border-radius: 5%;
-        color: #FFFFFF;
-        background-color: #8FA8FF;
-        padding: 13px 53px;
-    }
-    
-    .fa-dollar-sign {color: #8FA8FF;}
 }
