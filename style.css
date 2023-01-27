@@ -75,6 +75,10 @@ section ul {
     padding: 2rem;
 }
 
+.search-products {
+    max-width: 30%;
+}
+
 @media screen and (max-width: 468px) {
 
     .addres-contact {
