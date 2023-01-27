@@ -6,7 +6,7 @@
     padding-inline: 10%;
     padding-block: 5%; 
     margin-top: 2rem;
-    /* centralizar elementos */
+    
     
 }
 
@@ -30,7 +30,7 @@
     display: flex;
     justify-content: start;
     width: 50%;
-    margin-left: 0.5rem; /*margem lado esquerdo*/
+    margin-left: 0.5rem; 
 }
 
 .footer_inf {
@@ -92,7 +92,7 @@
         display: flex;
         justify-content: start;
         width: 50%;
-        margin-left: 0.5rem; /*margem lado esquerdo*/
+        margin-left: 0.5rem; 
     }
     
     .footer_inf {

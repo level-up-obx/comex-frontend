@@ -8,22 +8,22 @@
     .disable_mobile {
         display: none;
     }
-
-    /* LEMBRAR DE ARRUMAR */
-    .disable_desktop {
-        display: block;
-        visibility: visible;
-    }
 }
 
-
-.disable_desktop {
-    display: none;
-    visibility:hidden;
-} 
-
+@media(min-width: 768px) {
+    .disable_desktop {
+        display: none;
+    } 
+}
 .fa-dollar-sign {color: #8FA8FF;}
 
 .logo-white {
     filter: invert(100%) sepia(100%) saturate(15%) hue-rotate(307deg) brightness(106%) contrast(103%);
+}
+
+.btn_glass {
+    border-color: #8FA8FF;
+    border-style: solid; 
+    border-left:0px;
+    border-width: 0.2rem;
 }
