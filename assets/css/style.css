@@ -1,3 +1,9 @@
+:root {
+    --inter: 'Inter Tight', sans-serif;
+    --black: 'Black 900', sans-serif;
+    --tight: 'Thin 100', sans-serif;
+}
+
 @media(max-width: 768px) {
     .disable_mobile {
         display: none;
