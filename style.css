@@ -60,7 +60,7 @@ section ul {
 .btn-purchase {
     border-radius: 5px;
     border: none;
-    width: 50%;
+    width: 60%;
     color: white;
 }
 
@@ -76,7 +76,7 @@ section ul {
 }
 
 .search-products {
-    max-width: 30%;
+    max-width: 40%;
 }
 
 @media screen and (max-width: 468px) {
@@ -97,12 +97,15 @@ section ul {
     }
 
     .addres-contact{
+        display: flex;
+        flex-wrap: wrap;
+        width: 30%;
         font-size: 0.5rem;
     }
 }
 
 @media screen and (max-width: 768px) {
-    footer .nav-link, .addres-contact {
+    footer .nav-link {
         display: flex;
         justify-content: center;
     }
@@ -111,12 +114,6 @@ section ul {
         max-width: 100%;
     }
 
-    .addres-contact{
-        display: flex;
-        flex-wrap: wrap;
-        width: 20%;
-        font-size: 0.5rem;
-    }
 }
 
 @media screen and (max-width: 992px) {
