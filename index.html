@@ -47,36 +47,36 @@
         </header>
     </header>
 
-    <main class="mt-5">
-        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
+    <main class="mt-5 container">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./imgs/banner-img.png" class="d-block w-100" alt="banner">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imgs/banner-img.png" class="d-block w-100" alt="banner">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./imgs/banner-img.png" class="d-block w-100" alt="banner">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon carousel-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon carousel-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./imgs/banner-img.png" class="d-block w-50" alt="banner">
-                </div>
-                <div class="carousel-item">
-                    <img src="./imgs/banner-img.png" class="d-block w-50" alt="banner">
-                </div>
-                <div class="carousel-item">
-                    <img src="./imgs/banner-img.png" class="d-block w-50" alt="banner">
-                </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon carousel-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-                <span class="carousel-control-next-icon carousel-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
     </main>
 
     <section class="container">
@@ -84,71 +84,61 @@
             <img class="pe-3" src="./imgs/icons/estrela.png">
             <h2>Produtos mais vendidos</h2>
         </div>
-        <div class="row mt-5">
-            <div class="col-lg-3 col-md-4 col-sm-5 col-6 mt-3 purchase-item">
+        <div class="purchase mt-5">
+            <div class="purchase-item">
                 <div class="ms-5 mt-3">
                     <img class="imgs-purchase" src="./imgs/placa-mae.png">
-                    <div>Placa-mãe</div>
-                    <div class="mb-3">$ 1,500</div>
-                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                    <p>Placa-mãe <br> 1,500</p>
+                    <button class="btn-purchase mt-3 mb-3 p-2">Comprar</button>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-5 col-6 mt-3 purchase-item">
+            <div class="purchase-item">
                 <div class="ms-5 mt-3">
                     <img class="imgs-purchase" src="./imgs/controle-4.png">
-                    <div>Controle Super Nitendo</div>
-                    <div class="mb-3">$ 1,900</div>
-                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                    <p>Controle Super Nitendo <br> $ 1,900</p>
+                    <button class="btn-purchase mt-3 mb-3 p-2">Comprar</button>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-5 col-6 mt-3 purchase-item">
+            <div class="purchase-item">
                 <div class="ms-5 mt-3">
                     <img class="imgs-purchase" src="./imgs/memoria-ram.png">
-                    <div>Memória RAM</div>
-                    <div class="mb-3">$ 1,000</div>
-                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                    <p>Memória RAM <br> $ 1,000</p>
+                    <button class="btn-purchase mt-3 mb-3 p-2">Comprar</button>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-5 col-6 mt-3 purchase-item">
+            <div class="purchase-item">
                 <div class="ms-5 mt-3">
                     <img class="imgs-purchase" src="./imgs/fone.png">
-                    <div>Fone de Ouvido</div>
-                    <div class="mb-3">$ 1,000</div>
-                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                    <p>Fone de Ouvido <br> $ 1,000</p>
+                    <button class="btn-purchase mt-3 mb-3 p-2">Comprar</button>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-3 col-md-4 col-sm-5 col-6 mt-3 purchase-item">
+            <div class="purchase-item">
                 <div class="ms-5 mt-3">
                     <img class="imgs-purchase" src="./imgs/controle-1.png">
-                    <div>Controle PS (blue)</div>
-                    <div class="mb-3">$ 400</div>
-                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                    <p>Controle PS (blue) <br> $ 400</p>
+                    <button class="btn-purchase mt-3 mb-3 p-2">Comprar</button>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-5 col-6 mt-3 purchase-item">
+            <div class="purchase-item">
                 <div class="ms-5 mt-3">
                     <img class="imgs-purchase" src="./imgs/controle-2.png">
-                    <div>Controle PS (Black)</div>
-                    <div class="mb-3">$ 450</div>
-                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                    <p>Controle PS (Black) <br> $ 450</p>
+                    <button class="btn-purchase mt-3 mb-3 p-2">Comprar</button>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-5 col-6 mt-3 purchase-item">
+            <div class="purchase-item">
                 <div class="ms-5 mt-3">
                     <img class="imgs-purchase" src="./imgs/controle-3.png">
-                    <div>Controle X-Box</div>
-                    <div class="mb-3">$ 300</div>
-                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                    <p>Controle X-Box <br> $ 300</p>
+                    <button class="btn-purchase mt-3 mb-3 p-2">Comprar</button>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-4 col-sm-5 col-6 mt-3 purchase-item">
+            <div class="purchase-item">
                 <div class="ms-5 mt-3">
                     <img class="imgs-purchase" src="./imgs/processador.png">
-                    <div>Memória RYZEN</div>
-                    <div class="mb-3">$ 3,000</div>
-                    <button class="btn-purchase m-3 p-2">Comprar</button>
+                    <p>Memória RYZEN <br> 3,000</p>
+                    <button class="btn-purchase mt-3 mb-3 p-2">Comprar</button>
                 </div>
             </div>
         </div>
@@ -158,9 +148,9 @@
         <div>
             <img src="./imgs/icons/comex.png" alt="imagem-comex">
         </div>
-        <div>
-            <address class="address">Endereço: Rua tal, nº 50</address>
-            <div class="address">Contato: (11)99999-9999/(11)99999-9999</div>
+        <div class="addres-contact">
+            <address>Endereço: Rua tal, nº 50</address>
+            <div>Contato:  <br> (11)99999-9999 <br> (11)99999-9999</div>
         </div>
         <ul class="navbar-dark">
             <li class="nav-item">

@@ -32,10 +32,6 @@ footer {
     height: 150px;
 }
 
-.carousel-inner {
-    margin-left: 25%;
-}
-
 .tittle-banners {
     display: flex;
     justify-content: center;
@@ -48,9 +44,17 @@ section ul {
     flex-wrap: wrap;
 }
 
+.purchase {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .purchase-item {
     border-radius: 6px;
     border: 2px solid #8FA8FF;
+    margin-bottom: 2rem;
+    width: 15rem;
 }
 
 .btn-purchase {
@@ -71,6 +75,98 @@ section ul {
     padding: 2rem;
 }
 
+@media screen and (max-width: 468px) {
+
+    .addres-contact {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .addres-contact div {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    footer div img {
+        width: 5rem;
+    }
+
+    .addres-contact{
+        font-size: 0.5rem;
+    }
+}
+
 @media screen and (max-width: 768px) {
+    footer .nav-link, .addres-contact {
+        display: flex;
+        justify-content: center;
+    }
+
+    .carousel-inner, .carousel-item img {
+        max-width: 100%;
+    }
+
+    .addres-contact{
+        display: flex;
+        flex-wrap: wrap;
+        width: 20%;
+        font-size: 0.5rem;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .purchase {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+
+    .addres-contact {
+        order: -1;
+    }
+
+    footer ul {
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+
+    .btn-purchase, .purchase p {
+        font-size: 0.7rem;
+    }
+
+    .addres-contact {
+        order: -1;
+    }
+
+    .purchase-item {
+        width: 10rem;
+    }
+
+    .purchase {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 5rem;
+    }
+
+    .purchase-item img {
+        display: flex;
+        justify-content: center;
+        height: 5rem;
+        width: 5rem;
+    }
 
 }
+
+@media screen and (min-width: 468px) and (max-width: 768px) {
+    .purchase {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
