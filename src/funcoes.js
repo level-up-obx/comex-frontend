@@ -24,7 +24,33 @@ cumprimenta("Jorge")
  *   - 4 itens: 12% de desconto;
  *   - 5 itens ou mais: 20% de desconto.
  */
-function calculaDesconto() {}
+function calculaDesconto(valor, itens) {
+    let res;
+
+    if (itens == 1) {
+        res = 0
+    }
+
+    if (itens == 2) {
+        res = (valor * 0.03)
+    }
+
+    if (itens == 3) {
+        res = (valor * 0.07)
+    }
+
+    if (itens == 4) {
+        res = (valor * 0.12)
+    }
+
+    if (itens >= 5) {
+        res = (valor * 0.20)
+    }
+
+    return res
+}
+
+calculaDesconto(137, 2)
 
 
 /**
