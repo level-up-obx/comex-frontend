@@ -1,0 +1,54 @@
+svg path {
+    fill: white;
+}
+
+.gap {
+    gap: 20px;
+}
+
+nav.navbar, #rodape {
+    background-color: #8FA8FF;
+}
+
+.nav-link, .navbar-brand img {
+    color: #fff;
+}
+
+#rodape {
+    height: 255px;
+    padding: 40px;
+}
+
+#rodape__icones {
+    gap: 16px;
+}
+
+#rodape__icones-redes-sociais {
+    color: white;
+    font-size: 32px;
+    display: flex;
+    gap: 24px;
+}
+
+#rodape__mapa-site {
+    gap: 0px 16px;
+    height: 80px;
+}
+
+#rodape__mapa-site a {
+    width: 45%;
+    max-height: 24px;
+}
+
+#rodape__mapa-site a:nth-child(2n + 1) {
+    text-align: right;
+}
+
+@media (min-width: 1200px) {
+    
+    #rodape {
+        height: 200px;
+        padding: 40px;
+    }
+
+}
