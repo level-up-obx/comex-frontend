@@ -6,6 +6,8 @@
  *   - Se o nome do cliente é Steve Jobs, o cumprimento deve ser "Olá, Steve Jobs!".
  */
 
+const { array } = require('yargs')
+
 function cumprimenta(nome) {
     return `Olá, ${nome}!`
 }
@@ -27,25 +29,11 @@ cumprimenta("Jorge")
 function calculaDesconto(valor, itens) {
     let res;
 
-    if (itens == 1) {
-        res = 0
-    }
-
-    if (itens == 2) {
-        res = (valor * 0.03)
-    }
-
-    if (itens == 3) {
-        res = (valor * 0.07)
-    }
-
-    if (itens == 4) {
-        res = (valor * 0.12)
-    }
-
-    if (itens >= 5) {
-        res = (valor * 0.20)
-    }
+    if (itens == 1) { res = 0 }
+    if (itens == 2) { res = (valor * 0.03) }
+    if (itens == 3) { res = (valor * 0.07) }
+    if (itens == 4) { res = (valor * 0.12) }
+    if (itens >= 5) { res = (valor * 0.20) }
 
     return res
 }
@@ -60,8 +48,21 @@ calculaDesconto(137, 2)
  *   - X é 100: calcula 1 + 2 + 3 + ... + 99 + 100, retorna 5050
  *   - X é 200: calcula 1 + 2 + 3 + ... + 199 + 200, retorna 20100
  */
-function somatorio() {}
+function somatorio(valor) {
+    const list = new Array()
 
+    for (let i = 0; i < valor; i++) { list.push(1) }
+
+    const novoValor = list.reduce((previous, _, index) => {
+        return previous + index + 1
+    }, 0)
+
+    return novoValor
+
+
+}
+
+somatorio(100)
 
 /**
  * Implemente uma função que recebe um número N devolve o fatorial do número.
