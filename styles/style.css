@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --roxo: #8FA8FF;
+    --branco: #FFF;
+    --preto-fonte: #000;
+    --roxo-fonte: #BDCAF9;
+    --cinza-claro: #D9D9D9;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    background: --branco;
+}   

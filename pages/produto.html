@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/produtos.css">
+    <link rel="stylesheet" href="../styles/rodape.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+    <link rel="stylesheet" href="../styles/botaoCard.css">
+    <link rel="stylesheet" href="../styles/produto.css">
+    <script src="https://kit.fontawesome.com/0d76fadde4.js" crossorigin="anonymous"></script>   
+    <title>Produto X</title>
+</head>
+<body>
+    <header class="cabecalho menu-mobile">
+        <nav class="menu">
+            <a href="#" class="logo"><img src="../assets/svg/logo.svg" alt="Comex logo" class="logo"></a>
+            <ul class="menu__lista menu__lista-disable">
+                <li class="menu__lista-item"><a href="../index.html">Home</a></li>
+                <li class="menu__lista-item">Categorias</li>
+                <li class="menu__lista-item">Buscar</li>
+                <li class="menu__lista-item">Contato</li>
+                <li class="menu__lista-item">Carrinho</li>
+                <li class="menu__lista-item">Entrar</li>
+            </ul>
+            <button id="botao-menu" class="botao-menu"><img src="../assets/svg/menu.svg"></button>
+        </nav>
+        <div class="search-bar">
+            <input type="search" name="" id="" placeholder="Pesquisar..." class="cabecalho__input">
+            <img src="../assets/svg/search.svg" alt="">
+        </div>
+    </header>
+    <!-- menu desktop -->
+    <header class="menu-desktop">
+        <a href="#" class="logo-mobile"><img src="../assets/svg/logo.svg" alt="Logo Comex"></a>
+        <ul class="cabecalho__lista">
+            <li class="cabecalho__lista-item"><a href="../index.html">Home</a></li>
+            <li class="cabecalho__lista-item">Categorias</li>
+            <li class="cabecalho__lista-item">Contato</li>
+        </ul>
+        <div class="box-cabecalho-interativos">
+            <input type="search" name="" id="" placeholder="Pesquise..." class="input-pesquisa-mobile">
+            <ul class="cabecalho__lista">
+                <li class="cabecalho__lista-item"><img src="../assets/svg/carrinho-compras.svg" alt="Carrinho de compras"></li>
+                <li class="cabecalho__lista-item"><img src="../assets/svg/usuario.svg" alt="Perfil do usuário"></li>
+            </ul>
+        </div>
+    </header>
+    <main>
+        <div class="container-produto">
+            <img src="../assets/memoria-ram.png" alt="Placa mãe" class="img-produto">
+            <div class="container-produto__descricao">
+                <h1 class="nome--produto">Nome produto</h1>
+                <h3 class="descricao--produto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque doloribus, facilis animi officia laboriosam a ex, suscipit hic odit sequi aperiam tempora, unde reiciendis dolores perferendis labore tempore facere deserunt.</h3>
+                <div class="container-cep">
+                    <div class="campo-cep">
+
+                        <label for="cep">CEP:</label>
+                        <input type="number" placeholder="00000-000" id="cep" class="input-cep" min="0">
+                    </div>
+                    <button class="busca-cep">Pesquisar CEP</button>
+                </div>
+            </div>
+        </div>
+        <div class="container-compra">
+            <button class="compra-produto">Comprar</button>
+        </div>
+
+    </main>    
+    <footer class="rodape">
+        <div class="esquerda">
+            <a href="#"><img src="../assets/svg/logo.svg" alt="Logo Comex" class="logo-rodape"></a>
+            <ul class="rodape__lista">
+                <li class="rodape__lista-item"><a href="#"><img src="../assets/svg/instagram.svg" alt=""></a></li>
+                <li class="rodape__lista-item"><a href="#"><img src="../assets/svg/twitter.svg" alt=""></a></li>
+                <li class="rodape__lista-item"><a href="#"><img src="../assets/svg/linkedin.svg" alt=""></a></li>
+            </ul>
+        </div>
+        
+        <div class="rodape__box direita">
+            <ul class="box-lista lista-esquerda">
+                <li class="box-item">Promoções</li>
+                <li class="box-item">Categorias</li>
+                <li class="box-item">Buscar</li>
+            </ul>
+            <ul class="box-lista lista-direita">
+                <li class="box-item">Contato</li>
+                <li class="box-item">Carrinho</li>
+                <li class="box-item">Entrar</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="../js/menu.js"></script>
+</body>
+</html>

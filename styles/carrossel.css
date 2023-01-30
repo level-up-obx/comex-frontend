@@ -1,0 +1,171 @@
+.container{
+    background-size: cover;
+    height: 350px;
+    margin-top: 30px;
+    position: relative;
+    text-align: center;
+    width: 100%;
+}
+
+.img-baner{
+    height: 100%;
+    left: 0;
+    object-fit: fill;
+    position: absolute;
+    width: 100%;
+    z-index: -1;
+}
+
+.img-baner-mobile{
+    display: block;
+}
+
+.img-baner-tablet{
+    display: none;
+}
+
+.conteudo-baner{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    font-weight: 800;
+    height: 100%;
+    justify-content: center;
+}
+
+.titulo__principal{
+    color: var(--roxo-fonte);
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.titulo__secundario{
+    color: var(--branco);
+    font-size: 16px;
+    line-height: 19px;
+}
+
+.botoes-baner{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    max-width: 540px;
+    position: absolute;
+    width: 100%;
+}
+
+.botao{
+    background: none;
+    border: none;
+    width: 30px;
+}
+
+.botao > img {
+    width: 15px;
+}
+
+.seta-baixo{
+    align-items: center;
+    background: var(--roxo);
+    border: none;
+    border-radius: 100%;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    margin-top: 20px;
+    width: 32px;
+}
+
+.seta-baixo > img{
+    width: 10px;
+}
+
+.seletor-pagina{
+    background: var(--branco);
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+}
+
+.seletor-pagina > .container{
+    display: flex;
+    gap: 8px;
+    height: 20px;
+    justify-content: center;
+    margin-top: 10px !important;    
+    width: 150px;
+}
+
+.bolinha{
+    background: var(--cinza-claro);
+    border-radius: 100%;
+    display: block;
+    height: 16px;
+    width: 17px;
+}
+
+.bolinha-ativa{
+    background: var(--roxo);   
+}
+
+/* adaptação para tablet */
+
+@media screen and (min-width: 768px){
+    .container{
+        padding: 0 3rem;
+    }
+
+    .img-baner-mobile{
+        display: none;
+    }
+
+    .img-baner-tablet{
+        display: block;
+    }
+
+    .img-baner{
+        border-radius: 5px;
+        object-fit: contain;
+    }
+
+    .botoes-baner{
+        max-width: 90%;
+    }
+
+    .titulo__principal{
+        font-size: 28px;
+    }
+
+    .titulo__secundario{
+        font-size: 18px;
+    }
+
+    .botao{
+        width: 32px;
+        height: 32px;
+    }
+}
+
+/* adaptação para desktop */
+
+@media screen and (min-width: 1100px){
+    .titulo__principal{
+        font-size: 48px;
+    }
+
+    .titulo__secundario{
+        margin-top: 16px;
+        font-size: 30px;
+    }
+
+    .seta-baixo{
+        height: 60px;
+        width: 60px;
+    }
+
+    .seta-baixo > img{
+        width: 20px;
+    }
+
+
+}

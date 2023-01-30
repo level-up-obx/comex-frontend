@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.adiciona-relativo{
+    position: relative;
+}
+
+.container-modal-desabilitado{
+    display: none;
+}
+
+.container-modal{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    position: absolute;
+    background: #00000079;
+    padding: 0 10%;
+}
+
+.box-modal{
+    height: 50%;
+    width: 50%;
+}
+
+.cabecalho-modal{
+    background-color: var(--branco);
+    border-radius: 5px 5px 0 0;
+    border-bottom: 1.5px var(--cinza-claro) solid;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.cabecalho-modal > button{
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    height: 50px;
+    font-size: 1rem;
+    font-weight: 800;
+    width: 50px;
+}
+
+.conteudo-modal{
+    background-color: var(--branco);
+    border-radius: 0 0 5px 5px;
+    padding: 1rem;
+    position: relative;
+}
+
+.conteudo-modal > h1{
+    color: var(--roxo);
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.box-produto{
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: center;
+}
+
+.box-produto-textos{
+    align-items: center;
+    display: flex;
+    gap: 30px;
+}
+
+.conteudo-modal-desabilitado{
+    display: none;
+}
+
+.info-tecnica{
+    align-self: center;
+}
+
+@media screen and (max-width: 1100px){
+    .box-modal{
+        height: 60%;
+        width: 80%;
+    }
+}   
+
+@media screen and (max-width: 700px){
+    .box-modal{
+        height: 80%;
+        width: 90%;
+    }
+    
+    .box-produto-textos{
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .box-produto{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .conteudo-modal > h1{
+        font-size: 25px;
+    }
+
+    .box-produto > img{
+        width: 80%;
+    }
+
+    .box-produto > p {
+        font-size: 14px;
+    }
+}

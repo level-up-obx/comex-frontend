@@ -1,0 +1,43 @@
+.container-contato{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 1rem;
+    text-align: center;
+    height: 55vh;
+}
+
+.titulo-contato{
+    color: var(--roxo);
+    font-size: 24px;
+}
+
+.subtitulo-contato{
+    font-size: 16px;
+}
+
+@media screen and (min-width: 700px){
+    .titulo-contato{
+        font-size: 32px;
+    }
+
+    .subtitulo-contato{
+        font-size: 24px;
+    }
+
+    .contato-item{
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .titulo-contato{
+        font-size: 48px;
+    }
+
+    .subtitulo-contato{
+        font-size: 30px;
+    }
+}

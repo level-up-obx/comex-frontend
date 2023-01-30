@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/menu.css">
+    <link rel="stylesheet" href="../styles/produtos.css">
+    <link rel="stylesheet" href="../styles/rodape.css">
+    <link rel="stylesheet" href="../styles/modal.css">
+    <link rel="stylesheet" href="../styles/botaoCard.css">
+    <script src="https://kit.fontawesome.com/0d76fadde4.js" crossorigin="anonymous"></script>
+    <title>Produtos</title>
+</head>
+
+<body>
+    <!-- menu mobile -->
+    <header class="cabecalho menu-mobile">
+        <nav class="menu">
+            <a href="#" class="logo"><img src="../assets/svg/logo.svg" alt="Comex logo" class="logo"></a>
+            <ul class="menu__lista menu__lista-disable">
+                <li class="menu__lista-item"><a href="../index.html">Home</a></li>
+                <li class="menu__lista-item">Categorias</li>
+                <li class="menu__lista-item">Buscar</li>
+                <li class="menu__lista-item">Contato</li>
+                <li class="menu__lista-item">Carrinho</li>
+                <li class="menu__lista-item">Entrar</li>
+            </ul>
+            <button id="botao-menu" class="botao-menu"><img src="../assets/svg/menu.svg"></button>
+        </nav>
+        <div class="search-bar">
+            <input type="search" name="" id="" placeholder="Pesquisar..." class="cabecalho__input">
+            <img src="../assets/svg/search.svg" alt="">
+        </div>
+    </header>
+    <!-- menu desktop -->
+    <header class="menu-desktop">
+        <a href="#" class="logo-mobile"><img src="../assets/svg/logo.svg" alt="Logo Comex"></a>
+        <ul class="cabecalho__lista">
+            <li class="cabecalho__lista-item"><a href="../index.html">Home</a></li>
+            <li class="cabecalho__lista-item">Categorias</li>
+            <li class="cabecalho__lista-item">Contato</li>
+        </ul>
+        <div class="box-cabecalho-interativos">
+            <input type="search" name="" id="" placeholder="Pesquise..." class="input-pesquisa-mobile">
+            <ul class="cabecalho__lista">
+                <li class="cabecalho__lista-item"><img src="../assets/svg/carrinho-compras.svg" alt="Carrinho de compras"></li>
+                <li class="cabecalho__lista-item"><img src="../assets/svg/usuario.svg" alt="Perfil do usuário"></li>
+            </ul>
+        </div>
+    </header>
+    <main class="mais-vendidos" id="mais-vendidos">
+        <div class="box-mais-vendidos">
+            <h2 class="mais-vendidos__titulo">Produtos</h2>
+        </div>
+        <div class="box-mais-vendidos-card">
+            <div class="mais-vendidos__card">
+                <img src="../assets/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
+                <div class="mais-vendidos__card-textos">
+                    <h3 class="nome-produto">Placa-mãe</h3>
+                    <div class="box-valor-produto">
+                        <span class="valor-produto-simbolo"></span>
+                        <p class="valor-produto">1,500</p>
+                    </div>
+                </div>
+                <div class="botoes-produtos">
+                    <button class="carrinho"><i class="fa-solid fa-cart-plus"></i></button>
+                    <button class="detalhe abre-modal">Descrição</button>
+                </div>
+            </div>
+    </main>
+    <footer class="rodape">
+        <div class="esquerda">
+            <a href="#"><img src="../assets/svg/logo.svg" alt="Logo Comex" class="logo-rodape"></a>
+            <ul class="rodape__lista">
+                <li class="rodape__lista-item"><a href="#"><img src="../assets/svg/instagram.svg" alt=""></a></li>
+                <li class="rodape__lista-item"><a href="#"><img src="../assets/svg/twitter.svg" alt=""></a></li>
+                <li class="rodape__lista-item"><a href="#"><img src="../assets/svg/linkedin.svg" alt=""></a></li>
+            </ul>
+        </div>
+        
+        <div class="rodape__box direita">
+            <ul class="box-lista lista-esquerda">
+                <li class="box-item">Promoções</li>
+                <li class="box-item">Categorias</li>
+                <li class="box-item">Buscar</li>
+            </ul>
+            <ul class="box-lista lista-direita">
+                <li class="box-item">Contato</li>
+                <li class="box-item">Carrinho</li>
+                <li class="box-item">Entrar</li>
+            </ul>
+        </div>
+    </footer>
+    <div class="container-modal-desabilitado modal">
+        <div class="box-modal">
+            <div class="container-modal-generico">
+                <header class="cabecalho-modal">
+                    <button class="fecha-modal">X</button>
+                </header>
+                <main class="conteudo-modal">
+                    <h1 class="det-produto t1">Detalhes do produto</h1>
+                    <h1 class=" t2  conteudo-modal-desabilitado">Informações tecnicas</h1>
+                    <section class="detalhes-produto-modal">
+                        <div class="box-produto">
+                            <img src="../assets/placa-mae.png" alt="">
+                            <div class="box-produto-textos">
+                                <p class="det-produto sobre-produto t1">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Suscipit fuga cupiditate
+                                    aperiam libero architecto assumenda laudantium ut quo laboriosam modi perferendis
+                                    consequatur, placeat excepturi, nemo non officia asperiores? Enim, voluptatem.
+                                </p>
+                                <ul class="sobre-produto  t2  conteudo-modal-desabilitado lista-modal">
+                                    <li>lorem</li>
+                                    <li>lorem</li>
+                                    <li>lorem</li>
+                                    <li>lorem</li>
+                                </ul>
+                                <button class="detalhe info-tecnica t1">Informações técnicas</button>
+                                <button class="esp-tecnica detalhe t2 conteudo-modal-desabilitado">Especificações</button>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+            </div>
+        </div>
+    </div>
+    <script src="../js/menu.js"></script>
+    <script src="../js/modal.js"></script>
+</body>
+</html>
