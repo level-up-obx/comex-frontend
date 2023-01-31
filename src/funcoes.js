@@ -87,7 +87,29 @@ fatorial(34)
  * Implemente uma função que calcule uma função do segundo grau (ax² + bx + c = 0).
  * A função deve retornar um array com x1 na primeira posição e x2 na segunda posição.
  */
-function equacaoDeSegundoGrau() {}
+function equacaoDeSegundoGrau(a, b, c) {
+    var delta = b * b - 4 * a * c;
+
+    if (delta > 0) {
+      raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
+      raiz2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+      return [raiz1, raiz2]
+    } else {
+      if (delta == 0) {
+        raiz = (-b + Math.sqrt(delta)) / (2 * a);
+        // ans.innerHTML = 'Raiz dupla: ' + raiz;
+        return raiz
+      } else {
+        real = -b / (2 * a);
+        raiz = Math.sqrt(-delta) / (2 * a);
+        raiz2 = -Math.sqrt(-delta) / (2 * a);
+
+        // ans.innerHTML = 'Raiz 1: ' + real + '+' + raiz + 'i' + '<br/>' + 'Raiz 2: ' + real + '+' + raiz2 + 'i';
+        [raiz,raiz2]
+      }
+    }
+}
 
 /**
  * Implemente uma função que receba uma data no formato DD/MM/YYYY,
