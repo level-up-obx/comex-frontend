@@ -63,7 +63,11 @@ function fatorial(n) {
  * Implemente uma função que calcule uma função do segundo grau (ax² + bx + c = 0).
  * A função deve retornar um array com x1 na primeira posição e x2 na segunda posição.
  */
-function equacaoDeSegundoGrau() {}
+function equacaoDeSegundoGrau(a, b, c) {
+    const x1 = ((b * -1) + (Math.sqrt((b**2) - (4 * a * c)))) / (2 * a)
+    const x2 = ((b * -1) - (Math.sqrt((b**2) - (4 * a * c)))) / (2 * a)
+    return [x1, x2]
+}
 
 /**
  * Implemente uma função que receba uma data no formato DD/MM/YYYY, 
@@ -72,8 +76,9 @@ function equacaoDeSegundoGrau() {}
  *   - o MÊS na posição 2.
  *   - o DIA na posição 3.
  */
-function extraiElementosDaData() {}
-
+function extraiElementosDaData(date) {
+    return date.split('/').reverse()
+}
 
 /**
  * Considerando a sequência de Fibonacci 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, ...,
