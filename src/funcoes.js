@@ -96,7 +96,17 @@ function equacaoDeSegundoGrau() {}
  *   - o MÊS na posição 2.
  *   - o DIA na posição 3.
  */
-function extraiElementosDaData() {}
+function extraiElementosDaData(date) {
+    let day = date.substring(0,2)
+    let mounth = date.substring(3,5)
+    let year = date.substring(6,10)
+
+    let arrayDate = [year, mounth, day]
+
+    return arrayDate
+}
+
+extraiElementosDaData('15/01/2002')
 
 
 /**
