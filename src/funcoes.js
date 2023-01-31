@@ -71,8 +71,17 @@ somatorio(100)
  *   - n é 5: 5! = 120
  *   - n é 9: 9! = 362880
  */
-function fatorial() {}
+function fatorial(num) {
+    if (num < 0) {
+        return -1
+    } else if (num == 0) {
+        return 1
+    } else {
+        return (num * fatorial(num - 1));
+    }
+}
 
+fatorial(34)
 
 /**
  * Implemente uma função que calcule uma função do segundo grau (ax² + bx + c = 0).
