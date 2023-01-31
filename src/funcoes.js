@@ -21,8 +21,13 @@ function cumprimenta(nome) {
  *   - 4 itens: 12% de desconto;
  *   - 5 itens ou mais: 20% de desconto.
  */
-function calculaDesconto() {}
-
+function calculaDesconto(val, itens) {
+    if (itens === 2) return (val * 0.03)
+    else if (itens === 3) return (val * 0.07)
+    else if (itens === 4) return (val * 0.12)
+    else if (itens >= 5) return (val * 0.2)
+    else return 0
+}
 
 /**
  * Implemente uma função que receba um número X e devolva a soma dos número de 1 a X.
