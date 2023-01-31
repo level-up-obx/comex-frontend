@@ -51,8 +51,13 @@ function somatorio(x) {
  *   - n é 5: 5! = 120
  *   - n é 9: 9! = 362880
  */
-function fatorial() {}
-
+function fatorial(n) {
+    let result = n
+    for (let i = n - 1; i > 0; i --) {
+        result = result * i
+    }
+    return result
+}
 
 /**
  * Implemente uma função que calcule uma função do segundo grau (ax² + bx + c = 0).
