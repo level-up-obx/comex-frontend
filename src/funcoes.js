@@ -89,8 +89,13 @@ function extraiElementosDaData(date) {
  *   - posição é 7: retorna o elemento 13.
  *   - posição é 8: retorna o elemento 21.
  */
-function fibonacci() {}
-
+function fibonacci(n) {
+    const fibArr = [1, 1]
+    for (let i = 0; i < n; i++) {
+        fibArr.push(fibArr.at(-1) + fibArr.at(-2))
+    }
+    return fibArr[n - 1]
+}
 
 /**
  * Implemente uma função que recebe um array com notas de um aluno e uma função de callback,
