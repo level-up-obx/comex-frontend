@@ -101,7 +101,7 @@ function fibonacci(n) {
  * Implemente uma função que recebe um array com notas de um aluno e uma função de callback,
  * e devolva o resultado da média pelo callback.
 */
- 
+
 function calculaMedia(arr, callback) {
     const avg = arr.reduce((acc, note) => (acc + note), 0) / arr.length
     return callback(avg)
@@ -123,7 +123,9 @@ function calculaMedia(arr, callback) {
  *                       ]
  * RESULTADO ESPERADO: 60 (10 + 20 + 30)
  */
-function calculaFaturamentoAnual() {}
+function calculaFaturamentoAnual(arr) {
+    return arr.reduce((acc, month) => acc + month[1], 0)
+}
 
 /**
  * Agora a equipe do financeiro gostaria de filtrar os faturamentos pra ver períodos específicos.
