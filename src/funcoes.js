@@ -101,8 +101,10 @@ function fibonacci() {}
  * Implemente uma função que recebe um array com notas de um aluno e uma função de callback,
  * e devolva o resultado da média pelo callback.
  */
- function calculaMedia() {}
-
+ function calculaMedia(notas, callback) {
+    let media = notas.reduce((acc, value) => acc += value) / notas.length
+    return callback(media)
+}
 
 /**
  * O financeiro do Comex disponibilizou os faturamentos mensais numa lista de registros. 
