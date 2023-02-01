@@ -136,7 +136,10 @@ function calculaFaturamentoAnual(arr) {
  * 
  * EXEMPLO DO FILTRO: callback(mes, valor) 
  */
-function calculaFaturamentoAnualComFiltro() {}
+function calculaFaturamentoAnualComFiltro(arr, callback) {
+    const filtredArr = arr.filter(month => callback(month[0]))
+    return filtredArr.reduce((acc, month) => acc + month[1], 0)
+}
 
 
 /**
