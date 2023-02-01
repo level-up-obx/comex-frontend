@@ -69,7 +69,6 @@ function equacaoDeSegundoGrau(a, b, c) {
     return [x1, x2]
 }
 
-console.log(equacaoDeSegundoGrau(-1, 0, 4))
 
 /**
  * Implemente uma função que receba uma data no formato DD/MM/YYYY, 
@@ -77,9 +76,15 @@ console.log(equacaoDeSegundoGrau(-1, 0, 4))
  *   - o ANO na posição 1.
  *   - o MÊS na posição 2.
  *   - o DIA na posição 3.
- */
-function extraiElementosDaData() {}
+*/
+function extraiElementosDaData(data) {
+    let arr =  [...data]
+    let dia = arr.slice(0, 2).join("").toString()
+    let mes = arr.slice(3, 5).join("").toString()
+    let ano = arr.slice(6).join("").toString()
 
+    return [ano, mes, dia]
+}
 
 /**
  * Considerando a sequência de Fibonacci 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, ...,
