@@ -62,7 +62,14 @@ function fatorial() {}
  * Implemente uma função que calcule uma função do segundo grau (ax² + bx + c = 0).
  * A função deve retornar um array com x1 na primeira posição e x2 na segunda posição.
  */
-function equacaoDeSegundoGrau() {}
+function equacaoDeSegundoGrau(a, b, c) {
+    let x1 = ((b * -1) + Math.sqrt((b*b) - (4 * a * c))) / (2 * a)
+    let x2 = ((b * -1) - Math.sqrt((b*b) - (4 * a * c))) / (2 * a)
+
+    return [x1, x2]
+}
+
+console.log(equacaoDeSegundoGrau(-1, 0, 4))
 
 /**
  * Implemente uma função que receba uma data no formato DD/MM/YYYY, 
