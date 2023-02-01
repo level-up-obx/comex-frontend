@@ -5,7 +5,9 @@
  *   - Se o nome do cliente é Bill Gates, o cumprimento deve ser "Olá, Bill Gates!".
  *   - Se o nome do cliente é Steve Jobs, o cumprimento deve ser "Olá, Steve Jobs!".
  */
-function cumprimenta() {}
+function cumprimenta(nome) {
+    return `Olá, ${nome}!`
+}
 
 
 /**
@@ -19,7 +21,13 @@ function cumprimenta() {}
  *   - 4 itens: 12% de desconto;
  *   - 5 itens ou mais: 20% de desconto.
  */
-function calculaDesconto() {}
+function calculaDesconto(valores, quantidadeItens) {
+    if (quantidadeItens === 2) return (valores * 0.03)
+    else if (quantidadeItens === 3) return (valores * 0.07)
+    else if (quantidadeItens === 4) return (valores * 0.12)
+    else if (quantidadeItens >= 5) return (valores * 0.2)
+    else return 0
+}
 
 
 /**
@@ -29,7 +37,15 @@ function calculaDesconto() {}
  *   - X é 100: calcula 1 + 2 + 3 + ... + 99 + 100, retorna 5050
  *   - X é 200: calcula 1 + 2 + 3 + ... + 199 + 200, retorna 20100
  */
-function somatorio() {}
+function somatorio(x) {
+    let acc = 0;
+    for(let i = 0; i <= x ; i++){
+        acc += i
+    }
+
+    return acc
+
+}
 
 
 /**
@@ -39,14 +55,25 @@ function somatorio() {}
  *   - n é 5: 5! = 120
  *   - n é 9: 9! = 362880
  */
-function fatorial() {}
-
+function fatorial(x) {
+    let acum = 1;
+    for(let i = 1; i <= x; i++){
+        acum *= i        
+    }
+    return acum
+}
 
 /**
  * Implemente uma função que calcule uma função do segundo grau (ax² + bx + c = 0).
  * A função deve retornar um array com x1 na primeira posição e x2 na segunda posição.
  */
-function equacaoDeSegundoGrau() {}
+function equacaoDeSegundoGrau(a, b, c) {
+    let x1 = ((b * -1) + Math.sqrt((b*b) - (4 * a * c))) / (2 * a)
+    let x2 = ((b * -1) - Math.sqrt((b*b) - (4 * a * c))) / (2 * a)
+
+    return [x1, x2]
+}
+
 
 /**
  * Implemente uma função que receba uma data no formato DD/MM/YYYY, 
@@ -54,9 +81,15 @@ function equacaoDeSegundoGrau() {}
  *   - o ANO na posição 1.
  *   - o MÊS na posição 2.
  *   - o DIA na posição 3.
- */
-function extraiElementosDaData() {}
+*/
+function extraiElementosDaData(data) {
+    let arr =  [...data]
+    let dia = arr.slice(0, 2).join("").toString()
+    let mes = arr.slice(3, 5).join("").toString()
+    let ano = arr.slice(6).join("").toString()
 
+    return [ano, mes, dia]
+}
 
 /**
  * Considerando a sequência de Fibonacci 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, ...,
@@ -66,15 +99,25 @@ function extraiElementosDaData() {}
  *   - posição é 7: retorna o elemento 13.
  *   - posição é 8: retorna o elemento 21.
  */
-function fibonacci() {}
+function fibonacci(x) {
+    let fibonacci = [1, 1]
+
+    for(let i = 0; i <= x; i++){
+        fibonacci.push(fibonacci.at(-1) + fibonacci.at(-2))        
+    }
+
+    return fibonacci[x - 1]
+}
 
 
 /**
  * Implemente uma função que recebe um array com notas de um aluno e uma função de callback,
  * e devolva o resultado da média pelo callback.
  */
- function calculaMedia() {}
-
+ function calculaMedia(notas, callback) {
+    let media = notas.reduce((acc, value) => acc += value) / notas.length
+    return callback(media)
+}
 
 /**
  * O financeiro do Comex disponibilizou os faturamentos mensais numa lista de registros. 
@@ -109,7 +152,8 @@ function calculaFaturamentoAnualComFiltro() {}
  * Crie uma função que receba o fator de multiplicação de uma tabuada específica e retorne uma 
  * função que calcule a multiplicação do fator por um número.
  */
-function criaTabuada() {
+function criaTabuada(x) {
+    return (y) => (x * y)
 }
 
 
