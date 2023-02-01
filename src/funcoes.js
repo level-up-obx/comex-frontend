@@ -139,7 +139,8 @@ function calculaFaturamentoAnualComFiltro() {}
  * Crie uma função que receba o fator de multiplicação de uma tabuada específica e retorne uma 
  * função que calcule a multiplicação do fator por um número.
  */
-function criaTabuada() {
+function criaTabuada(x) {
+    return (y) => (x * y)
 }
 
 
