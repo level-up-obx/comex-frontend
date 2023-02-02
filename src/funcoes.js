@@ -115,7 +115,7 @@ function fibonacci(n) {
  * Implemente uma função que recebe um array com notas de um aluno e uma função de callback,
  * e devolva o resultado da média pelo callback.
  */
-function calculaMedia() { }
+function calculaMedia() {}
 
 
 /**
@@ -133,7 +133,7 @@ function calculaMedia() { }
  *                       ]
  * RESULTADO ESPERADO: 60 (10 + 20 + 30)
  */
-function calculaFaturamentoAnual() { }
+function calculaFaturamentoAnual() {}
 
 /**
  * Agora a equipe do financeiro gostaria de filtrar os faturamentos pra ver períodos específicos.
