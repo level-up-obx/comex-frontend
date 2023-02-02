@@ -5,7 +5,9 @@
  *   - Se o nome do cliente é Bill Gates, o cumprimento deve ser "Olá, Bill Gates!".
  *   - Se o nome do cliente é Steve Jobs, o cumprimento deve ser "Olá, Steve Jobs!".
  */
-function cumprimenta() {}
+function cumprimenta(nome) {
+    return "Olá, " + nome + "!";
+}
 
 
 /**
@@ -19,7 +21,37 @@ function cumprimenta() {}
  *   - 4 itens: 12% de desconto;
  *   - 5 itens ou mais: 20% de desconto.
  */
-function calculaDesconto() {}
+function calculaDesconto(valorCompra, itensComprados) {
+    let percentualDesconto = 0;
+
+    switch (itensComprados) {
+        case 0:
+            percentualDesconto = 0;
+            break;
+        case 1:
+            percentualDesconto = 0;
+            break;
+        case 2:
+            percentualDesconto = 3;
+            break;
+        case 3:
+            percentualDesconto = 7;
+            break;
+        case 4:
+            percentualDesconto = 12;
+            break;
+        case 5:
+            percentualDesconto = 20;
+            break;
+        default:
+            percentualDesconto = 20;
+    }
+    return calculaPercentual(valorCompra, percentualDesconto);
+}
+
+function calculaPercentual(valorCompra, percentualDesconto) {
+    return (valorCompra * percentualDesconto) / 100;
+}
 
 
 /**
@@ -29,7 +61,13 @@ function calculaDesconto() {}
  *   - X é 100: calcula 1 + 2 + 3 + ... + 99 + 100, retorna 5050
  *   - X é 200: calcula 1 + 2 + 3 + ... + 199 + 200, retorna 20100
  */
-function somatorio() {}
+function somatorio(maxSoma) {
+    let soma = 0;
+    for (let atual = 1; atual <= maxSoma; atual++) {
+        soma = soma + atual;
+    }
+    return soma;
+}
 
 
 /**
@@ -39,14 +77,26 @@ function somatorio() {}
  *   - n é 5: 5! = 120
  *   - n é 9: 9! = 362880
  */
-function fatorial() {}
+function fatorial(numero) {
+    let fatorial = 1;
+    for (let atual = numero; atual > 0; atual--) {
+        fatorial = fatorial * atual;
+    }
+    return fatorial;
+}
+
 
 
 /**
  * Implemente uma função que calcule uma função do segundo grau (ax² + bx + c = 0).
  * A função deve retornar um array com x1 na primeira posição e x2 na segunda posição.
  */
-function equacaoDeSegundoGrau() {}
+function equacaoDeSegundoGrau(a, b, c) {
+    const delta = b * b - 4 * a * c;
+    const x1 = (-b + Math.sqrt(delta)) / (2 * a);
+    const x2 = (-b - Math.sqrt(delta)) / (2 * a);
+    return [x1, x2];
+}
 
 /**
  * Implemente uma função que receba uma data no formato DD/MM/YYYY, 
@@ -55,7 +105,11 @@ function equacaoDeSegundoGrau() {}
  *   - o MÊS na posição 2.
  *   - o DIA na posição 3.
  */
-function extraiElementosDaData() {}
+function extraiElementosDaData(datastring) {
+    let dataArray = datastring.split('/').reverse();
+
+    return dataArray;
+}
 
 
 /**
@@ -66,14 +120,27 @@ function extraiElementosDaData() {}
  *   - posição é 7: retorna o elemento 13.
  *   - posição é 8: retorna o elemento 21.
  */
-function fibonacci() {}
+function fibonacci(n) {
+
+    if (n < 2) {
+        return n
+    }
+    return fibonacci(n - 1) + fibonacci(n - 2)
+};
 
 
 /**
  * Implemente uma função que recebe um array com notas de um aluno e uma função de callback,
  * e devolva o resultado da média pelo callback.
  */
- function calculaMedia() {}
+function calculaMedia(notas) { 
+    let somaNotas = 0;
+    for (let nota of notas) {
+        somaNotas += nota
+    }
+    const media = somaNotas / notas.length;
+    return media;
+}
 
 
 /**
@@ -91,7 +158,13 @@ function fibonacci() {}
  *                       ]
  * RESULTADO ESPERADO: 60 (10 + 20 + 30)
  */
-function calculaFaturamentoAnual() {}
+function calculaFaturamentoAnual(faturamentos) { 
+    let somaFaturamento = 0;
+    for (let faturamentoMes of faturamentos){
+        somaFaturamento += faturamentoMes[1];
+    }
+    return somaFaturamento;
+}
 
 /**
  * Agora a equipe do financeiro gostaria de filtrar os faturamentos pra ver períodos específicos.
@@ -102,14 +175,18 @@ function calculaFaturamentoAnual() {}
  * 
  * EXEMPLO DO FILTRO: callback(mes, valor) 
  */
-function calculaFaturamentoAnualComFiltro() {}
+function calculaFaturamentoAnualComFiltro(faturamentos, primeiroSemestre) {
+    const faturamentofilter = faturamentos.filter(faturamento => primeiroSemestre(faturamento[0], faturamento[1]));
+    return calculaFaturamentoAnual(faturamentofilter);
+ }
 
 
 /**
  * Crie uma função que receba o fator de multiplicação de uma tabuada específica e retorne uma 
  * função que calcule a multiplicação do fator por um número.
  */
-function criaTabuada() {
+function criaTabuada(tabuadaNum) {
+   return (valor) => tabuadaNum * valor; 
 }
 
 
