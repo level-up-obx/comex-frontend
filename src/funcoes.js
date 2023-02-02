@@ -99,7 +99,15 @@ function extraiElementosDaData(data) {
  *   - posição é 7: retorna o elemento 13.
  *   - posição é 8: retorna o elemento 21.
  */
-function fibonacci() {}
+function fibonacci(x) {
+    let fibonacci = [1, 1]
+
+    for(let i = 0; i <= x; i++){
+        fibonacci.push(fibonacci.at(-1) + fibonacci.at(-2))        
+    }
+
+    return fibonacci[x - 1]
+}
 
 
 /**
