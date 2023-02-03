@@ -7,7 +7,7 @@ const {
     equacaoDeSegundoGrau,
     extraiElementosDaData,
     fibonacci,
-    calculaFaturamentoAnual,
+    calculaFaturamento,
     calculaFaturamentoAnualComFiltro,
     criaTabuada
 } = require('./funcoes');
@@ -95,7 +95,7 @@ describe('Desafio', () => {
             ['dezembro', 28_666.97]
         ];
     
-        expect(calculaFaturamentoAnual(faturamentos)).toBeCloseTo(404_037.38);
+        expect(calculaFaturamento(faturamentos)).toBeCloseTo(404_037.38);
     });
 
     test('Deve calcular faturamento anual com filtro', () => {
@@ -114,7 +114,14 @@ describe('Desafio', () => {
             ['dezembro', 28_666.97]
         ];
 
-        let primeiroSemestre = (mes, valor) => ['janeiro', 'fevereiro', 'março', 'abril', 'maio', 'junho'].includes(mes);
+        let primeiroSemestre = (mes, valor) => [
+            'janeiro', 
+            'fevereiro', 
+            'março', 
+            'abril', 
+            'maio', 
+            'junho'
+        ].includes(mes);
     
         expect(calculaFaturamentoAnualComFiltro(faturamentos, primeiroSemestre)).toBeCloseTo(201_357.39);
     });
