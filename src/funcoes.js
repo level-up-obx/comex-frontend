@@ -142,7 +142,18 @@ function calculaMedia(notas) {
  *                       ]
  * RESULTADO ESPERADO: 60 (10 + 20 + 30)
  */
-function calculaFaturamentoAnual() { }
+function calculaFaturamentoAnual(faturamento) {
+    let total = 0;
+
+    let montante = faturamento.map((elemento) => {
+        return elemento[1];
+    });
+    for (let i = 0; i < montante.length; i++) {
+        total += montante[i];
+    }
+
+    return total;
+}
 
 /**
  * Agora a equipe do financeiro gostaria de filtrar os faturamentos pra ver períodos específicos.
@@ -153,7 +164,17 @@ function calculaFaturamentoAnual() { }
  * 
  * EXEMPLO DO FILTRO: callback(mes, valor) 
  */
-function calculaFaturamentoAnualComFiltro() { }
+function calculaFaturamentoAnualComFiltro(faturamento, filtro) {
+    let faturamentoFiltrado = faturamento.filter((elemento) => {
+        let mes = elemento[0];
+        let valor = elemento[1];
+
+        let ficaOuSai = filtro(mes, valor);
+        return ficaOuSai;
+    });
+
+    return calculaFaturamentoAnual(faturamentoFiltrado);
+}
 
 
 /**
