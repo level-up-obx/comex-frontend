@@ -134,7 +134,9 @@ function fibonacci(x) {
  *                       ]
  * RESULTADO ESPERADO: 60 (10 + 20 + 30)
  */
-function calculaFaturamentoAnual() {}
+function calculaFaturamentoAnual(values) {
+    return values.map(value => value[1]).reduce((acc, current)=>(acc += current), 0)
+}
 
 /**
  * Agora a equipe do financeiro gostaria de filtrar os faturamentos pra ver períodos específicos.
