@@ -118,7 +118,12 @@ function fibonacci(n) {
  * Implemente uma função que recebe um array com notas de um aluno e uma função de callback,
  * e devolva o resultado da média pelo callback.
  */
- function calculaMedia() {}
+ function calculaMedia(notas, callbackDeResultado) {
+    let somaDasNotas = notas.reduce((acumulador, notaAtual) => acumulador + notaAtual, 0);
+    let media = somaDasNotas / notas.length;
+
+    callbackDeResultado(media);
+ }
 
 
 /**
