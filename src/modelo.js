@@ -4,6 +4,5 @@ export function criaCategoria(id, nome, status, criacao) {
         nome: nome,
         status: status,
         criacao: criacao
-
     }
 }
