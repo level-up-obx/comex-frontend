@@ -23,3 +23,22 @@ export function criaProduto(nome, descricao, preco, quantidade_estoque, categori
         criacao: date
      }
 }
+
+export function criaCliente(nome, sobrenome, cpf, telefone, endereco) {
+    return {
+        id: uuidv4(),
+        nome: nome,
+        sobrenome: sobrenome,
+        cpf: cpf,
+        telefone: telefone,
+        endereco: {
+            rua: endereco.rua,
+            numero: endereco.numero,
+            bairro: endereco.bairro,
+            cidade: endereco.cidade,
+            estado: endereco.estado,
+            cep: endereco.cep,
+            complemento: endereco.complemento
+        },
+    }
+}
