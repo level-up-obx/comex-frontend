@@ -1,8 +1,8 @@
 import { v4 as uuidv4 } from 'uuid'
 
-export function criaCategoria(id, nome, status, criacao) {
+export function criaCategoria(nome, status, criacao) {
     return {
-        id: id,
+        id: uuidv4(),
         nome: nome,
         status: status,
         criacao: criacao

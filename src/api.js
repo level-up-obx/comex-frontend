@@ -1,11 +1,9 @@
-import { v4 as uuidv4 } from 'uuid'
-
 const categorias = []
 
-export function salvaCategorias(newCategorias) {
-    return categorias.push(newCategorias)
-}
+export function salvaCategorias(newCategorias) { return categorias.push(newCategorias) }
+export function listaCategorias() { return categorias }
 
-export function listaCategorias(param) {
-    return categorias
-}
+const produtos = []
+
+export function salvaProdutos(newProdutos) { return produtos.push(newProdutos) }
+export function listaProdutos() { return produtos }
