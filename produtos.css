@@ -1,0 +1,38 @@
+.produto {
+  font-size: 1.6rem;
+}
+
+.produto__form {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.produto__label {
+  font-size: 1.6rem;
+  display: block;  
+}
+
+.produto__input {
+  height: 25px;
+  font-size: 1.6rem;
+  padding: 1rem 0 1rem 1rem;
+}
+
+.produto__textarea {
+  font-size: 1.6rem;
+  padding: 1rem 0 0 1rem;
+}
+
+.produto__select {
+  font-size: 1.6rem;
+  padding: .3rem;
+}
+
+.produto__btn {
+  font-size: 2.2rem;
+  padding: .5rem 2rem;
+  margin-top: 2rem;
+  cursor: pointer;
+}

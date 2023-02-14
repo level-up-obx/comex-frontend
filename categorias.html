@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produto</title>
+  <script src="./produto.js" defer></script>
+  <!-- <script src="./produto.js" defer type="module"></script> -->
+  <script src="./src/pagina/categorias.js" defer type="module"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="stylesheet" href="./produto.css">
+  <link rel="stylesheet" href="./categorias.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="./assets/primaria.svg" alt="Logo Comex" class="logo" onclick="location.href = location.origin + '/index.html'">
+    </div>
+  </header>
+  <!-- <section class="product-page-container container"></section> -->
+
+  <section class="container categoria">
+    <h2 class="categoria__title">Nova Categoria</h2>
+    <div class="categoria__input-container">
+      <input class="categoria__input" type="text" placeholder="Informe o nome da categoria...">
+      <button class="categoria__btn">Salvar</button>
+    </div>
+  </section>
+
+  <!-- <section class="products-actions container">
+    <div class="products-actions-input-container">
+      <input type="text" placeholder="Digite o CEP"><button>Calcular Frente</button><br>
+    </div>
+    <button class="buy-btn">Adicionar ao carrinho</button>
+
+  </section> -->
+
+  <footer>
+    <div class="container">
+      <img src="./assets/primaria.svg" alt="Logo Comex" class="logo" onclick="location.href = location.origin + '/index.html'">
+      <div class="footer-social-media">
+        <img src="./assets/Twitter.svg" alt="Logo Twitter">
+        <img src="./assets/_Instagram.svg" alt="Logo Instagram">
+        <img src="./assets/_Linkedin.svg" alt="Logo Linkedin">
+      </div>
+      <div class="footer-list-container">
+        <ul>
+          <li>Promoções</li>
+          <li>Categorias</li>
+          <li>Buscar</li>
+        </ul>
+
+        <ul>
+          <li>Contato</li>
+          <li>Carrinho</li>
+          <li>Entrar</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

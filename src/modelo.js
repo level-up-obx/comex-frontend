@@ -1,11 +1,15 @@
-import { v4 as uuidv4 } from "uuid"
+import { v4 as uuidv4 } from '/node_modules/uuid/dist/esm-browser/index.js'
+
+function getDate() {
+  return new Date().toLocaleDateString().split('/').reverse().join('-')
+}
 
 export function criaCategoria(nome) {
   return {
     nome,
     id: uuidv4(),
     status: 'ATIVA',
-    criacao: new Date(Date.now()).toLocaleString().split(',')[0].split('/').reverse().join('/')
+    criacao: getDate()
   }
 }
 
@@ -17,7 +21,7 @@ export function criaProduto(nome, descricao, preco, estoque, categoria) {
     preco,
     estoque,
     categoria,
-    criacao: new Date(Date.now()).toLocaleString().split(',')[0].split('/').reverse().join('/')
+    criacao: getDate()
   }
 }
 
@@ -29,6 +33,6 @@ export function criaCliente(nome, sobrenome, cpf, telefone, endereco) {
     cpf,
     telefone,
     endereco,
-    criacao: new Date(Date.now()).toLocaleString().split(',')[0].split('/').reverse().join('/')
+    criacao: getDate()
   }  
 }
