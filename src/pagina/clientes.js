@@ -32,10 +32,20 @@ formClientes.addEventListener('submit', function (event) {
 })
 
 async function searchAddress(cep) {
-    let url = `https://viacep.com.br/ws/${cep}/json/`
+    try {
+        const url = `https://viacep.com.br/ws/${cep}/json/`;
+        const response = await fetch(url);
+        const data = await response.json();
 
-    let response = await fetch(url)
-    return await response.json()
+        if (data.erro) {
+          throw new Error("CEP inválido");
+        }
+
+        return data;
+      } catch (error) {
+        console.log(error.message);
+        return null;
+      }
 }
 
 let inputCpf = document.getElementById("cep");
@@ -43,14 +53,12 @@ let inputCpf = document.getElementById("cep");
 inputCpf.onblur = async function(event){
     let enderecoViaCep = await searchAddress(event.target.value)
 
-    document.getElementById('logradouro').value = enderecoViaCep.logradouro
-    document.getElementById('complemento').value = enderecoViaCep.complemento
-    document.getElementById('uf').value = enderecoViaCep.uf
-    document.getElementById('bairro').value = enderecoViaCep.bairro
-    document.getElementById('localidade').value = enderecoViaCep.localidade
-
-    // console.log(enderecoViaCep)
+    if (enderecoViaCep) {
+        document.getElementById('logradouro').value = enderecoViaCep.logradouro
+        document.getElementById('complemento').value = enderecoViaCep.complemento
+        document.getElementById('uf').value = enderecoViaCep.uf
+        document.getElementById('bairro').value = enderecoViaCep.bairro
+        document.getElementById('localidade').value = enderecoViaCep.localidade
+        // console.log(enderecoViaCep)
+    }
 }
-
-
-
