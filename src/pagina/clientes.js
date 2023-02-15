@@ -9,14 +9,23 @@ formClientes.addEventListener('submit', function (event) {
     let sobrenome = event.target.elements['sobrenome']
     let cpf = event.target.elements['cpf']
     let telefone = event.target.elements['telefone']
-    let endereco = event.target.elements['endereco']
+
+    let endereco = {
+        rua: event.target.elements['logradouro'].value,
+        numero: event.target.elements['numero'].value,
+        bairro: event.target.elements['bairro'].value,
+        cidade: event.target.elements['localidade'].value,
+        estado: event.target.elements['uf'].value,
+        cep: event.target.elements['cep'].value,
+        complemento: event.target.elements['complemento'].value
+    }
 
     let novoCliente = criaCliente(
         nome.value,
-        sobrenome,
+        sobrenome.value,
         cpf.value,
         telefone.value,
-        endereco.value
+        endereco
     )
 
     console.log(novoCliente)
