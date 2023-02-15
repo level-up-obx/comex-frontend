@@ -54,15 +54,16 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-12 d-flex justify-content-center mt-3">
+            <form id="formCategoria" class="offset-3 col-6 d-flex justify-content-center mt-3">
                 <input
+                    id="nome"
+                    class="form-control"
                     placeholder="Informe o nome da nova categoria com pelo menos 2 letras..."
                     type="text"
-                    size="50px"
                     class="border border-1 rounded"
                 >
-                <button type="submit" class="btn btn-primary">Salvar</button>
-            </div>
+                <button id="salvar-categoria" type="submit" class="btn btn-primary">Salvar</button>
+            </form>
         </div>
     </section>
 
@@ -109,5 +110,7 @@
             </li>
         </ul>
     </footer>
+
+    <script type="module" src="./src/pagina/categorias.js"></script>
 </body>
 </html>
