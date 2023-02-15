@@ -7,6 +7,10 @@ h2, nav {
     color: #8FA8FF;
 }
 
+th {
+    font-weight: bold;
+}
+
 .navbar-collapse {
     display: flex;
     align-items: center;
