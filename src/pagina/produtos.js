@@ -5,14 +5,26 @@ let formProdutos = document.querySelector('#formProdutos')
 formProdutos.addEventListener('submit', (event) => {
     event.preventDefault()
 
+    let nome = event.target.elements['nome']
+    let descricao = event.target.elements['descricao']
+    let preco = event.target.elements['preco']
+    let quantidade = event.target.elements['quantidade']
+    let categoria = event.target.elements['categoria']
+
     let novaProduto = criaProduto(
-        event.target.elements['nome'].value,
-        event.target.elements['descricao'].value,
-        parseInt(event.target.elements['preco'].value) || null,
-        parseInt(event.target.elements['quantidade'].value) || null,
-        parseInt(event.target.elements['categoria'].value) || null
+        nome.value,
+        descricao.value,
+        parseInt(preco.value) || null,
+        parseInt(quantidade.value) || null,
+        parseInt(categoria.value) || null
     )
 
+    nome.value = '',
+    descricao.value = '',
+    preco.value = '',
+    quantidade.value = '',
+    categoria.value = ''
+    nome.focus()
 
     console.log(novaProduto)
 })
