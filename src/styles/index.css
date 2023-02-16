@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    margin-bottom: 2rem;
 }
 /* Carousel */
 .carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
@@ -39,10 +38,6 @@
     width: 210px;
     height: 210px;
     align-self: center;
-}
-.btn:hover {
-    color: #0d6efd;
-    background-color: #212529;
 }
 
 
