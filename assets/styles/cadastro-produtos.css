@@ -1,0 +1,63 @@
+.container{
+    margin: 3rem 0;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.container form{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    justify-content: right;
+}
+
+.container form label{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+.container form label input, .container form label textarea{
+    border: 1px solid #c6c6c6;
+    padding: 0.75rem;
+    outline: none;
+}
+
+.container form select, .container form button{
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0.75rem;
+    outline: none;
+}
+
+.container form select{
+    background: var(--branco); 
+    border: 1px solid #c6c6c6;
+    width: 50%;
+}
+
+.container form button{
+    align-items: baseline;
+    background: var(--roxo);
+    border-radius: 5px;
+    color: var(--branco);
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    width: 125px;
+}
+
+@media screen and (min-width: 1024px){
+    .container form select{
+        width: 300px;
+    }
+}

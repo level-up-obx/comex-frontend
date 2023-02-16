@@ -12,10 +12,10 @@
     <link rel="stylesheet" href="../assets/styles/style.css">
     <link rel="stylesheet" href="../assets/styles/menu.css">
     <link rel="stylesheet" href="../assets/styles/rodape.css">
-    <link rel="stylesheet" href="../assets/styles/cadastro-produtos.css">
+    <link rel="stylesheet" href="../assets/styles/clientes.css">
     <script src="https://kit.fontawesome.com/0d76fadde4.js" crossorigin="anonymous"></script>
     <script src="../assets/js/menu.js" defer></script>
-    <script src="../src/paginas/cadastroProdutos.js" type="module" defer></script>
+    <script src="../src/paginas/clientes.js" type="module" defer></script>
 </head>
 
 <body>
@@ -57,31 +57,52 @@
     </header>
     <main>
         <div class="container">
-            <h1>Novo produto</h1>
-            <form action="" id="formulario">
-                <label for="nome">
+            <h1>Cadastrar cliente</h1>
+            <!-- nome, sobrenome, cpf, telefone, endereco -->
+            <form action="" id="form">
+                <label for="nome" class="label-form" >
                     Nome:
                     <input type="text" required id="nome" class="input">
                 </label>
-                <label for="preco">
-                    Preco:
-                    <input type="number" required id="preco" class="input" min="0">
+                <label for="sobrenome" class="label-form">
+                    Sobrenome:
+                    <input type="text" required id="sobrenome" class="input">
                 </label>
-                <label for="qEstoque">
-                    Quantia em estoque:
-                    <input type="number" required id="qEstoque" class="input" min="0">
+                <label for="cpf" class="label-form">
+                    CPF:
+                    <input type="text" required id="cpf" class="input">
                 </label>
-                <label for="descricao">
-                    Descricão:
-                    <textarea name="" id="descricao" required cols="30" rows="10"></textarea>
+                <label for="telefone" class="label-form">
+                    Telefone:
+                    <input type="tel" required id="telefone" class="input" required></input>
                 </label>
-                <select name="teste" id="categoria" required>
-                    <option value="" selected>Selecione uma opção</option>
-                    <option value="1">Informática</option>
-                    <option value="2">Móveis</option>
-                    <option value="3">Livros</option>
-                </select>
-                <button type="submit" id="botao">Salvar <i class="fa-solid fa-floppy-disk"></i></button>
+                <label for="cep" class="label-form teste">
+                    Buscar endereço por CEP:
+                    <div class="box">
+                        <input type="text" required id="cep" class="input" pattern="[0-9]{5}-?[0-9]{3}" maxlength="9" required></input>
+                        <button type="button" id="botao-cep" class="botao-cep"><i class="fa-solid fa-search"></i></button>
+                    </div>
+                </label>
+                <fieldset>
+                    <legend>Endereço</legend>
+                    <label for="rua" >
+                        Rua:
+                        <input type="text" class="input-fieldset" id="rua" disabled >
+                    </label>
+                    <label for="bairro" >
+                        Bairro:
+                        <input type="text" class="input-fieldset" id="bairro" disabled >
+                    </label>
+                    <label for="cidade" >
+                        Cidade:
+                        <input type="text" class="input-fieldset" id="cidade" disabled >
+                    </label>
+                    <label for="uf" >
+                        Estado:
+                        <input type="text" class="input-fieldset" id="uf" disabled >
+                    </label>
+                </fieldset>
+                <button type="submit" id="botao-form" class="botao-salva-cliente">Salvar <i class="fa-solid fa-floppy-disk"></i></button>
             </form>
         </div>
     </main>
