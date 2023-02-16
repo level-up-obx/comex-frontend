@@ -1,0 +1,106 @@
+.container{
+    margin: 3rem 0;
+}
+
+.container h1{
+    text-align: center;
+    margin-bottom: 1.2rem;
+}
+
+.container form{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 30px;
+    width: 100%;
+    justify-content: right;
+}
+
+.container form label{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 80%;
+}
+
+.container form .label-form input, .container form .label-form textarea{
+    border: 1px solid #c6c6c6;
+    max-width: 500px;
+    outline: none;
+    padding: 0.75rem;
+}
+
+.container form button{
+    background: var(--roxo);
+    border: none;
+    color: var(--branco);
+    cursor: pointer;
+    display: flex;
+    font-size: 16px;
+    font-weight: 700;
+    outline: none;
+}
+
+.container form select{
+    background: var(--branco); 
+    border: 1px solid #c6c6c6;
+    width: 50%;
+}
+
+.container form .botao-salva-cliente{
+    align-items: baseline;
+    border-radius: 5px;
+    gap: 10px;
+    justify-content: center;
+    padding: 0.75rem;
+    width: 125px;
+}
+
+.container form label .box .botao-cep{
+    border-radius: 0 5px 5px 0;
+    padding: 0.75rem
+}
+
+.container form label .box{
+    display: flex
+}
+
+fieldset{
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 0.75rem;
+    width: 90%;
+}
+
+fieldset legend{
+    padding: 0 1rem;
+}
+
+fieldset label{
+    width: 100%;
+}
+
+fieldset label .input-fieldset{
+    padding: 0.75rem;
+}
+
+@media screen and (min-width: 1024px){
+    .container form{
+        align-content: center;
+        flex-direction: row;
+        justify-content: center;
+    }
+    
+    .container form select{
+        width: 300px;
+    }
+    
+    .container form label{
+        flex-wrap: wrap;
+        max-width: 500px;
+    }
+}
