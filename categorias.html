@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comex | Categorias</title>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Local Styles -->
+    <link rel="stylesheet" href="./src/styles/base.css" />
+    <link rel="stylesheet" href="./src/styles/categorias.css" />
+    <!-- Box icons -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header>
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
+        <div class="container-fluid">
+          <img
+            src="src/assets/images/logo-comex.svg"
+            class="comex-logo"
+            alt="Comex logo"
+            title="Comex logo"
+          />
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarTogglerDemo02"
+            aria-controls="navbarTogglerDemo02"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Promoções</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Categorias</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Buscar</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Contato</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Carrinho</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link">Entrar</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <div class="searchBar-icons">
+                <i class="bx bx-cart bx-sm searchBar-icon"></i>
+                <i class="bx bxs-user bx-sm searchBar-icon"></i>
+              </div>
+              <button class="btn btn-outline-success btn-search" type="submit">
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+    </header>
+    <!-- Página de produto -->
+    <main id="category-page">
+      <!-- Primeiro nome -->
+      <div class="input-txt">
+        <form action="#" id="category-form" class="category-input">
+          <label for="first-name" class="text-white text-center fw-semibold fs-2 text">Nova Categoria</label>
+          <div class="d-flex">
+            <input type="text" name="first-name" id="first-name" class="input-style" placeholder="Informe o nome da nova categoria com pelo menos duas letras...">
+            <button class="btn btn-primary" id="category-button" type="submit">Salvar</button>
+          </div>
+        </form>
+      </div>
+      <div class="category-table">
+        <h3 class="text-white text-center">Categorias</h3>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col" class="table-dark">Nome</th>
+              <th scope="col" class="table-dark">Status</th>
+              <th scope="col" class="table-dark">Data de criação</th>
+              <th scope="col" class="table-dark">Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td scope="row" class="table-dark">Móveis</td>
+              <td class="table-dark">Ativa</td>
+              <td class="table-dark">01/01/2023</td>
+              <td class="table-dark"><i class='bx bx-trash bx-sm trash'></i></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer id="footer" class="bg-dark py-5">
+      <div class="footer-images">
+        <img src="./src/assets/images/logo-comex.svg" alt="Comex" />
+        <div class="footerImages-social">
+          <i class="bx bx-sm bxl-twitter footerSocial-icon"></i>
+          <i class="bx bx-sm bxl-instagram footerSocial-icon"></i>
+          <i class="bx bx-sm bxl-linkedin footerSocial-icon"></i>
+        </div>
+      </div>
+      <div class="footer-list">
+        <div class="column text-end">
+          <ul class="mb-0 px-2">
+            <li>
+              <a class="text-white text-decoration-none" href="">Promoções</a>
+            </li>
+            <li>
+              <a class="text-white text-decoration-none" href="">Categorias</a>
+            </li>
+            <li>
+              <a class="text-white text-decoration-none" href="">Buscar</a>
+            </li>
+          </ul>
+        </div>
+        <div class="column text-start">
+          <ul class="mb-0 px-2">
+            <li>
+              <a class="text-white text-decoration-none" href="">Carrinho</a>
+            </li>
+            <li>
+              <a class="text-white text-decoration-none" href="">Carrinho</a>
+            </li>
+            <li>
+              <a class="text-white text-decoration-none" href="">Entrar</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="./src/pages/categoria.js" type="module"></script>
+  </body>
+</html>

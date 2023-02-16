@@ -51,3 +51,5 @@ api.saveProduct(monitorDell);
 const elizabeth = model.createClient('Elizabeth', 'Black', '223.154.169-95', '(13)3434-6585', await api.getCep(11340050))
 
 api.saveClient(elizabeth)
+
+api.getCep(11310080);
