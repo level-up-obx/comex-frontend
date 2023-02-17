@@ -19,7 +19,7 @@
     ></script>
     <!-- Local Styles -->
     <link rel="stylesheet" href="./src/styles/base.css" />
-    <link rel="stylesheet" href="./src/styles/produtos.css" />
+    <link rel="stylesheet" href="./src/styles/clientes.css" />
     <!-- Box icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -93,38 +93,143 @@
       <!-- End Navbar -->
     </header>
     <!-- Página de produto -->
-    <main id="product-page" class="d-flex align-items-center flex-column">
+    <main id="client-page" class="d-flex align-items-center flex-column">
       <h2 class="text-white mb-4">Novo produto</h2>
-        <form action="#" id="product-form">
-          <div class="input-fields">
-
+      <form action="#" id="client-form">
+        <div class="input-fields">
           <div class="input-field">
-            <label for="product-name" class="text-white text-center fw-semibold">Nome</label>
-            <input type="text" name="product-name" id="product-name" class="input-style rounded">
+            <label for="first-name" class="text-white text-center fw-semibold"
+              >Nome</label
+            >
+            <input
+              type="text"
+              name="first-name"
+              id="first-name"
+              class="input-style rounded"
+            />
           </div>
           <div class="input-field">
-            <label for="product-price" class="text-white text-center fw-semibold">Preço</label>
-            <input type="number" name="product-price" id="product-price" class="input-style rounded">
+            <label for="last-name" class="text-white text-center fw-semibold"
+              >Sobrenome</label
+            >
+            <input
+              type="text"
+              name="last-name"
+              id="last-name"
+              class="input-style rounded"
+            />
           </div>
           <div class="input-field">
-            <label for="product-stock" class="text-white text-center fw-semibold">Quantidade em estoque</label>
-            <input type="number" name="product-stock" id="product-stock" class="input-style rounded">
+            <label for="cpf" class="text-white text-center fw-semibold"
+              >CPF</label
+            >
+            <input
+              type="number"
+              name="cpf"
+              id="cpf"
+              class="input-style rounded"
+            />
           </div>
           <div class="input-field">
-            <label for="product-price" class="text-white text-center fw-semibold">Descrição</label>
-            <textarea name="product-description" id="product-description" cols="30" rows="4" class="input-style rounded"></textarea>
+            <label for="telephone" class="text-white text-center fw-semibold"
+              >Telefone</label
+            >
+            <input
+              type="number"
+              name="telephone"
+              id="telephone"
+              class="input-style rounded"
+            />
           </div>
           <div class="input-field">
-            <label for="product-category" class="text-white text-center fw-semibold">Categoria</label>
-            <select name="product-category" id="product-category" class="input-style rounded">
-              <option value="1">Móveis</option>
-              <option value="2">Livros</option>
-              <option value="3">Lorem ipsim</option>
-            </select>
+            <label for="cep" class="text-white text-center fw-semibold"
+              >CEP</label
+            >
+            <input
+              type="number"
+              name="cep"
+              id="cep"
+              class="input-style rounded"
+            />
           </div>
         </div>
-          <button class="btn btn-primary align-self-center" id="product-button" type="submit">Salvar</button>
-        </form>
+        <h2 class="text-white">Endereço</h2>
+        <div class="input-fields">
+          <div class="input-field">
+            <label for="street" class="text-white text-center fw-semibold"
+              >Rua</label
+            >
+            <input
+              type="text"
+              name="street"
+              id="street"
+              class="input-style rounded"
+            />
+          </div>
+          <div class="input-field">
+            <label for="number" class="text-white text-center fw-semibold"
+              >Numero</label
+            >
+            <input
+              type="number"
+              name="number"
+              id="number"
+              class="input-style rounded"
+            />
+          </div>
+          <div class="input-field">
+            <label for="complement" class="text-white text-center fw-semibold"
+              >Complemento</label
+            >
+            <input
+              type="text"
+              name="complement"
+              id="complement"
+              class="input-style rounded"
+            />
+          </div>
+          <div class="input-field">
+            <label for="district" class="text-white text-center fw-semibold"
+              >Bairro</label
+            >
+            <input
+              type="text"
+              name="district"
+              id="district"
+              class="input-style rounded"
+            />
+          </div>
+          <div class="input-field">
+            <label for="city" class="text-white text-center fw-semibold"
+              >Cidade</label
+            >
+            <input
+              type="text"
+              name="city"
+              id="city"
+              class="input-style rounded"
+            />
+          </div>
+          <div class="input-field">
+            <label for="state" class="text-white text-center fw-semibold"
+              >Estado</label
+            >
+            <input
+              type="text"
+              name="state"
+              id="state"
+              class="input-style rounded"
+            />
+          </div>
+        </div>
+        <button
+          class="btn btn-primary align-self-center"
+          id="client-button"
+          type="submit"
+        >
+          Salvar
+        </button>
+      </form>
     </main>
     <!-- Footer -->
     <footer id="footer" class="bg-dark">
@@ -165,6 +270,6 @@
         </div>
       </div>
     </footer>
-    <script src="./src/pages/produto.js" type="module"></script>
+    <script src="./src/pages/cliente.js" type="module"></script>
   </body>
 </html>
