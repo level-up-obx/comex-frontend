@@ -1,0 +1,40 @@
+#product-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-infos {
+    display: flex;
+    align-items: center;
+}
+.input-field {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 100%;
+}
+.input-field input {
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    #product-form {
+        width: 768px;
+    }
+    .input-fields {
+        width: 100%;
+        display: flex;
+        flex-flow: row wrap;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .input-field {
+        width: 30%;
+    }
+
+    .input-field:nth-child(4) {
+        width: 100%;
+    }
+}

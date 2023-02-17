@@ -1,7 +1,7 @@
 import { createCategory } from "../modelo.js";
 import { categoryList, saveCategory } from "../api.js";
 
-const categoryName = document.querySelector("#first-name");
+const categoryName = document.querySelector("#category-name");
 const button = document.querySelector("#category-button");
 const form = document.querySelector("#category-form");
 
@@ -14,7 +14,9 @@ const getCategoryName = (e) => {
   categoryName.focus();
 };
 
-form.onsubmit = getCategoryName;
+form.addEventListener("submit", (event) => {
+  getCategoryName(event);
+});
 button.addEventListener("click", (event) => {
   getCategoryName(event);
 });

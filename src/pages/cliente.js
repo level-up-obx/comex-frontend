@@ -28,8 +28,6 @@ const getAddress = async (cep) => {
         city:data.localidade,
         cityState:data.uf,
     }
-    
-
 }
 
 btnCep.addEventListener("click", (event) => {

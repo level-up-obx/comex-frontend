@@ -1,26 +1,27 @@
 import { createProduct } from "../modelo.js"
 
-const productName = document.querySelector("#productName")
-const productPrice = document.querySelector("#productPrice")
-const productStock = document.querySelector("#productStock")
-const productDescription = document.querySelector("#productDescription")
-const productCategory = document.querySelector("#productCategory")
-const button = document.querySelector("#button")
-const form = document.querySelector("#productForm")
-let inc = 0;
+const productName = document.querySelector("#product-name")
+const productPrice = document.querySelector("#product-price")
+const productStock = document.querySelector("#product-stock")
+const productDescription = document.querySelector("#product-description")
+const productCategory = document.querySelector("#product-category")
+const button = document.querySelector("#category-button")
+const form = document.querySelector("#product-form")
 
 const saveProduct = (event) => {
     event.preventDefault();
-    let product = createProduct(productName.value, productDescription.value, productPrice.value, productStock.value, inc)
-    console.log(product)
-    inc++;
+    let product = createProduct(productName.value, productDescription.value, productPrice.value, productStock.value, productCategory.value);
+    console.log(product);
+    productName.value = "";
+    productPrice.value = "";
+    productStock.value = "";
+    productDescription.value = "";
+    productCategory.value = "";
 }
 
-form.onsubmit = saveProduct;
-// button.onclick = onProductSave; // Por conta do atributo type="submit" no html não precisa do evento de clique
-
-// button.addEventListener("click", () => {
-//     let product = model.createProduct(productName.value, productDescription.value, productPrice.value, productStock.value, inc)
-//     console.log(product)
-//     inc++;
-// })
+form.addEventListener("submit", (event) => {
+    saveProduct(event);
+})
+button.addEventListener("click", (event) => {
+    saveProduct(event)
+})
