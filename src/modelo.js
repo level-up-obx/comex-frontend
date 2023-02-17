@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from 'uuid';
+import { v4 as uuidv4 } from '/node_modules/uuid/dist/esm-browser/index.js';
 
 function dataFormat() {
     const data = new Date();
