@@ -1,11 +1,24 @@
 import { criaCliente } from "../modelo.js";
+import IMask from '/node_modules/imask/esm/index.js';
 
 const nome = document.querySelector('#nomeCliente');
 const sobrenome = document.querySelector('#sobrenomeCliente');
-const cpf = document.querySelector('#cpfCliente');
-const telefone = document.querySelector('#telefoneCliente');
+
+const cpf = IMask(document.querySelector('#cpfCliente'), {
+    mask: '000.000.000-00'
+});
+const telefone = IMask(document.querySelector('#telefoneCliente'), {
+    mask: [
+        { mask: '(00) 00000-0000' },
+        { mask: '(00) 0000-0000' }
+    ]
+});
+
 const email = document.querySelector('#emailCliente');
-let cep = document.querySelector('#cepCliente');
+
+let cep = IMask(document.querySelector('#cepCliente'), {
+    mask: '00000-000'
+});
 
 const buscar = document.querySelector('#buscarCliente');
 const enviar = document.querySelector('#enviarCliente');

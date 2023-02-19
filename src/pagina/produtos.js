@@ -1,7 +1,15 @@
 import { criaProduto } from "../modelo.js";
+import IMask from '/node_modules/imask/esm/index.js';
 
 const nome = document.querySelector('#nome');
-const preco = document.querySelector('#preco');
+const preco = IMask(document.querySelector('#preco'), {
+    mask: Number,
+    scale: 2,
+    thousandsSeparator: '.',
+    radix: ',',
+    signed: false,
+    padFractionalZeros: true
+});
 const estoque = document.querySelector('#estoque');
 const descricao = document.querySelector('#descricao');
 const categoria = document.querySelector('#categoria');
