@@ -63,7 +63,7 @@
     justify-content: center;
 }
 
-@media(max-width: 768px) {
+@media(max-width: 767px) {
     .panel_title{
         margin: 0rem;
         margin-top: 2rem; 
@@ -88,7 +88,31 @@
         margin-bottom: 1rem;
     }
     
+      
+}
+ /* TABLET */
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+    .product_section {
+        display: flex;
+        justify-content: space-between;
+    }
     
+    .highlights_panel {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    border-color: #8FA8FF;
+    border-style: solid;    
+    border-width: 0.2rem;
+    border-radius: 5%;
+    width: 30%; 
+    height: 23rem; 
+    margin: 0rem;
+    }
     
-    
+
 }

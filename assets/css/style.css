@@ -15,6 +15,9 @@
     filter: invert(100%) sepia(100%) saturate(15%) hue-rotate(307deg) brightness(106%) contrast(103%);
 }
 
+/* Colocando simbolo no mobile e desktop */
+.fa-dollar-sign {color: #8FA8FF;}
+
 @media(max-width: 768px) {
     .disable_mobile {
         display: none;
@@ -25,7 +28,7 @@
     }
 }
 
-@media(min-width: 768px) {
+@media(min-width: 1024px) {
     .disable_desktop {
         display: none;
     } 
@@ -34,13 +37,15 @@
         width: 70%;
     }
 
-.fa-dollar-sign {color: #8FA8FF;}
-
 .btn_glass {
     border-color: #8FA8FF;
     border-style: solid; 
     border-left:0px;
     border-width: 0.2rem;
 }
-
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container_home {
+        width: 90%;
+    }
+}
 }

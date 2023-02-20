@@ -1,0 +1,28 @@
+.container_category {
+    flex-direction: column;
+    
+}
+
+.category {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    font-family: var(--inter);
+    
+}
+
+.btn_color {
+    background-color: #6383f7;
+    border-color: #6383f7;
+    border-radius: 5px;
+    font-family: var(--inter);
+    color: azure;
+
+}
+
+.title {
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
