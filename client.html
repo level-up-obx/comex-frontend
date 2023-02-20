@@ -79,7 +79,7 @@
                             <label for="client_cpf">CPF:</label>
                             <input type="text" class="form-control" id="client_cpf">
                         </div>
-                        <div>
+                        <div class="w-25">
                             <label for="client_birth_date">Nascimento:</label>
                             <input type="date" class="form-control" id="client_birth_date">
                         </div>
@@ -89,7 +89,7 @@
                             <label for="client_email">E-mail:</label>
                             <input type="text" class="form-control" id="client_email">
                         </div>
-                        <div>
+                        <div class="w-25">
                             <label for="client_contact">Contato:</label>
                             <input type="tel" class="form-control" placeholder="(XX) XXXXX-XXXX" id="client_contact">
                         </div>
@@ -102,7 +102,9 @@
                 <div class="address">
                     <div class="w-25">
                         <label for="client_cep">CEP:</label>
-                        <input type="text" class="form-control" id="client_cep">
+                        <input type="text" class="form-control" id="client_cep" >
+                        <button class="btn btn_color" type="button" id="btn_cep">Pesquisar</button>
+                        <div id="erro"></div>
                     </div>
                     <div class="w-50">
                         <label for="client_address">Endereço:</label>

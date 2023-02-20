@@ -1,5 +1,6 @@
 import {createClient} from "./modelo.js"
 
+document.getElementById("btn_cep").onclick = searchAddress;
 const form = document.getElementById("form_client")
 const client_name_input = document.getElementById("client_name")
 const client_cpf_input = document.getElementById("client_cpf")
@@ -13,7 +14,6 @@ const client_complement_input = document.getElementById("client_complement")
 const client_district_input = document.getElementById("client_district")
 const client_city_input = document.getElementById("client_city")
 const client_state_input = document.getElementById("client_state")
-
 
 
 form.addEventListener("submit", (evento) => {
@@ -59,6 +59,8 @@ form.addEventListener("submit", (evento) => {
 
     client_contact_input.value = ""
 
+    client_cep_input.value = ""
+
     client_address_input.value = ""
 
     client_number_input.value = ""
@@ -71,9 +73,27 @@ form.addEventListener("submit", (evento) => {
 
     client_state_input.value = ""
 
-
 })
 
+async function searchAddress() {
+    let cep = client_cep_input.value
+    let errorMessage = document.getElementById('erro')
+    errorMessage.innerHTML = ""
+    try {
+        let queryCep = await fetch(`https://viacep.com.br/ws/${cep}/json/`)
+        let queryCepJson = await queryCep.json()
+        if (queryCepJson.erro) {
+            throw Error('CEP inexistente!')
+        }
+        console.log(queryCepJson)
+        client_address_input.value = queryCepJson.logradouro
+        client_district_input.value = queryCepJson.bairro
+        client_city_input.value = queryCepJson.localidade
+        client_state_input.value = queryCepJson.uf
 
+    } catch (erro) {
+        errorMessage.innerHTML = `<p>CEP inválido. Tente novamente!</p>`
+    }
+}
 
 
