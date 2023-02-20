@@ -21,3 +21,25 @@ export function createProduct(name, description, price, qtd, category) {
       createdAt: getDate(),
     };
 }
+
+export function createClient(name, cpf, birth,  email, contact, cep, address, number, complement, district, city, state) {
+  return {
+    uuid: getUuid(),
+    name: name,
+    cpf: cpf,
+    birth: birth,
+    email: email,
+    contact: contact,
+    address: {
+      cep: cep,
+      address: address,
+      number: number,
+      complement: complement,
+      district: district,
+      city: city,
+      state: state,
+
+    }
+  }
+
+}
