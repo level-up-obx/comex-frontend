@@ -2,13 +2,18 @@ import { criaCliente } from '../modelo.js'
 
 let formClientes = document.querySelector('#formClientes')
 
+let maskTelefone = IMask( document.getElementById('telefone'), { mask: '(00)00000-0000' })
+let maskCpf = IMask( document.getElementById('cpf'), { mask: '000.000.000-00' })
+let maskCep = IMask( document.getElementById('cep'), { mask: '00000-000' })
+let inputCep = document.getElementById("cep");
+
 formClientes.addEventListener('submit', function (event) {
     event.preventDefault()
 
     let nome = event.target.elements['nome']
     let sobrenome = event.target.elements['sobrenome']
-    let cpf = event.target.elements['cpf']
-    let telefone = event.target.elements['telefone']
+    let cpf = maskCpf.unmaskedValue
+    let telefone = maskTelefone.unmaskedValue
 
     let endereco = {
         rua: event.target.elements['logradouro'].value,
@@ -23,42 +28,50 @@ formClientes.addEventListener('submit', function (event) {
     let novoCliente = criaCliente(
         nome.value,
         sobrenome.value,
-        cpf.value,
-        telefone.value,
+        cpf,
+        telefone,
         endereco
     )
 
     console.log(novoCliente)
 })
 
-async function searchAddress(cep) {
+async function searchAddress() {
     try {
-        const url = `https://viacep.com.br/ws/${cep}/json/`;
-        const response = await fetch(url);
-        const data = await response.json();
+        const url = `https://viacep.com.br/ws/${maskCep.unmaskedValue}/json/`;
 
-        if (data.erro) {
-          throw new Error("CEP inválido");
+        const options = {
+            method: 'GET',
+            mode: 'cors',
+            headers: { 'content-type': 'application/json;charset=utf-8'}
         }
 
-        return data;
+        const response = await fetch(url, options);
+        const data = await response.json();
+        if (data.error) { throw new Error("Cep inválido!") }
+
+        return data
+
       } catch (error) {
-        console.log(error.message);
-        return null;
+            console.log('Erro do ao tentar buscar o cep.');
+            throw error
       }
 }
 
-let inputCpf = document.getElementById("cep");
+inputCep.onblur = async function(){
+        try {
+            let enderecoViaCep = await searchAddress()
 
-inputCpf.onblur = async function(event){
-    let enderecoViaCep = await searchAddress(event.target.value)
-
-    if (enderecoViaCep) {
-        document.getElementById('logradouro').value = enderecoViaCep.logradouro
-        document.getElementById('complemento').value = enderecoViaCep.complemento
-        document.getElementById('uf').value = enderecoViaCep.uf
-        document.getElementById('bairro').value = enderecoViaCep.bairro
-        document.getElementById('localidade').value = enderecoViaCep.localidade
-        // console.log(enderecoViaCep)
-    }
+            if (enderecoViaCep) {
+                document.getElementById('logradouro').value = enderecoViaCep.logradouro
+                document.getElementById('complemento').value = enderecoViaCep.complemento
+                document.getElementById('uf').value = enderecoViaCep.uf
+                document.getElementById('bairro').value = enderecoViaCep.bairro
+                document.getElementById('localidade').value = enderecoViaCep.localidade
+                // console.log(enderecoViaCep)
+            }
+        } catch (err) {
+            console.log(err)
+        }
 }
+
