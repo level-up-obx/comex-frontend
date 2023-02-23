@@ -20,12 +20,30 @@
   ],
   "produtos": [
     {
-      "id": "e6e7b64a-733b-4550-b2ac-f8a448efd88e",
-      "nome": "produto teste",
-      "descricao": "description tal",
+      "id": "3667c7a6-047a-43bf-95a5-3fe47ec8528f",
+      "nome": "Produto 1",
+      "descricao": "",
       "preco": 12,
-      "quantidade_estoque": 2,
+      "quantidade_estoque": 1,
+      "categoria": 3,
+      "criacao": "2023-2-23"
+    },
+    {
+      "id": "7d01a30e-d965-4bb9-b3ca-6b7802da78ec",
+      "nome": "Produto 2",
+      "descricao": "",
+      "preco": 14,
+      "quantidade_estoque": 4,
       "categoria": 1,
+      "criacao": "2023-2-23"
+    },
+    {
+      "id": "b402693a-837f-4b19-822a-6acf741c6c35",
+      "nome": "Produto 3",
+      "descricao": "",
+      "preco": 3,
+      "quantidade_estoque": 3,
+      "categoria": null,
       "criacao": "2023-2-23"
     }
   ],
