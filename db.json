@@ -1,5 +1,38 @@
 {
-  "clientes": [],
+  "clientes": [
+    {
+      "id": "81fde609-a6f0-48b0-a8cd-675541a42766",
+      "nome": "maria",
+      "sobrenome": "alves",
+      "cpf": "333444555",
+      "telefone": "99999999999",
+      "endereco": {
+        "rua": "Rodovia José Simões Louro Júnior",
+        "numero": "",
+        "bairro": "Penteado",
+        "cidade": "Embu-Guaçu",
+        "estado": "SP",
+        "cep": "06924-760",
+        "complemento": ""
+      }
+    },
+    {
+      "id": "8925bbcf-5611-42a3-9ed0-24e078d1414e",
+      "nome": "teste",
+      "sobrenome": "teste sobrenome",
+      "cpf": "44444444444",
+      "telefone": "88888888888",
+      "endereco": {
+        "rua": "Praça da Sé",
+        "numero": null,
+        "bairro": "Sé",
+        "cidade": "São Paulo",
+        "estado": "SP",
+        "cep": "01001-000",
+        "complemento": null
+      }
+    }
+  ],
   "produtos": [
     {
       "id": "e6e7b64a-733b-4550-b2ac-f8a448efd88e",

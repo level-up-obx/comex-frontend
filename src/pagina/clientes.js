@@ -17,12 +17,12 @@ formClientes.addEventListener('submit', function (event) {
 
     let endereco = {
         rua: event.target.elements['logradouro'].value,
-        numero: event.target.elements['numero'].value,
+        numero: event.target.elements['numero'].value  || null,
         bairro: event.target.elements['bairro'].value,
         cidade: event.target.elements['localidade'].value,
         estado: event.target.elements['uf'].value,
         cep: event.target.elements['cep'].value,
-        complemento: event.target.elements['complemento'].value
+        complemento: event.target.elements['complemento'].value || null
     }
 
     let novoCliente = criaCliente(
@@ -32,6 +32,19 @@ formClientes.addEventListener('submit', function (event) {
         telefone,
         endereco
     )
+
+    fetch('http://localhost:3000/clientes', {
+            method: 'POST', // or 'PUT'
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(novoCliente),
+        })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(`${data.nome}(CPF: ${data.cpf}) cadastrada com sucesso.`);
+        })
+        .catch((error) => {
+            console.error('Não foi possível cadastrar o cliente! Aguarde uns minutos e tente novamente.');
+        });
 
     console.log(novoCliente)
 })
