@@ -56,12 +56,24 @@
                   <input type="text" class="form-control" id="nome">
                 </div>
                 <div class="col-3">
-                    <label for="preco" class="form-label">Preço:</label>
-                    <input type="text" class="form-control" id="preco">
+                    <label for="preco" class="form-label" >Preço:</label>
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="preco"
+                        pattern='[0-9]+(\\.[0-9][0-9]?)?'
+                        title="Digite somente números"
+                    >
                 </div>
                 <div class="col-3">
                     <label for="quantidade" class="form-label">Quantidade em estoque:</label>
-                    <input type="text" class="form-control" id="quantidade">
+                    <input
+                        type="text"
+                        class="form-control"
+                        id="quantidade"
+                        pattern='[0-9]+(\\.[0-9][0-9]?)?'
+                        title="Digite somente números"
+                    >
                 </div>
             </div>
             <div class="row">

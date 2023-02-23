@@ -1,16 +1,26 @@
 {
   "clientes": [],
-  "produtos": [],
+  "produtos": [
+    {
+      "id": "e6e7b64a-733b-4550-b2ac-f8a448efd88e",
+      "nome": "produto teste",
+      "descricao": "description tal",
+      "preco": 12,
+      "quantidade_estoque": 2,
+      "categoria": 1,
+      "criacao": "2023-2-23"
+    }
+  ],
   "categorias": [
     {
       "id": "9aee0eff-78d8-4690-a64f-e516654b7f68",
-      "nome": "teste",
+      "nome": "teste 1",
       "status": "ATIVO",
       "criacao": "2023-02-23"
     },
     {
       "id": "7ea20878-c066-45fc-b566-8c21eef1c93d",
-      "nome": "test23",
+      "nome": "test 2",
       "status": "ATIVO",
       "criacao": "2023-02-23"
     }

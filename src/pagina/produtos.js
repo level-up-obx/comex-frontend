@@ -2,6 +2,7 @@ import { criaProduto } from '../modelo.js'
 
 let formProdutos = document.querySelector('#formProdutos')
 
+
 formProdutos.addEventListener('submit', (event) => {
     event.preventDefault()
 
@@ -11,13 +12,26 @@ formProdutos.addEventListener('submit', (event) => {
     let quantidade = event.target.elements['quantidade']
     let categoria = event.target.elements['categoria']
 
-    let novaProduto = criaProduto(
+    let novoProduto = criaProduto(
         nome.value,
         descricao.value,
         parseInt(preco.value) || null,
         parseInt(quantidade.value) || null,
         parseInt(categoria.value) || null
     )
+
+    fetch('http://localhost:3000/produtos', {
+        method: 'POST', // or 'PUT'
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(novoProduto),
+    })
+    .then((response) => response.json())
+    .then((data) => {
+        console.log(`Produto ${data.nome} cadastrada com sucesso.`);
+    })
+    .catch((error) => {
+        console.error('Não foi possível salvar o produto! Aguarde uns minutos e tente novamente.');
+    });
 
     nome.value = '',
     descricao.value = '',
@@ -26,5 +40,5 @@ formProdutos.addEventListener('submit', (event) => {
     categoria.value = ''
     nome.focus()
 
-    console.log(novaProduto)
+    console.log(novoProduto)
 })
