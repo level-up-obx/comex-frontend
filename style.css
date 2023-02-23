@@ -11,6 +11,12 @@ th {
     font-weight: bold;
 }
 
+.error-message {
+    color: red;
+    font-size: 12px;
+    display: block;
+  }
+
 .navbar-collapse {
     display: flex;
     align-items: center;

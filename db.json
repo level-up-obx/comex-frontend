@@ -1,36 +1,21 @@
 {
   "clientes": [
     {
-      "id": "81fde609-a6f0-48b0-a8cd-675541a42766",
-      "nome": "maria",
-      "sobrenome": "alves",
-      "cpf": "333444555",
-      "telefone": "99999999999",
+      "id": "ca53d0c6-edd6-4e3c-bf81-6157e9d7d646",
+      "nome": "jorge",
+      "sobrenome": "silva",
+      "cpf": "47398423861",
+      "telefone": "43243243243",
       "endereco": {
         "rua": "Rodovia José Simões Louro Júnior",
-        "numero": "",
+        "numero": null,
         "bairro": "Penteado",
         "cidade": "Embu-Guaçu",
         "estado": "SP",
         "cep": "06924-760",
-        "complemento": ""
-      }
-    },
-    {
-      "id": "8925bbcf-5611-42a3-9ed0-24e078d1414e",
-      "nome": "teste",
-      "sobrenome": "teste sobrenome",
-      "cpf": "44444444444",
-      "telefone": "88888888888",
-      "endereco": {
-        "rua": "Praça da Sé",
-        "numero": null,
-        "bairro": "Sé",
-        "cidade": "São Paulo",
-        "estado": "SP",
-        "cep": "01001-000",
         "complemento": null
-      }
+      },
+      "email": "jorge@jorgeq.com"
     }
   ],
   "produtos": [

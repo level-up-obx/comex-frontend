@@ -24,7 +24,7 @@ export function criaProduto(nome, descricao, preco, quantidade_estoque, categori
      }
 }
 
-export function criaCliente(nome, sobrenome, cpf, telefone, endereco) {
+export function criaCliente(nome, sobrenome, cpf, telefone, endereco, email) {
     return {
         id: uuidv4(),
         nome: nome,
@@ -40,5 +40,6 @@ export function criaCliente(nome, sobrenome, cpf, telefone, endereco) {
             cep: endereco.cep,
             complemento: endereco.complemento
         },
+        email: email
     }
 }
