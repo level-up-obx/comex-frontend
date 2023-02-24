@@ -2,11 +2,11 @@ import { criaProduto } from '../modelo.js'
 
 let formProdutos = document.querySelector('#formProdutos')
 
-
 formProdutos.addEventListener('submit', (event) => {
     event.preventDefault()
 
     let nome = event.target.elements['nome']
+    let url = event.target.elements['url']
     let descricao = event.target.elements['descricao']
     let preco = event.target.elements['preco']
     let quantidade = event.target.elements['quantidade']
@@ -14,6 +14,7 @@ formProdutos.addEventListener('submit', (event) => {
 
     let novoProduto = criaProduto(
         nome.value,
+        url.value,
         descricao.value,
         parseInt(preco.value) || null,
         parseInt(quantidade.value) || null,
@@ -21,7 +22,7 @@ formProdutos.addEventListener('submit', (event) => {
     )
 
     fetch('http://localhost:3000/produtos', {
-        method: 'POST', // or 'PUT'
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(novoProduto),
     })
@@ -34,11 +35,12 @@ formProdutos.addEventListener('submit', (event) => {
     });
 
     nome.value = '',
+    url.value = '',
     descricao.value = '',
     preco.value = '',
     quantidade.value = '',
     categoria.value = ''
     nome.focus()
 
-    console.log(novoProduto)
+    // console.log(novoProduto)
 })

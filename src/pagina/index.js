@@ -9,7 +9,7 @@ async function listaCategorias() {
             html += /*html*/
                     `<div class="purchase-item">
                         <div class="ms-5 mt-3">
-                            <img class="imgs-purchase mb-4" src="./imgs/processador.png">
+                            <img class="imgs-purchase mb-4" src="${item.url? item.url : 'https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Item_sem_imagem.svg/498px-Item_sem_imagem.svg.png'}">
                             <p>Nome: ${item.nome}<br>
                             Preço: ${item.preco}</p>
                             <button class="btn-purchase mt-3 mb-3 p-2">Comprar</button>

@@ -20,31 +20,34 @@
   ],
   "produtos": [
     {
-      "id": "3667c7a6-047a-43bf-95a5-3fe47ec8528f",
-      "nome": "Produto 1",
-      "descricao": "",
-      "preco": 12,
-      "quantidade_estoque": 1,
-      "categoria": 3,
-      "criacao": "2023-2-23"
-    },
-    {
-      "id": "7d01a30e-d965-4bb9-b3ca-6b7802da78ec",
-      "nome": "Produto 2",
-      "descricao": "",
-      "preco": 14,
-      "quantidade_estoque": 4,
-      "categoria": 1,
-      "criacao": "2023-2-23"
-    },
-    {
-      "id": "b402693a-837f-4b19-822a-6acf741c6c35",
-      "nome": "Produto 3",
-      "descricao": "",
-      "preco": 3,
-      "quantidade_estoque": 3,
+      "id": "25d744de-0212-42c3-b430-4f43643e3e7f",
+      "nome": "teste",
+      "url": "https://acaonsfatima.org.br/wp-content/uploads/2021/09/informatica-conteudo-pagina-1.png",
+      "descricao": "desc",
+      "preco": 1,
+      "quantidade_estoque": 11,
       "categoria": null,
-      "criacao": "2023-2-23"
+      "criacao": "2023-2-24"
+    },
+    {
+      "id": "e7762fbb-9037-4ecc-9acd-732374360bf6",
+      "nome": "teste 2",
+      "url": "https://acaonsfatima.org.br/wp-content/uploads/2021/09/informatica-conteudo-pagina-1.png",
+      "descricao": "desc",
+      "preco": 2,
+      "quantidade_estoque": 22,
+      "categoria": 1,
+      "criacao": "2023-2-24"
+    },
+    {
+      "id": "73647107-893d-4514-852a-a98912933fd7",
+      "nome": "teste 3",
+      "url": "",
+      "descricao": "desc",
+      "preco": 3,
+      "quantidade_estoque": 33,
+      "categoria": 3,
+      "criacao": "2023-2-24"
     }
   ],
   "categorias": [

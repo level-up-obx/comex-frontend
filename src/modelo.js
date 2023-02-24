@@ -9,13 +9,14 @@ export function criaCategoria(nome, status, criacao) {
     }
 }
 
-export function criaProduto(nome, descricao, preco, quantidade_estoque, categoria) {
+export function criaProduto(nome, url, descricao, preco, quantidade_estoque, categoria) {
     var today = new Date();
     var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
      return {
         id: uuidv4(), //uuid gerado para o produto;
         nome: nome, //o nome do produto;
+        url: url,
         descricao: descricao, //informações sobre as características do produto;
         preco: preco, //preço cobrado pelo produto;
         quantidade_estoque: quantidade_estoque, //quantos itens desse produto estão,
