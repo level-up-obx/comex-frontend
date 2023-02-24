@@ -1,13 +1,23 @@
 import { criaCategoria } from '../modelo.js'
 
-async function listaCategorias() {
+(async () => {
     try {
-        const response = await fetch('http://localhost:3000/categorias');
-        const categorias = await response.json();
-
         let html = '';
+        let categorias = '';
+        const categoriasLocalStorage = JSON.parse(localStorage.getItem("categorias"));
+
+        if (categoriasLocalStorage !== null) {
+            categorias = categoriasLocalStorage
+        } else {
+            const response = await fetch('http://localhost:3000/categorias');
+            const newCategorias = await response.json();
+            localStorage.setItem("categorias", JSON.stringify(newCategorias))
+            categorias = newCategorias
+        }
+
         categorias.forEach(item => {
-            html += `<tr>
+            html +=  /* html */ `
+                    <tr>
                         <td>${item.nome}</td>
                         <td>${item.status}</td>
                         <td>${item.criacao}</td>
@@ -20,13 +30,13 @@ async function listaCategorias() {
         });
 
         document.querySelector('tbody').innerHTML = html;
+
     } catch (err) {
         let msg = 'Não foi possível recuperar as categorias.'
         document.querySelector('.erro-listar-categorias').innerHTML = msg;
     }
 
-}
-listaCategorias()
+})()
 
 const campoNome = document.querySelector("#nome")
 const form = document.querySelector("#formCategoria")
@@ -51,7 +61,7 @@ form.addEventListener("submit", function (event) {
     let novaCategoria = criaCategoria(nome, status, criacao)
 
     fetch('http://localhost:3000/categorias', {
-        method: 'POST', // or 'PUT'
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(novaCategoria),
     })
