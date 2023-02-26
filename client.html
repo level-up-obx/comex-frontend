@@ -66,12 +66,10 @@
     <div class="container container_client">
         <div class="product w-75">
             <h1 class="title">Dados do cadastro</h1>
-            <h2 class="title_data">Dados pessoais</h2>
+            <h4 class="title_data">Dados pessoais</h4>
             <form id="form_client">
-                <div>
-                    <div class="product_1">
-
-                        <div class="w-50">
+                <div class="register">
+                        <div>
                             <label for="client_name">Nome Completo:</label>
                             <input type="text" class="form-control" id="client_name" name="client_name">
                         </div>
@@ -79,34 +77,32 @@
                             <label for="client_cpf">CPF:</label>
                             <input type="text" class="form-control" id="client_cpf" name="client_cpf">
                         </div>
-                        <div class="w-25">
+                        <div>
                             <label for="client_birth_date">Nascimento:</label>
                             <input type="date" class="form-control" id="client_birth_date" name="client_birth_date">
                         </div>
-                    </div>
-                    <div class="product_2">
-                        <div class="w-50">
+                        <div>
                             <label for="client_email">E-mail:</label>
                             <input type="text" class="form-control" id="client_email" name="client_email">
                         </div>
-                        <div class="w-25">
+                        <div>
                             <label for="client_contact">Contato:</label>
                             <input type="tel" class="form-control" placeholder="(XX) XXXXX-XXXX" id="client_contact" name="client_contact">
                         </div>
-                    </div>
+    
 
                 </div>
 
 
-                <h2 class="title_address">Endereço</h2>
+                <h4 class="title_address">Endereço</h4>
                 <div class="address">
-                    <div class="w-25">
-                        <label for="client_cep">CEP:</label>
+                    <label for="client_cep">CEP:</label>
+                    <div class="address_cep">
                         <input type="text" class="form-control" id="client_cep" name="client_cep">
-                        <button class="btn btn_color" type="button" id="btn_cep">Pesquisar</button>
+                        <button class="btn btn_color w-25" type="button" id="btn_cep">Pesquisar</button>
                         <div id="erro"></div>
                     </div>
-                    <div class="w-50">
+                    <div>
                         <label for="client_address">Endereço:</label>
                         <input type="text" class="form-control" id="client_address" name="client_address">
                     </div>
