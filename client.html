@@ -73,25 +73,25 @@
 
                         <div class="w-50">
                             <label for="client_name">Nome Completo:</label>
-                            <input type="text" class="form-control" id="client_name">
+                            <input type="text" class="form-control" id="client_name" name="client_name">
                         </div>
                         <div>
                             <label for="client_cpf">CPF:</label>
-                            <input type="text" class="form-control" id="client_cpf">
+                            <input type="text" class="form-control" id="client_cpf" name="client_cpf">
                         </div>
                         <div class="w-25">
                             <label for="client_birth_date">Nascimento:</label>
-                            <input type="date" class="form-control" id="client_birth_date">
+                            <input type="date" class="form-control" id="client_birth_date" name="client_birth_date">
                         </div>
                     </div>
                     <div class="product_2">
                         <div class="w-50">
                             <label for="client_email">E-mail:</label>
-                            <input type="text" class="form-control" id="client_email">
+                            <input type="text" class="form-control" id="client_email" name="client_email">
                         </div>
                         <div class="w-25">
                             <label for="client_contact">Contato:</label>
-                            <input type="tel" class="form-control" placeholder="(XX) XXXXX-XXXX" id="client_contact">
+                            <input type="tel" class="form-control" placeholder="(XX) XXXXX-XXXX" id="client_contact" name="client_contact">
                         </div>
                     </div>
 
@@ -102,37 +102,39 @@
                 <div class="address">
                     <div class="w-25">
                         <label for="client_cep">CEP:</label>
-                        <input type="text" class="form-control" id="client_cep" >
+                        <input type="text" class="form-control" id="client_cep" name="client_cep">
                         <button class="btn btn_color" type="button" id="btn_cep">Pesquisar</button>
                         <div id="erro"></div>
                     </div>
                     <div class="w-50">
                         <label for="client_address">Endereço:</label>
-                        <input type="text" class="form-control" id="client_address">
+                        <input type="text" class="form-control" id="client_address" name="client_address">
                     </div>
                     <div>
                         <label for="client_number">Número:</label>
-                        <input type="text" class="form-control" id="client_number">
+                        <input type="text" class="form-control" id="client_number" name="client_number"> 
                     </div>
                     <div>
                         <label for="client_complement">Complemento:</label>
-                        <input type="text" class="form-control" id="client_complement">
+                        <input type="text" class="form-control" id="client_complement" name="client_complement">
                     </div>
                     <div>
                         <label for="client_district">Bairro:</label>
-                        <input type="text" class="form-control" id="client_district">
+                        <input type="text" class="form-control" id="client_district" name="client_district">
                     </div>
                     <div>
                         <label for="client_city">Cidade:</label>
-                        <input type="text" class="form-control" id="client_city">
+                        <input type="text" class="form-control" id="client_city" name="client_city">
                     </div>
                     <div>
                         <label for="client_state">UF:</label>
-                        <input type="text" class="form-control" id="client_state">
+                        <input type="text" class="form-control" id="client_state" name="client_state">
                     </div>
                 </div>
                 <div class="input_btn">
-                    <input type="submit" value="Salvar" class="form_btn" id="form_btn">
+                    <!-- <input type="submit" value="Salvar" class="form_btn" id="form_btn"> -->
+                    <button type="submit" class="btn form_btn">Salvar</button>
+        
                 </div>
             </form>
 

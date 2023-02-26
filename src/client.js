@@ -1,82 +1,33 @@
-import {createClient} from "./modelo.js"
+import { createClient } from "./modelo.js"
 
 document.getElementById("btn_cep").onclick = searchAddress;
 const form = document.getElementById("form_client")
-const client_name_input = document.getElementById("client_name")
-const client_cpf_input = document.getElementById("client_cpf")
-const client_birth_date_input = document.getElementById("client_birth_date")
-const client_email_input = document.getElementById("client_email")
-const client_contact_input = document.getElementById("client_contact")
-const client_cep_input = document.getElementById("client_cep")
-const client_address_input = document.getElementById("client_address")
-const client_number_input = document.getElementById("client_number")
-const client_complement_input = document.getElementById("client_complement")
-const client_district_input = document.getElementById("client_district")
-const client_city_input = document.getElementById("client_city")
-const client_state_input = document.getElementById("client_state")
 
 
 form.addEventListener("submit", (evento) => {
     evento.preventDefault()
-    const client_name = client_name_input.value
 
-    const client_cpf = client_cpf_input.value
+    const client = createClient(form.client_name.value, form.client_cpf.value, form.client_birth_date.value,
+        form.client_email.value, form.client_contact.value, form.client_cep.value, form.client_address.value,
+        form.client_number.value, form.client_complement.value, form.client_district.value, form.client_city.value, form.client_state.value)
 
-    const client_birth_date = client_birth_date_input.value
+    const elements = form.getElementsByTagName("input")
 
-    const client_email = client_email_input.value
-
-    const client_contact = client_contact_input.value
-
-    const client_cep = client_cep_input.value
-
-    const client_address = client_address_input.value
-
-    const client_number = client_number_input.value
-
-    const client_complement = client_complement_input.value
-
-    const client_district = client_district_input.value
-
-    const client_city = client_city_input.value
-
-    const client_state = client_state_input.value
-
-
-
-    const client = createClient(client_name, client_cpf, client_birth_date, client_email, client_contact, client_cep, client_address,
-        client_number, client_complement, client_district, client_city, client_state)
     console.log(client)
 
-    client_name_input.value = ""
-    client_name_input.focus()
+    for (let index = 0; index < elements.length; index++) {
+        const element = elements[index]
+        element.value = ""
 
-    client_cpf_input.value = ""
+    }
 
-    client_birth_date_input.value = ""
+    form.client_name.focus()
 
-    client_email_input.value = ""
-
-    client_contact_input.value = ""
-
-    client_cep_input.value = ""
-
-    client_address_input.value = ""
-
-    client_number_input.value = ""
-
-    client_complement_input.value = ""
-
-    client_district_input.value = ""
-
-    client_city_input.value = ""
-
-    client_state_input.value = ""
 
 })
 
 async function searchAddress() {
-    let cep = client_cep_input.value
+    let cep = form.client_cep.value
     let errorMessage = document.getElementById('erro')
     errorMessage.innerHTML = ""
     try {
@@ -86,10 +37,10 @@ async function searchAddress() {
             throw Error('CEP inexistente!')
         }
         console.log(queryCepJson)
-        client_address_input.value = queryCepJson.logradouro
-        client_district_input.value = queryCepJson.bairro
-        client_city_input.value = queryCepJson.localidade
-        client_state_input.value = queryCepJson.uf
+        form.client_address.value = queryCepJson.logradouro
+        form.client_district.value = queryCepJson.bairro
+        form.client_city.value = queryCepJson.localidade
+        form.client_state.value = queryCepJson.uf
 
     } catch (erro) {
         errorMessage.innerHTML = `<p>CEP inválido. Tente novamente!</p>`
