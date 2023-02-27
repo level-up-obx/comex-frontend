@@ -57,6 +57,26 @@ body {
   padding: 5px;
 }
 
+.form__input__error {
+  color: #F24E4E;
+  border: 2px solid #F24E4E;;
+}
+.form__message__error {
+  color: #F24E4E!important;
+}
+.hidden {
+  display: none;
+}
+
+input[type=number]::-webkit-inner-spin-button { 
+  -webkit-appearance: none;
+  
+}
+input[type=number] { 
+ -moz-appearance: textfield;
+ appearance: textfield;
+
+}
 
 @media (min-width: 768px) {
   /* Footer */

@@ -99,14 +99,14 @@
         <form action="#" id="category-form" class="category-input gap-2">
           <label for="category-name" class="text-white text-center fw-semibold fs-2 text">Nova Categoria</label>
           <div class="d-flex gap-2">
-            <input type="text" name="category-name" id="category-name" class="input-style rounded" placeholder="Informe o nome da nova categoria com pelo menos duas letras...">
-            <button class="btn btn-primary" id="category-button" type="submit">Salvar</button>
+            <input type="text" name="category-name" id="category-name" class="input-style rounded" placeholder="Informe o nome da nova categoria com pelo menos duas letras..." minlength="2" required>
+            <button class="btn btn-primary" type="submit">Salvar</button>
           </div>
         </form>
       </div>
       <div class="category-table d-flex flex-column gap-3">
         <h3 class="text-white text-center mb-0">Categorias</h3>
-        <table class="table mb-0">
+        <table class="table mb-0 text-center">
           <thead>
             <tr>
               <th scope="col" class="table-dark">Nome</th>
@@ -115,16 +115,49 @@
               <th scope="col" class="table-dark">Ação</th>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <td scope="row" class="table-dark">Móveis</td>
-              <td class="table-dark">Ativa</td>
-              <td class="table-dark">01/01/2023</td>
-              <td class="table-dark"><i class='bx bx-trash bx-sm trash'></i></td>
-            </tr>
+          <tbody id="category-table">
+            
           </tbody>
         </table>
       </div>
+      <!-- Modal Editar -->
+      <div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="editModalLabel">Alterar Categoria</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="newCategoryName" class="col-form-label">Nome:</label>
+                <input type="text" class="form-control" id="newCategoryName">
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+            <button type="button" id="editButton" class="btn btn-primary" data-bs-dismiss="modal">Alterar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal Excluir -->
+    <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5" id="deleteModalLabel">Excluir Categoria</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+          <button type="button" id="deleteButton" class="btn btn-danger">Excluir</button>
+        </div>
+      </div>
+    </div>
+  </div>
     </main>
     <!-- Footer -->
     <footer id="footer" class="bg-dark">

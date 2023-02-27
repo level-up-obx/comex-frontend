@@ -1,27 +1,36 @@
-import { createProduct } from "../modelo.js"
+import { createProduct } from "../modelo.js";
+import { saveProduct, productList } from "../api.js";
 
-const productName = document.querySelector("#product-name")
-const productPrice = document.querySelector("#product-price")
-const productStock = document.querySelector("#product-stock")
-const productDescription = document.querySelector("#product-description")
-const productCategory = document.querySelector("#product-category")
-const button = document.querySelector("#category-button")
-const form = document.querySelector("#product-form")
+const productName = document.querySelector("#product-name");
+const productPrice = document.querySelector("#product-price");
+const productStock = document.querySelector("#product-stock");
+const productDescription = document.querySelector("#product-description");
+const productCategory = document.querySelector("#product-category");
+const productPhoto = document.querySelector("#product-url");
+const form = document.querySelector("#product-form");
 
-const saveProduct = (event) => {
-    event.preventDefault();
-    let product = createProduct(productName.value, productDescription.value, productPrice.value, productStock.value, productCategory.value);
-    console.log(product);
-    productName.value = "";
-    productPrice.value = "";
-    productStock.value = "";
-    productDescription.value = "";
-    productCategory.value = "";
-}
+const clearValues = () => {
+  productName.value = "";
+  productPrice.value = "";
+  productStock.value = "";
+  productDescription.value = "";
+  productCategory.value = "";
+};
+
+const getProductName = (event) => {
+  event.preventDefault();
+  const product = createProduct(
+    productName.value,
+    productDescription.value,
+    productPrice.value,
+    productStock.value,
+    productCategory.value,
+    productPhoto.value
+  );
+  saveProduct(product);
+  clearValues();
+};
 
 form.addEventListener("submit", (event) => {
-    saveProduct(event);
-})
-button.addEventListener("click", (event) => {
-    saveProduct(event)
-})
+  getProductName(event);
+});

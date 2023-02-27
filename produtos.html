@@ -100,30 +100,39 @@
 
           <div class="input-field">
             <label for="product-name" class="text-white text-center fw-semibold">Nome</label>
-            <input type="text" name="product-name" id="product-name" class="input-style rounded">
+            <input type="text" name="product-name" id="product-name" class="input-style rounded" minlength="2" required>
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
           <div class="input-field">
             <label for="product-price" class="text-white text-center fw-semibold">Preço</label>
-            <input type="number" name="product-price" id="product-price" class="input-style rounded">
+            <input type="text" name="product-price" id="product-price" data-input="price" class="input-style rounded" minlength="2" required>
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
           <div class="input-field">
             <label for="product-stock" class="text-white text-center fw-semibold">Quantidade em estoque</label>
-            <input type="number" name="product-stock" id="product-stock" class="input-style rounded">
+            <input type="number" name="product-stock" id="product-stock" class="input-style rounded" minlength="2" required>
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
           <div class="input-field">
-            <label for="product-price" class="text-white text-center fw-semibold">Descrição</label>
-            <textarea name="product-description" id="product-description" cols="30" rows="4" class="input-style rounded"></textarea>
+            <label for="product-description" class="text-white text-center fw-semibold">Descrição</label>
+            <textarea name="product-description" id="product-description" cols="30" rows="4" class="input-style rounded" minlength="20" required></textarea>
+            <span id="form__message__error" class="form__message__error hidden"></span>
+          </div>
+          <div class="input-field">
+            <label for="product-url" class="text-white text-center fw-semibold">Foto do produto(URL)</label>
+            <input type="text" name="product-url" id="product-url" class="input-style rounded" minlength="2" required>
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
           <div class="input-field">
             <label for="product-category" class="text-white text-center fw-semibold">Categoria</label>
             <select name="product-category" id="product-category" class="input-style rounded">
               <option value="1">Móveis</option>
               <option value="2">Livros</option>
-              <option value="3">Lorem ipsim</option>
+              <option value="3">Informática</option>
             </select>
           </div>
         </div>
-          <button class="btn btn-primary align-self-center" id="product-button" type="submit">Salvar</button>
+          <button class="btn btn-primary align-self-center" type="submit">Salvar</button>
         </form>
     </main>
     <!-- Footer -->
@@ -166,5 +175,7 @@
       </div>
     </footer>
     <script src="./src/pages/produto.js" type="module"></script>
+    <script src="./node_modules/simple-mask-money/lib/simple-mask-money.js"></script>
+    <script src="./src/validator.js"></script>
   </body>
 </html>

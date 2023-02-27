@@ -1,46 +1,92 @@
 import { v4 as uuidv4 } from "/node_modules/uuid/dist/esm-browser/index.js";
 // import { v4 as uuidv4 } from "uuid";
+const url = "http://localhost:3000"
 
-/*================= Produto =================*/
-const getError = (error) => {
-  throw new Error("Ocorreu um erro!", { cause: error });
-};
-/*================= Categoria =================*/
-const arrCategory = [];
-
-export const saveCategory = (name) => {
-  arrCategory.push(name);
-  return arrCategory;
-};
-
-export const categoryList = () => {
-  return arrCategory;
-};
-
+/*================= UUID =================*/
 export const getUuid = () => {
   return uuidv4();
 };
 
-/*================= Produto =================*/
-const arrProduct = [];
-
-export const saveProduct = (product) => {
-  arrProduct.push(product);
-  return arrProduct;
+/*================= Error =================*/
+const getError = (error) => {
+  throw new Error("Ocorreu um erro!", { cause: error });
 };
-export const productList = () => {
-  return arrProduct;
+
+/*================= Categoria =================*/
+export const saveCategory = (name) => {
+  try {
+    const post = fetch(`${url}/categorias`, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(name),
+    });
+    window.alert(`Categoria: ${name.name} Cadastrada com sucesso!`);
+  } catch (error) {
+    window.alert(
+      "Não foi possível salvar a categoria! Aguarde uns minutos e tente novamente."
+    );
+    getError(error);
+  }
+};
+
+export const categoryList = async () => {
+  try {
+    const response = await fetch(`${url}/categorias`);
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    window.alert("Não foi possível recuperar as categorias!")
+    getError(error)
+  }
+};
+
+/*================= Produto =================*/
+export const saveProduct = (product) => {
+  try {
+    const post = fetch(`${url}/produtos`, {
+      method: "POST",
+      headers: { 
+        "Content-Type":"application/json" 
+      },
+      body: JSON.stringify(product)
+    })
+    window.alert(`Produto: ${product.name} Cadastrado com sucesso!`)
+  } catch (error) {
+    window.alert("Não foi possível salvar o produto! Aguarde uns minutos e tente novamente")
+    getError(error)
+  }
+};
+export const productList = async () => {
+  try {
+    const response = await fetch(`${url}/produtos`)
+    const data = await response.json();
+    return data;
+  } catch (error) {
+    window.alert("Não foi possível exibir os produtos! Aguarde uns minutos e tente novamente")
+    getError(error)
+  }
 };
 
 /*================= Cliente =================*/
-const arrClient = [];
-
-export const saveClient = (client) => {
-  arrClient.push(client);
-  return arrClient;
+export const saveClient = async (client) => {
+  try {
+    const post = await fetch(`${url}/clientes`, {
+      method: "POST",
+      headers: {
+         "Content-Type": "application/json" 
+      },
+      body: JSON.stringify(client)
+    })
+    window.alert(`Cliente ${client.name} (${client.cpf}) cadastrado com sucesso.`);
+  } catch (error) {
+    window.alert("Não foi possível cadastrar o cliente! Aguarde uns minutos e tente novamente.");
+    getError(error)
+  }
 };
 export const clientList = () => {
-  return arrClient;
+  // return arrClient;
 };
 
 /*================= Cliente =================*/

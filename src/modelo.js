@@ -1,4 +1,4 @@
-import { getCep, getUuid } from "./api.js";
+import { getUuid } from "./api.js";
 
 const getDate = () => {
   return new Date()
@@ -25,7 +25,8 @@ export const createProduct = (
   description,
   price,
   quantity,
-  category
+  category,
+  photo
 ) => {
   return {
     uuid: getUuid(),
@@ -34,6 +35,7 @@ export const createProduct = (
     price: price,
     stock: quantity,
     category: category,
+    photo: photo,
     createdAt: getDate(),
   };
 };

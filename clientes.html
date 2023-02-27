@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Comex | Produtos</title>
+    <title>Comex | Clientes</title>
     <!-- Bootstrap -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
@@ -51,13 +51,18 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Promoções</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./categorias.html" >Categorias</a>
+                <a class="nav-link" href="./categorias.html">Categorias</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link">Buscar</a>
@@ -80,8 +85,12 @@
                 aria-label="Search"
               />
               <div class="searchBar-icons">
-                <a href="./produtos.html"><i class='bx bx-cart bx-sm searchBar-icon'></i></a>
-                <a href="./clientes.html"><i class="bx bxs-user bx-sm searchBar-icon"></i></a>
+                <a href="./produtos.html"
+                  ><i class="bx bx-cart bx-sm searchBar-icon"></i
+                ></a>
+                <a href="./clientes.html"
+                  ><i class="bx bxs-user bx-sm searchBar-icon"></i
+                ></a>
               </div>
               <button class="btn btn-outline-primary btn-search" type="submit">
                 Search
@@ -94,7 +103,7 @@
     </header>
     <!-- Página de produto -->
     <main id="client-page" class="d-flex align-items-center flex-column">
-      <h2 class="text-white mb-4">Novo produto</h2>
+      <h2 class="text-white mb-4">Novo Cliente</h2>
       <form action="#" id="client-form">
         <div class="input-fields">
           <div class="input-field">
@@ -106,7 +115,11 @@
               name="first-name"
               id="first-name"
               class="input-style rounded"
+              minlength="2"
+              required
+              data-input="firstName"
             />
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
           <div class="input-field">
             <label for="last-name" class="text-white text-center fw-semibold"
@@ -117,7 +130,11 @@
               name="last-name"
               id="last-name"
               class="input-style rounded"
+              minlength="2"
+              required
+              data-input="lastName"
             />
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
           <div class="input-field">
             <label for="cpf" class="text-white text-center fw-semibold"
@@ -128,7 +145,10 @@
               name="cpf"
               id="cpf"
               class="input-style rounded"
+              required
+              data-input="cpf"
             />
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
           <div class="input-field">
             <label for="telephone" class="text-white text-center fw-semibold"
@@ -139,7 +159,10 @@
               name="telephone"
               id="telephone"
               class="input-style rounded"
+              required
+              data-input="telephone"
             />
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
           <div class="input-field">
             <label for="cep" class="text-white text-center fw-semibold"
@@ -150,7 +173,10 @@
               name="cep"
               id="cep"
               class="input-style rounded"
+              required
+              data-input="cep"
             />
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
         </div>
         <h2 class="text-white">Endereço</h2>
@@ -164,7 +190,11 @@
               name="street"
               id="street"
               class="input-style rounded"
+              minlength="3"
+              required
+              data-input="street"
             />
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
           <div class="input-field">
             <label for="number" class="text-white text-center fw-semibold"
@@ -175,7 +205,10 @@
               name="number"
               id="number"
               class="input-style rounded"
+              required
+              data-input="number"
             />
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
           <div class="input-field">
             <label for="complement" class="text-white text-center fw-semibold"
@@ -186,6 +219,7 @@
               name="complement"
               id="complement"
               class="input-style rounded"
+              data-input="complement"
             />
           </div>
           <div class="input-field">
@@ -197,7 +231,11 @@
               name="district"
               id="district"
               class="input-style rounded"
+              minlength="2"
+              required
+              data-input="district"
             />
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
           <div class="input-field">
             <label for="city" class="text-white text-center fw-semibold"
@@ -208,7 +246,11 @@
               name="city"
               id="city"
               class="input-style rounded"
+              minlength="2"
+              required
+              data-input="city"
             />
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
           <div class="input-field">
             <label for="state" class="text-white text-center fw-semibold"
@@ -219,7 +261,11 @@
               name="state"
               id="state"
               class="input-style rounded"
+              minlength="2"
+              required
+              data-input="state"
             />
+            <span id="form__message__error" class="form__message__error hidden"></span>
           </div>
         </div>
         <button
@@ -270,6 +316,7 @@
         </div>
       </div>
     </footer>
+    <script src="./src/validator.js"></script>
     <script src="./src/pages/cliente.js" type="module"></script>
   </body>
 </html>
