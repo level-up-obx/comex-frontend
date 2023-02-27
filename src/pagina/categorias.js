@@ -1,20 +1,10 @@
-import { criaCategoria } from '../modelo.js'
+import { criaCategoria } from '../modelo.js';
 
-(async () => {
+(async function listarCategorias() {
     try {
+        const response = await fetch('http://localhost:3000/categorias');
+        const categorias = await response.json();
         let html = '';
-        let categorias = '';
-        const categoriasLocalStorage = JSON.parse(localStorage.getItem("categorias"));
-
-        if (categoriasLocalStorage !== null) {
-            categorias = categoriasLocalStorage
-        } else {
-            const response = await fetch('http://localhost:3000/categorias');
-            const newCategorias = await response.json();
-            localStorage.setItem("categorias", JSON.stringify(newCategorias))
-            categorias = newCategorias
-        }
-
         categorias.forEach(item => {
             html +=  /* html */ `
                     <tr>
@@ -22,7 +12,7 @@ import { criaCategoria } from '../modelo.js'
                         <td>${item.status}</td>
                         <td>${item.criacao}</td>
                         <td>
-                            <button class="btn border border-1">
+                            <button class="btn border border-1" id="delete-btn-${item.id}">
                                 <svg width="20px" height="20px" viewBox="0 0 24.00 24.00" fill="none" stroke="#ff0000" transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 12V17" stroke="#ff0000" stroke-width="1.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14 12V17" stroke="#ff0000" stroke-width="1.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M4 7H20" stroke="#ff0000" stroke-width="0.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M6 10V18C6 19.6569 7.34315 21 9 21H15C16.6569 21 18 19.6569 18 18V10" stroke="#ff0000" stroke-width="0.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="#ff0000" stroke-width="0.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
                             </button>
                         </td>
@@ -30,6 +20,25 @@ import { criaCategoria } from '../modelo.js'
         });
 
         document.querySelector('tbody').innerHTML = html;
+
+        const deletarItem = async (uuid) => {
+            try {
+              const response = await fetch(`http://localhost:3000/categorias/${uuid}`, { method: 'DELETE' });
+              const data = await response.json();
+              // atualizar o estado do aplicativo conforme necessário
+              // atualizar a interface do usuário
+            } catch (error) {
+              console.error('Erro ao excluir o item: ', error);
+            }
+          };
+
+            document.querySelectorAll('button[id^="delete-btn-"]').forEach(btn => {
+                const id = btn.id.substring(11,50)
+                btn.addEventListener('click', () => {
+                    deletarItem(id)
+                    alert('item deletado com sucesso! atualize a página.')
+                });
+            });
 
     } catch (err) {
         let msg = 'Não foi possível recuperar as categorias.'
@@ -67,7 +76,7 @@ form.addEventListener("submit", function (event) {
     })
     .then((response) => response.json())
     .then((data) => {
-        console.log(`Categoria ${data.nome} cadastrada com sucesso.`);
+        alert(`Categoria ${data.nome} cadastrada com sucesso! Atualize a página.`)
     })
     .catch((error) => {
         console.error('Não foi possível salvar a categoria! Aguarde uns minutos e tente novamente.');
