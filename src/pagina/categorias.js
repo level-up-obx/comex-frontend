@@ -23,10 +23,9 @@ import { criaCategoria } from '../modelo.js';
 
         const deletarItem = async (uuid) => {
             try {
-              const response = await fetch(`http://localhost:3000/categorias/${uuid}`, { method: 'DELETE' });
-              const data = await response.json();
-              // atualizar o estado do aplicativo conforme necessário
-              // atualizar a interface do usuário
+                const response = await fetch(`http://localhost:3000/categorias/${uuid}`, { method: 'DELETE' });
+                const data = await response.json();
+                return data
             } catch (error) {
               console.error('Erro ao excluir o item: ', error);
             }
