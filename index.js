@@ -3,6 +3,27 @@ const nav = document.querySelector('#nav')
 
 let menuController = false
 
+window.onload = () => {
+  fetch('http://localhost:3000/produtos')
+    .then(r => r.json())
+    .then(products => products.forEach(p => {
+      createCard(p)
+    }))
+}
+
+function createCard(product) {
+  document.querySelector('.products-container').innerHTML += `
+  <article class="products">
+    <img src=${product.imagem.url} alt=${product.imagem.alt} class="product__image">
+    <p>
+      <span class="products-text">${product.nome}</span><br>
+      <span class="products-price">${(+product.preco).toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}</span>
+    </p>
+    <button class="buy-btn">Comprar</button>
+  </article>     
+  `
+}
+
 const toggleMenu = () => {
   menuController = !menuController
   menuController ? nav.classList.add('show') : nav.classList.remove('show')
