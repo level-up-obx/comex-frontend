@@ -59,6 +59,7 @@ cpf.addEventListener('blur', () => {
 form.addEventListener('submit', e => {
     e.preventDefault()
     apiPost('clientes', criaCliente(nome.value, sobrenome.value, cpf.value, telefone.value, endereco))
+    console.log(endereco)
     limpaCampos()
     nome.focus()
 })
