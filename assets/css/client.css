@@ -70,3 +70,13 @@
     justify-content: center;
 
 }
+
+.message_error {
+    display: none;
+}
+
+.input_container_invalid .message_error {
+    
+    display: block;
+    
+}

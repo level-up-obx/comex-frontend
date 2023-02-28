@@ -1,0 +1,35 @@
+{
+  "clientes": [
+    {
+      "uuid": "f1c29657-758b-464d-8e9a-50c7604dea5e",
+      "name": "Alana",
+      "cpf": "06110234907",
+      "birth": "2023-02-09",
+      "email": "alanacarsten@gmail.com",
+      "contact": "(41) 998815-2928",
+      "address": {
+        "cep": "83508-400",
+        "address": "Rua Padre José Maurício",
+        "number": "",
+        "complement": "",
+        "district": "Tanguá",
+        "city": "Almirante Tamandaré",
+        "state": "PR"
+      },
+      "id": 1
+    }
+  ],
+  "produtos": [
+    {
+      "uuid": "2e7d4832-9a43-4c98-ac15-520f101db0f8",
+      "name": "monitor",
+      "description": "Monitor",
+      "price": "1000",
+      "qtd": "11",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 1
+    }
+  ],
+  "categorias": []
+}

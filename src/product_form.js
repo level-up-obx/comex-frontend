@@ -1,39 +1,47 @@
-import {createProduct} from "./modelo.js"
+import { createProduct } from "./modelo.js"
 
 const form = document.getElementById("form_product")
+const URL_API = 'http://localhost:3000'
 
 form.addEventListener("submit", (evento) => {
     evento.preventDefault()
-    const product_name_input = document.getElementById("product_name")
-    const product_name = product_name_input.value
 
-    const product_description_input = document.getElementById("product_description")
-    const product_description = product_description_input.value
+    const product = createProduct(form.product_name.value, form.product_description.value,
+        form.product_price.value, form.product_qtd.value, form.product_category.value)
 
-    const product_price_input = document.getElementById("product_price")
-    const product_price = product_price_input.value
-
-
-    const product_qtd_input = document.getElementById("product_qtd")
-    const product_qtd = product_qtd_input.value
-
-    const product_category_input = document.getElementById("product_category")
-    const product_category = product_category_input.value
-
-    const product = createProduct(product_name, product_description, product_price, product_qtd, product_category)
     console.log(product)
 
-    product_name_input.value = ""
-    product_name_input.focus()
+    postProduct(product)
 
-    product_description_input.value = ""
+    const elements = form.getElementsByTagName("input")
 
-    product_price_input.value = ""
+    for (let index = 0; index < elements.length; index++) {
+        const element = elements[index]
+        element.value = ""
 
-    product_qtd_input.value = ""
+    }
 
-    product_category_input.value = ""
 })
+
+function postProduct(product) {
+    fetch(`${URL_API}/produtos`, {
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(product),
+    })
+        .then(response => {
+            alert(`Produto ${product.name} cadastrado com sucesso.`)
+            form.product_name.value = ""
+            form.product_name.focus()
+        })
+        .catch(error => {
+            alert('Não foi possível salvar o produto! Aguarde uns minutos e tente novamente.')
+        })
+}
+
+
 
 
 

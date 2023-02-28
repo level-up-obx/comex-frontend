@@ -71,23 +71,28 @@
                 <div class="register">
                         <div>
                             <label for="client_name">Nome Completo:</label>
-                            <input type="text" class="form-control" id="client_name" name="client_name">
+                            <input type="text" class="form-control" id="client_name" name="client_name" data-tipo="client_name" minlength="2" required>
+                            <span class="message_error">Digite seu nome completo.</span>
                         </div>
                         <div>
                             <label for="client_cpf">CPF:</label>
-                            <input type="text" class="form-control" id="client_cpf" name="client_cpf">
+                            <input type="text" class="form-control" id="client_cpf" name="client_cpf" data-tipo="client_cpf" required>
+                            <span class="message_error">Cadastre um CPF válido</span>
                         </div>
                         <div>
                             <label for="client_birth_date">Nascimento:</label>
-                            <input type="date" class="form-control" id="client_birth_date" name="client_birth_date">
+                            <input type="date" class="form-control" id="client_birth_date" name="client_birth_date" data-tipo="client_birth_date">
+                            <span class="message_error">Digite uma data de nascimento válida</span>
                         </div>
                         <div>
                             <label for="client_email">E-mail:</label>
-                            <input type="text" class="form-control" id="client_email" name="client_email">
+                            <input type="email" class="form-control" id="client_email" name="client_email" data-tipo="client_email" required>
+                            <span class="message_error">Digite um e-mail válido</span>
                         </div>
                         <div>
                             <label for="client_contact">Contato:</label>
-                            <input type="tel" class="form-control" placeholder="(XX) XXXXX-XXXX" id="client_contact" name="client_contact">
+                            <input type="tel" class="form-control" placeholder="(00) 0000-0000" id="client_contact" name="client_contact" data-tipo="client_contact">
+                            <span class="message_error">Digite um telefone válido</span>
                         </div>
     
 
@@ -98,33 +103,40 @@
                 <div class="address">
                     <label for="client_cep">CEP:</label>
                     <div class="address_cep">
-                        <input type="text" class="form-control" id="client_cep" name="client_cep">
+                        <input type="text" class="form-control" id="client_cep" name="client_cep" placeholder="00000-000" data-tipo="client_cep" required>
                         <button class="btn btn_color w-25" type="button" id="btn_cep">Pesquisar</button>
+                        <span class="message_error">CEP não encontrado.</span>
                         <div id="erro"></div>
                     </div>
                     <div>
                         <label for="client_address">Endereço:</label>
-                        <input type="text" class="form-control" id="client_address" name="client_address">
+                        <input type="text" class="form-control" id="client_address" name="client_address" data-tipo="client_address" required>
+                        <span class="message_error">Endereço não encontrado.</span>
                     </div>
                     <div>
                         <label for="client_number">Número:</label>
-                        <input type="text" class="form-control" id="client_number" name="client_number"> 
+                        <input type="text" class="form-control" id="client_number" name="client_number" data-tipo="client_number"> 
+                        <span class="message_error">Digite um número válido.</span>
                     </div>
                     <div>
                         <label for="client_complement">Complemento:</label>
-                        <input type="text" class="form-control" id="client_complement" name="client_complement">
+                        <input type="text" class="form-control" id="client_complement" name="client_complement" data-tipo="client_complement">
+                        <span class="message_error">Digite um complemento.</span>
                     </div>
                     <div>
                         <label for="client_district">Bairro:</label>
-                        <input type="text" class="form-control" id="client_district" name="client_district">
+                        <input type="text" class="form-control" id="client_district" name="client_district" data-tipo="client_district" required>
+                        <span class="message_error">Bairro não encontrado.</span>
                     </div>
                     <div>
                         <label for="client_city">Cidade:</label>
-                        <input type="text" class="form-control" id="client_city" name="client_city">
+                        <input type="text" class="form-control" id="client_city" name="client_city" data-tipo="client_city" required>
+                        <span class="message_error">Cidade não encontrada.</span>
                     </div>
                     <div>
                         <label for="client_state">UF:</label>
-                        <input type="text" class="form-control" id="client_state" name="client_state">
+                        <input type="text" class="form-control" id="client_state" name="client_state" data-tipo="client_state" required>
+                        <span class="message_error">UF não encotrado.</span>
                     </div>
                 </div>
                 <div class="input_btn">
