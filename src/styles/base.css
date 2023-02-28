@@ -5,8 +5,12 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
+/* Fontsize */
+.fs-7 {
+  font-size: 0.8rem!important;
+}
 /* Navbar */
-.searchBar-icons {
+.text-whites {
   display: none;
 }
 .card:nth-child(4),
@@ -35,19 +39,12 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.footerSocial-icon {
-  color: #FFFFFF;
-}
 .footer-list {
   display: flex;
   flex-direction: row;
   gap: .5rem;
 }
-/* Botao */
-.btn:hover {
-  color: #0d6efd;
-  background-color: #212529;
-}
+
 /* Input */
 .input-style {
   color: white;
@@ -56,18 +53,7 @@ body {
   border: 2px solid #212529;
   padding: 5px;
 }
-
-.form__input__error {
-  color: #F24E4E;
-  border: 2px solid #F24E4E;;
-}
-.form__message__error {
-  color: #F24E4E!important;
-}
-.hidden {
-  display: none;
-}
-
+/* Removendo o incrementador e decrementador dos inputs */
 input[type=number]::-webkit-inner-spin-button { 
   -webkit-appearance: none;
   
@@ -91,14 +77,11 @@ input[type=number] {
 
 @media (min-width: 1024px) {
       /* Navbar */
-      .searchBar-icons {
+      .text-whites {
         display: flex;
         flex-direction: row;
         align-items: center;
         gap: 5px;
-    }
-    .searchBar-icon {
-        color: #FFFFFF;
     }
   .nav-item:nth-child(4),
   .nav-item:nth-child(5),

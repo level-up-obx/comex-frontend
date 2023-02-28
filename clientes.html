@@ -84,12 +84,12 @@
                 placeholder="Search"
                 aria-label="Search"
               />
-              <div class="searchBar-icons">
+              <div class="text-whites">
                 <a href="./produtos.html"
-                  ><i class="bx bx-cart bx-sm searchBar-icon"></i
+                  ><i class="bx bx-cart bx-sm text-white"></i
                 ></a>
                 <a href="./clientes.html"
-                  ><i class="bx bxs-user bx-sm searchBar-icon"></i
+                  ><i class="bx bxs-user bx-sm text-white"></i
                 ></a>
               </div>
               <button class="btn btn-outline-primary btn-search" type="submit">
@@ -101,12 +101,12 @@
       </nav>
       <!-- End Navbar -->
     </header>
-    <!-- Página de produto -->
+    <!-- Página de Clientes -->
     <main id="client-page" class="d-flex align-items-center flex-column">
       <h2 class="text-white mb-4">Novo Cliente</h2>
       <form action="#" id="client-form">
         <div class="input-fields">
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="first-name" class="text-white text-center fw-semibold"
               >Nome</label
             >
@@ -119,9 +119,9 @@
               required
               data-input="firstName"
             />
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="last-name" class="text-white text-center fw-semibold"
               >Sobrenome</label
             >
@@ -134,9 +134,9 @@
               required
               data-input="lastName"
             />
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="cpf" class="text-white text-center fw-semibold"
               >CPF</label
             >
@@ -148,9 +148,9 @@
               required
               data-input="cpf"
             />
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="telephone" class="text-white text-center fw-semibold"
               >Telefone</label
             >
@@ -162,9 +162,9 @@
               required
               data-input="telephone"
             />
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="cep" class="text-white text-center fw-semibold"
               >CEP</label
             >
@@ -176,12 +176,12 @@
               required
               data-input="cep"
             />
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
         </div>
         <h2 class="text-white">Endereço</h2>
         <div class="input-fields">
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="street" class="text-white text-center fw-semibold"
               >Rua</label
             >
@@ -194,9 +194,9 @@
               required
               data-input="street"
             />
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="number" class="text-white text-center fw-semibold"
               >Numero</label
             >
@@ -208,9 +208,9 @@
               required
               data-input="number"
             />
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="complement" class="text-white text-center fw-semibold"
               >Complemento</label
             >
@@ -222,7 +222,7 @@
               data-input="complement"
             />
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="district" class="text-white text-center fw-semibold"
               >Bairro</label
             >
@@ -235,9 +235,9 @@
               required
               data-input="district"
             />
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="city" class="text-white text-center fw-semibold"
               >Cidade</label
             >
@@ -250,9 +250,9 @@
               required
               data-input="city"
             />
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="state" class="text-white text-center fw-semibold"
               >Estado</label
             >
@@ -265,7 +265,7 @@
               required
               data-input="state"
             />
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
         </div>
         <button
@@ -282,9 +282,9 @@
       <div class="footer-images">
         <img src="./src/assets/images/logo-comex.svg" alt="Comex" />
         <div class="footerImages-social">
-          <i class="bx bx-sm bxl-twitter footerSocial-icon"></i>
-          <i class="bx bx-sm bxl-instagram footerSocial-icon"></i>
-          <i class="bx bx-sm bxl-linkedin footerSocial-icon"></i>
+          <i class="bx bx-sm bxl-twitter text-white"></i>
+          <i class="bx bx-sm bxl-instagram text-white"></i>
+          <i class="bx bx-sm bxl-linkedin text-white"></i>
         </div>
       </div>
       <div class="footer-list">

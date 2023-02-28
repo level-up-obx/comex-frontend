@@ -10,18 +10,13 @@
     flex-direction: column;
     gap: 1rem;
 }
-.input-field {
-    display: flex;
-    align-items: flex-start;
-    flex-direction: column;
-}
 
 @media (min-width: 768px) {
     #client-form {
         width: 768px;
     }
     .input-fields {
-        width: 100%;
+        width: 80%;
         display: flex;
         flex-flow: row wrap;
         gap: 1rem;

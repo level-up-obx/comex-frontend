@@ -1,5 +1,5 @@
 import { createProduct } from "../modelo.js";
-import { saveProduct, productList } from "../api.js";
+import { saveProduct, productList, categoryList } from "../api.js";
 
 const productName = document.querySelector("#product-name");
 const productPrice = document.querySelector("#product-price");
@@ -8,6 +8,7 @@ const productDescription = document.querySelector("#product-description");
 const productCategory = document.querySelector("#product-category");
 const productPhoto = document.querySelector("#product-url");
 const form = document.querySelector("#product-form");
+const productOption = document.querySelector("#product-category")
 
 const clearValues = () => {
   productName.value = "";
@@ -22,7 +23,7 @@ const getProductName = (event) => {
   const product = createProduct(
     productName.value,
     productDescription.value,
-    productPrice.value,
+    productPrice.formatToNumber(),
     productStock.value,
     productCategory.value,
     productPhoto.value
@@ -34,3 +35,10 @@ const getProductName = (event) => {
 form.addEventListener("submit", (event) => {
   getProductName(event);
 });
+
+
+// Categoria do produto
+const categories = await categoryList()
+categories.forEach((category) => {
+  productOption.innerHTML += `<option value="${category.id}">${category.name}</option>`
+})

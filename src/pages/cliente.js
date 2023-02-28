@@ -36,35 +36,7 @@ const getAddressByCep = async (cep) => {
   }
 };
 
-cep.addEventListener("blur", async (event) => {
-  event.preventDefault();
-  await getAddressByCep(cep.value);
-});
-
-clientForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  if(validaCPF(cpf.value)) {
-    const client = createClient(
-      firstName.value,
-      lastName.value,
-      cpf.value,
-      telephone.value,
-      address = {
-        street: street.value,
-        number: number.value,
-        complement: complement.value,
-        district: district.value,
-        city: city.value,
-        state: state.value,
-      }
-    );
-    saveClient(client);
-  } else {
-    window.alert("O CPF esta incorreto")
-  }
-});
-
-function validaCPF(cpf) {
+const validaCPF = (cpf) => {
   if (cpf.length != 11) {
     return false;
   } else {
@@ -98,3 +70,32 @@ function validaCPF(cpf) {
     return true;
   }
 }
+
+
+cep.addEventListener("blur", async (event) => {
+  event.preventDefault();
+  await getAddressByCep(cep.value);
+});
+
+clientForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  if(validaCPF(cpf.value)) {
+    const client = createClient(
+      firstName.value,
+      lastName.value,
+      cpf.value,
+      telephone.value,
+      address = {
+        street: street.value,
+        number: number.value,
+        complement: complement.value,
+        district: district.value,
+        city: city.value,
+        state: state.value,
+      }
+    );
+    saveClient(client);
+  } else {
+    window.alert("O CPF está incorreto")
+  }
+});

@@ -1,6 +1,6 @@
 import { v4 as uuidv4 } from "/node_modules/uuid/dist/esm-browser/index.js";
 // import { v4 as uuidv4 } from "uuid";
-const url = "http://localhost:3000"
+const url = "http://localhost:3000";
 
 /*================= UUID =================*/
 export const getUuid = () => {
@@ -37,35 +37,69 @@ export const categoryList = async () => {
     const data = await response.json();
     return data;
   } catch (error) {
-    window.alert("Não foi possível recuperar as categorias!")
-    getError(error)
+    window.alert("Não foi possível recuperar as categorias!");
+    getError(error);
+  }
+};
+
+export const deleteCategory = (id) => {
+  try {
+    fetch(`${url}/categorias/${id}`, { method: "DELETE" });
+    window.alert("Categoria excluída com sucesso!");
+  } catch (error) {
+    window.alert(
+      "Não foi possível excluir a categoria, tente novamente mais tarde..."
+    );
+    getError(error);
+  }
+};
+
+export const editCategory = (name, id) => {
+  try {
+    fetch(`${url}/categorias/${id}`, {
+      method: "PATCH",
+      headers: { "Content-type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+      }),
+    });
+  } catch (error) {
+    window.alert(
+      "Não foi possível alterar a categoria, tente novamente mais tarde..."
+    );
+    getError(error);
   }
 };
 
 /*================= Produto =================*/
 export const saveProduct = (product) => {
   try {
-    const post = fetch(`${url}/produtos`, {
+    fetch(`${url}/produtos`, {
       method: "POST",
-      headers: { 
-        "Content-Type":"application/json" 
+      headers: {
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(product)
-    })
-    window.alert(`Produto: ${product.name} Cadastrado com sucesso!`)
+      body: JSON.stringify(product),
+    });
+    window.alert(`Produto: ${product.name} Cadastrado com sucesso!`);
+    return;
   } catch (error) {
-    window.alert("Não foi possível salvar o produto! Aguarde uns minutos e tente novamente")
-    getError(error)
+    window.alert(
+      "Não foi possível salvar o produto! Aguarde uns minutos e tente novamente"
+    );
+    getError(error);
   }
 };
 export const productList = async () => {
   try {
-    const response = await fetch(`${url}/produtos`)
+    const response = await fetch(`${url}/produtos`);
     const data = await response.json();
     return data;
   } catch (error) {
-    window.alert("Não foi possível exibir os produtos! Aguarde uns minutos e tente novamente")
-    getError(error)
+    window.alert(
+      "Não foi possível exibir os produtos! Aguarde uns minutos e tente novamente"
+    );
+    getError(error);
   }
 };
 
@@ -75,14 +109,18 @@ export const saveClient = async (client) => {
     const post = await fetch(`${url}/clientes`, {
       method: "POST",
       headers: {
-         "Content-Type": "application/json" 
+        "Content-Type": "application/json",
       },
-      body: JSON.stringify(client)
-    })
-    window.alert(`Cliente ${client.name} (${client.cpf}) cadastrado com sucesso.`);
+      body: JSON.stringify(client),
+    });
+    window.alert(
+      `Cliente ${client.name} (${client.cpf}) cadastrado com sucesso.`
+    );
   } catch (error) {
-    window.alert("Não foi possível cadastrar o cliente! Aguarde uns minutos e tente novamente.");
-    getError(error)
+    window.alert(
+      "Não foi possível cadastrar o cliente! Aguarde uns minutos e tente novamente."
+    );
+    getError(error);
   }
 };
 export const clientList = () => {

@@ -79,9 +79,9 @@
                 placeholder="Search"
                 aria-label="Search"
               />
-              <div class="searchBar-icons">
-                <a href="./produtos.html"><i class='bx bx-cart bx-sm searchBar-icon'></i></a>
-                <a href="./clientes.html"><i class="bx bxs-user bx-sm searchBar-icon"></i></a>
+              <div class="text-whites">
+                <a href="./produtos.html"><i class='bx bx-cart bx-sm text-white'></i></a>
+                <a href="./clientes.html"><i class="bx bxs-user bx-sm text-white"></i></a>
               </div>
               <button class="btn btn-outline-primary btn-search" type="submit">
                 Search
@@ -98,37 +98,35 @@
         <form action="#" id="product-form">
           <div class="input-fields">
 
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="product-name" class="text-white text-center fw-semibold">Nome</label>
-            <input type="text" name="product-name" id="product-name" class="input-style rounded" minlength="2" required>
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <input type="text" name="product-name" id="product-name" class="input-style rounded w-100" minlength="2" required>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="product-price" class="text-white text-center fw-semibold">Preço</label>
-            <input type="text" name="product-price" id="product-price" data-input="price" class="input-style rounded" minlength="2" required>
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <input type="text" name="product-price" id="product-price" data-input="price" class="input-style rounded w-100" minlength="2" required>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="product-stock" class="text-white text-center fw-semibold">Quantidade em estoque</label>
-            <input type="number" name="product-stock" id="product-stock" class="input-style rounded" minlength="2" required>
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <input type="number" name="product-stock" id="product-stock" class="input-style rounded w-100" minlength="2" required>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="product-description" class="text-white text-center fw-semibold">Descrição</label>
-            <textarea name="product-description" id="product-description" cols="30" rows="4" class="input-style rounded" minlength="20" required></textarea>
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <textarea name="product-description" id="product-description" cols="30" rows="4" class="input-style rounded w-100" minlength="20" required></textarea>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="product-url" class="text-white text-center fw-semibold">Foto do produto(URL)</label>
-            <input type="text" name="product-url" id="product-url" class="input-style rounded" minlength="2" required>
-            <span id="form__message__error" class="form__message__error hidden"></span>
+            <input type="text" name="product-url" id="product-url" class="input-style rounded w-100" minlength="2" required>
+            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
-          <div class="input-field">
+          <div class="d-flex align-items-start flex-column">
             <label for="product-category" class="text-white text-center fw-semibold">Categoria</label>
-            <select name="product-category" id="product-category" class="input-style rounded">
-              <option value="1">Móveis</option>
-              <option value="2">Livros</option>
-              <option value="3">Informática</option>
+            <select name="product-category" id="product-category" class="input-style rounded w-100">
+              <!-- As categorias serão dinâmicas -->
             </select>
           </div>
         </div>
@@ -140,9 +138,9 @@
       <div class="footer-images">
         <img src="./src/assets/images/logo-comex.svg" alt="Comex" />
         <div class="footerImages-social">
-          <i class="bx bx-sm bxl-twitter footerSocial-icon"></i>
-          <i class="bx bx-sm bxl-instagram footerSocial-icon"></i>
-          <i class="bx bx-sm bxl-linkedin footerSocial-icon"></i>
+          <i class="bx bx-sm bxl-twitter text-white"></i>
+          <i class="bx bx-sm bxl-instagram text-white"></i>
+          <i class="bx bx-sm bxl-linkedin text-white"></i>
         </div>
       </div>
       <div class="footer-list">

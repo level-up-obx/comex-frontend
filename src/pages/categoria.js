@@ -1,19 +1,13 @@
 import { createCategory } from "../modelo.js";
-import { categoryList, saveCategory } from "../api.js";
+import { categoryList, deleteCategory, editCategory, saveCategory } from "../api.js";
 
 const categoryName = document.querySelector("#category-name");
 const form = document.querySelector("#category-form");
-
-const editButton = document.querySelector("#editButton")
-const deleteButton = document.querySelector("#deleteButton")
-const newCategoryName = document.querySelector("#newCategoryName")
-const idCategory = document.querySelector("#editModal")
-
-
 const categoryTable = document.querySelector("#category-table");
+const categoriesOnLocalStorage = JSON.parse(localStorage.getItem("categories"))
 
-const getCategoryName = (e) => {
-  let category = createCategory(categoryName.value);
+const getCategoryName = () => {
+  const category = createCategory(categoryName.value);
   saveCategory(category);
   categoryName.value = "";
   categoryName.focus();
@@ -21,16 +15,16 @@ const getCategoryName = (e) => {
 
 const createRow = (category) => {
   categoryTable.innerHTML += `
-      <tr>
-        <td scope="row" class="table-dark">${category.name}</td>
-        <td class="table-dark">${category.status}</td>
-        <td class="table-dark">${category.createdAt}</td>
-        <td class="table-dark"><i class='bx bx-trash bx-sm trash' data-bs-toggle="modal" data-bs-target="#deleteModal" ></i> <i class='bx bx-edit bx-sm edit' data-bs-toggle="modal" data-bs-target="#editModal" ></i> <i class='bx bx-info-circle bx-sm desactivate'></i></td>
-      </tr>
-    `;
+    <tr>
+      <td scope="row" class="table-dark">${category.name}</td>
+      <td class="table-dark px-0">${category.status}</td>
+      <td class="table-dark px-0">${category.createdAt}</td>
+      <td class="table-dark px-0 d-flex justify-content-center"><i id="delete-${category.id}" class='bx bx-trash bx-sm text-danger' data-bs-toggle="modal" data-bs-target="#deleteModal"></i> <i id="edit-${category.id}" class='bx bx-edit bx-sm text-success' data-bs-toggle="modal" data-bs-target="#editModal" ></i> <i id="desactive-${category.id}" class='bx bx-info-circle bx-sm text-warning'></i></td>
+    </tr>
+  `;
 }
 
-const categoriesOnLocalStorage = JSON.parse(localStorage.getItem("categories"))
+
 if(categoriesOnLocalStorage != null) {
   categoriesOnLocalStorage.forEach((category) => {
     createRow(category);
@@ -43,10 +37,25 @@ if(categoriesOnLocalStorage != null) {
   });
 }
 
-form.addEventListener("submit", (event) => {
-  getCategoryName(event);
+const deleteButtons = document.querySelectorAll('i[id^="delete-"]')
+deleteButtons.forEach((input) => {
+  input.addEventListener('click', () => {
+    document.querySelector("#deleteButton").addEventListener("click", () => {
+      deleteCategory(input.id.slice(7, 50))
+    })
+  })
 });
 
-editButton.addEventListener("click", (e) => {
-  console.log(e.target)
-})
+const editButtons = document.querySelectorAll('i[id^="edit-"]')
+const newCategoryName = document.querySelector('#newCategoryName')
+editButtons.forEach((input) => {
+  input.addEventListener('click', () => {
+    document.querySelector("#editButton").addEventListener("click", () => {
+      editCategory(newCategoryName.value, input.id.slice(5, 50))
+    })
+  })
+});
+
+form.addEventListener("submit", () => {
+  getCategoryName();
+});

@@ -1,4 +1,17 @@
 {
   "clientes": [],
-  "produtos": []
+  "produtos": [
+    {
+      "uuid": "4b2ffdc5-acee-4f3e-9794-ca46de889d2d",
+      "name": "Notebook",
+      "description": "asodkasodkapsodkaopskdpaoskdpoaskodaksopdkasdkaso",
+      "price": 1234.56,
+      "stock": "2",
+      "category": "1",
+      "photo": "https://gratisography.com/wp-content/uploads/2023/02/gratisography-bowtie-dogfree-stock-photo-1170x780.jpg",
+      "createdAt": "2023-28-2",
+      "id": 1
+    }
+  ],
+  "categorias": []
 }

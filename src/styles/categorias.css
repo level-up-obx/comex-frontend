@@ -1,22 +1,3 @@
-.category-input {
-    display: flex;
-    flex-direction: column;
-}
-.trash, .edit, .desactivate {
-    transition: 0.3s;
-}
-.trash:hover {
-    color: red;
-}
-
-.edit:hover {
-    color: green;
-}
-
-.desactivate:hover {
-    color: yellow;
-}
-
 @media (min-width: 768px) {
     .category-table {
         width: 60%;

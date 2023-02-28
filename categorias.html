@@ -51,13 +51,13 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                <a class="nav-link" href="./index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Promoções</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./categorias.html" >Categorias</a>
+                <a class="nav-link active" aria-current="page" href="./categorias.html" >Categorias</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link">Buscar</a>
@@ -79,9 +79,9 @@
                 placeholder="Search"
                 aria-label="Search"
               />
-              <div class="searchBar-icons">
-                <a href="./produtos.html"><i class='bx bx-cart bx-sm searchBar-icon'></i></a>
-                <a href="./clientes.html"><i class="bx bxs-user bx-sm searchBar-icon"></i></a>
+              <div class="text-whites">
+                <a href="./produtos.html"><i class='bx bx-cart bx-sm text-white'></i></a>
+                <a href="./clientes.html"><i class="bx bxs-user bx-sm text-white"></i></a>
               </div>
               <button class="btn btn-outline-primary btn-search" type="submit">
                 Search
@@ -96,7 +96,7 @@
     <main id="category-page" class="gap-4 d-flex flex-column align-items-center">
       <!-- Categoria -->
       <div class="category-infos">
-        <form action="#" id="category-form" class="category-input gap-2">
+        <form action="#" id="category-form" class="d-flex flex-column gap-2">
           <label for="category-name" class="text-white text-center fw-semibold fs-2 text">Nova Categoria</label>
           <div class="d-flex gap-2">
             <input type="text" name="category-name" id="category-name" class="input-style rounded" placeholder="Informe o nome da nova categoria com pelo menos duas letras..." minlength="2" required>
@@ -106,13 +106,13 @@
       </div>
       <div class="category-table d-flex flex-column gap-3">
         <h3 class="text-white text-center mb-0">Categorias</h3>
-        <table class="table mb-0 text-center">
+        <table class="table table-hover mb-0 text-center">
           <thead>
             <tr>
-              <th scope="col" class="table-dark">Nome</th>
-              <th scope="col" class="table-dark">Status</th>
-              <th scope="col" class="table-dark">Data de criação</th>
-              <th scope="col" class="table-dark">Ação</th>
+              <th scope="col" class="table-dark px-0">Nome</th>
+              <th scope="col" class="table-dark px-0">Status</th>
+              <th scope="col" class="table-dark px-0">Data de criação</th>
+              <th scope="col" class="table-dark px-0">Ação</th>
             </tr>
           </thead>
           <tbody id="category-table">
@@ -164,9 +164,9 @@
       <div class="footer-images">
         <img src="./src/assets/images/logo-comex.svg" alt="Comex" />
         <div class="footerImages-social">
-          <i class="bx bx-sm bxl-twitter footerSocial-icon"></i>
-          <i class="bx bx-sm bxl-instagram footerSocial-icon"></i>
-          <i class="bx bx-sm bxl-linkedin footerSocial-icon"></i>
+          <i class="bx bx-sm bxl-twitter text-white"></i>
+          <i class="bx bx-sm bxl-instagram text-white"></i>
+          <i class="bx bx-sm bxl-linkedin text-white"></i>
         </div>
       </div>
       <div class="footer-list">
