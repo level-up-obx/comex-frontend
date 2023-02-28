@@ -1,0 +1,83 @@
+{
+  "clientes": [
+    {
+      "id": "63b1e162-76df-4374-b0ee-8c4a54167185",
+      "nome": "Danilo",
+      "sobrenome": "Araujo",
+      "cpf": "440.035.548-92",
+      "telefone": "(11) 96059-8551",
+      "email": "dan.ag2@gmail.com"
+    },
+    {
+      "id": "07d298e5-c4de-41be-a6ed-b0cb544e3c5c",
+      "nome": "Thais",
+      "sobrenome": "Amaral",
+      "cpf": "333.029.865-44",
+      "telefone": "(11) 94681-2343",
+      "email": "thais@gmail.com"
+    },
+    {
+      "id": "8de4d595-ade2-4230-b795-f1ddbc744a44",
+      "nome": "Bruce",
+      "sobrenome": "Wayne",
+      "cpf": "888.999.555-00",
+      "telefone": "(11) 99992-2222",
+      "email": "batman@gmail.com"
+    }
+  ],
+  "produtos": [
+    {
+      "id": "ecb871d0-1d72-4686-a392-2cd08e64f07b",
+      "nome": "Notebook 17'",
+      "descricao": "Notebook para quem quer se divertir e também trabalhar, notebook grande e com especificações renomadas.",
+      "preco": "2.599,00",
+      "quantidade": "4",
+      "categoria": "1",
+      "url": "https://images.unsplash.com/photo-1520375300877-3500f50d069e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "criacao": "2023/02/28"
+    },
+    {
+      "id": "ca0c17cf-362b-4b1d-b8bc-794206ef8f61",
+      "nome": "Escrivaninha",
+      "descricao": "Escrivaninha para ter o conforto em passar horas em frente a telinha do computador.",
+      "preco": "399,00",
+      "quantidade": "2",
+      "categoria": "2",
+      "url": "https://images.unsplash.com/photo-1555212697-194d092e3b8f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80",
+      "criacao": "2023/02/28"
+    },
+    {
+      "id": "e691bbf7-a67c-4a89-a976-826000049331",
+      "nome": "Box Livros renomados",
+      "descricao": "Box com 8 livros de autores renomados que elevaram seu grau de conhecimento.",
+      "preco": "550,00",
+      "quantidade": "1",
+      "categoria": "3",
+      "url": "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=898&q=80",
+      "criacao": "2023/02/28"
+    }
+  ],
+  "categorias": [
+    {
+      "uuid": "5b69bcc0-65fc-4874-8295-06c0eb193620",
+      "nome": "Móveis",
+      "status": "ATIVA",
+      "criacao": "2023/02/28",
+      "id": 1
+    },
+    {
+      "uuid": "de877357-f3e8-450d-888a-def7b48d5e1e",
+      "nome": "Informática",
+      "status": "ATIVA",
+      "criacao": "2023/02/28",
+      "id": 2
+    },
+    {
+      "uuid": "e716e0b0-b889-4080-a31a-f174d591f224",
+      "nome": "Livros",
+      "status": "ATIVA",
+      "criacao": "2023/02/28",
+      "id": 3
+    }
+  ]
+}

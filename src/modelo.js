@@ -17,7 +17,7 @@ function dataFormat() {
 
 export function criaCategoria(categoria) {
     return {
-        id: uuidv4(),
+        uuid: uuidv4(),
         nome: categoria,
         status: 'ATIVA',
         criacao: dataFormat()
@@ -25,11 +25,11 @@ export function criaCategoria(categoria) {
 }
 
 export function categoriaFormatada(categoria) {
-    return `\n ID: ${categoria.id}, Categoria: ${categoria.nome} \n
+    return `\n ID: ${categoria.uuid}, Categoria: ${categoria.nome} \n
     Criação/Status: (${categoria.criacao} '${categoria.status}')`;
 }
 
-export function criaProduto(nome, descricao, preco, quantidade, categoria) {
+export function criaProduto(nome, descricao, preco, quantidade, categoria, url) {
     return {
         id: uuidv4(),
         nome: nome,
@@ -37,6 +37,7 @@ export function criaProduto(nome, descricao, preco, quantidade, categoria) {
         preco: preco,
         quantidade: quantidade,
         categoria: categoria,
+        url: url,
         criacao: dataFormat()
     }
 }

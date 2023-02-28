@@ -22,8 +22,16 @@
     color: #8fa8ff;
 }
 
-.card {
+/* .card {
     height: 350px;
+} */
+.cardItens {
+    height: 350px;
+    width: 270px;
+}
+
+.card img {
+    height: 180px;  
 }
 
 .cifrao {

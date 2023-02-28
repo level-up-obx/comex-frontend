@@ -1,7 +1,14 @@
-import { criaProduto } from "../modelo.js";
 import IMask from '/node_modules/imask/esm/index.js';
+import { criaProduto } from "../modelo.js";
+import { salvaProdutos } from '../api.js';
+
+const enviar = document.querySelector('#formulario-produtos');
 
 const nome = document.querySelector('#nome');
+const estoque = document.querySelector('#estoque');
+const descricao = document.querySelector('#descricao');
+const categoria = document.querySelector('#categoria');
+const urlImg = document.querySelector('#url');
 const preco = IMask(document.querySelector('#preco'), {
     mask: Number,
     scale: 2,
@@ -10,28 +17,18 @@ const preco = IMask(document.querySelector('#preco'), {
     signed: false,
     padFractionalZeros: true
 });
-const estoque = document.querySelector('#estoque');
-const descricao = document.querySelector('#descricao');
-const categoria = document.querySelector('#categoria');
 
-const enviar = document.querySelector('#enviar');
+// ============================= Função para criar e salvar produtos na API fake =============================
+enviar.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const produto = criaProduto(nome.value, descricao.value, preco.value, estoque.value, categoria.value, urlImg.value)
+    salvaProdutos(produto)
 
-function salvar() {
-    let imprimeProduto = criaProduto(nome.value, descricao.value, preco.value, estoque.value, categoria.value);
-    console.log(imprimeProduto);
     nome.value = '';
     descricao.value = '';
     preco.value = '';
     estoque.value = '';
+    urlImg.value = '';
     categoria.value = 'Selecione...';
     nome.focus();
-}
-
-enviar.addEventListener('click', (e) => {
-    e.preventDefault();
-    salvar();
 })
-
-
-
-
