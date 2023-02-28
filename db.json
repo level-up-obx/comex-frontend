@@ -1,0 +1,26 @@
+{
+  "clientes": [],
+  "produtos": [
+    {
+      "id": "ccfb3422-c45e-4a38-b505-f8e9055d1524",
+      "nome": "Notebook X",
+      "descricao": "Notebook ",
+      "preco": "2.200,00",
+      "quantidade": "8",
+      "url": "https://media.istockphoto.com/id/1368877490/pt/foto/open-laptop-or-notebook-screen-front-view.jpg?s=1024x1024&w=is&k=20&c=Q0rZBdwLyRCCuP6UN2R8KwtgoIY0FqdClR1f8wlefbI=",
+      "categoria": "1",
+      "criacao": "2023-02-27"
+    },
+    {
+      "id": "828d42e9-ab67-45a5-911a-ba8d633e62f5",
+      "nome": "Controle Xbox",
+      "descricao": "Controle para Xbox series X/S e Xbox one",
+      "preco": "330,00",
+      "quantidade": "3",
+      "url": "https://images.unsplash.com/photo-1543973277-5020ef836640?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "categoria": "1",
+      "criacao": "2023-02-27"
+    }
+  ],
+  "categorias": []
+}

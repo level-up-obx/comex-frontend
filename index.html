@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./assets/styles/produtos.css">
     <link rel="stylesheet" href="./assets/styles/rodape.css">
     <title>Comex</title>
+    <script src="./src/paginas/principal.js" type="module" defer></script>
 </head>
 <body>
     <!-- menu mobile -->
@@ -22,10 +23,10 @@
             <ul class="menu__lista menu__lista-disable">
                 <li class="menu__lista-item"><a href="./pages/produtos.html">Produtos</a></li>
                 <li class="menu__lista-item"><a href="./pages/categorias.html">Categorias</a></li>
-                <li class="menu__lista-item">Buscar</li>
                 <li class="menu__lista-item"><a href="./pages/contato.html">Contato</a></li>
+                <li class="menu__lista-item">Buscar</li>
                 <li class="menu__lista-item">Carrinho</li>
-                <li class="menu__lista-item">Entrar</li>
+                <li class="menu__lista-item"><a href="./pages/clientes.html"></a></li>
             </ul>
             <button id="botao-menu" class="botao-menu"><img src="./assets/svg/menu.svg"></button>
         </nav>
@@ -46,7 +47,9 @@
             <input type="search" name="" id="" placeholder="Pesquise..." class="input-pesquisa-mobile">
             <ul class="cabecalho__lista">
                 <li class="cabecalho__lista-item"><img src="./assets/svg/carrinho-compras.svg" alt="Carrinho de compras"></li>
-                <li class="cabecalho__lista-item"><img src="./assets/svg/usuario.svg" alt="Perfil do usuário"></li>
+                <a href="./pages/clientes.html">
+                    <li class="cabecalho__lista-item"><img src="./assets/svg/usuario.svg" alt="Perfil do usuário"></li>
+                </a>
             </ul>
         </div>
     </header>
@@ -79,138 +82,6 @@
                 <h2 class="mais-vendidos__titulo">Produtos mais vendidos</h2>
             </div>
             <div class="box-mais-vendidos-card">
-                <div class="mais-vendidos__card">
-                    <img src="./assets/img/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
-                    <div class="mais-vendidos__card-textos">
-                        <h3 class="nome-produto">Placa-mãe</h3>
-                        <div class="box-valor-produto">
-                            <span class="valor-produto-simbolo"></span>
-                            <p class="valor-produto">1,500</p>
-                        </div>
-                    </div>
-                    <button class="botao-produto">Comprar</button>
-                </div>
-                <div class="mais-vendidos__card">
-                    <img src="./assets/img/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
-                    <div class="mais-vendidos__card-textos">
-                        <h3 class="nome-produto">Placa-mãe</h3>
-                        <div class="box-valor-produto">
-                            <span class="valor-produto-simbolo"></span>
-                            <p class="valor-produto">1,500</p>
-                        </div>
-                    </div>
-                    <a class="botao-produto" href="./pages/produto.html">Comprar</a>
-                </div>
-                <div class="mais-vendidos__card">
-                    <img src="./assets/img/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
-                    <div class="mais-vendidos__card-textos">
-                        <h3 class="nome-produto">Placa-mãe</h3>
-                        <div class="box-valor-produto">
-                            <span class="valor-produto-simbolo"></span>
-                            <p class="valor-produto">1,500</p>
-                        </div>
-                    </div>
-                    <a class="botao-produto" href="./pages/produto.html">Comprar</a>
-                </div>
-                <div class="mais-vendidos__card">
-                    <img src="./assets/img/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
-                    <div class="mais-vendidos__card-textos">
-                        <h3 class="nome-produto">Placa-mãe</h3>
-                        <div class="box-valor-produto">
-                            <span class="valor-produto-simbolo"></span>
-                            <p class="valor-produto">1,500</p>
-                        </div>
-                    </div>
-                    <a class="botao-produto" href="./pages/produto.html">Comprar</a>
-                </div>
-                <div class="mais-vendidos__card desativado">
-                    <img src="./assets/img/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
-                    <div class="mais-vendidos__card-textos">
-                        <h3 class="nome-produto">Placa-mãe</h3>
-                        <div class="box-valor-produto">
-                            <span class="valor-produto-simbolo"></span>
-                            <p class="valor-produto">1,500</p>
-                        </div>
-                    </div>
-                    <a class="botao-produto" href="./pages/produto.html">Comprar</a>
-                </div>
-                <div class="mais-vendidos__card desativado">
-                    <img src="./assets/img/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
-                    <div class="mais-vendidos__card-textos">
-                        <h3 class="nome-produto">Placa-mãe</h3>
-                        <div class="box-valor-produto">
-                            <span class="valor-produto-simbolo"></span>
-                            <p class="valor-produto">1,500</p>
-                        </div>
-                    </div>
-                    <a class="botao-produto" href="./pages/produto.html">Comprar</a>
-                </div>
-                <div class="mais-vendidos__card desativado">
-                    <img src="./assets/img/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
-                    <div class="mais-vendidos__card-textos">
-                        <h3 class="nome-produto">Placa-mãe</h3>
-                        <div class="box-valor-produto">
-                            <span class="valor-produto-simbolo"></span>
-                            <p class="valor-produto">1,500</p>
-                        </div>
-                    </div>
-                    <a class="botao-produto" href="./pages/produto.html">Comprar</a>
-                </div>
-                <div class="mais-vendidos__card desativado">
-                    <img src="./assets/img/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
-                    <div class="mais-vendidos__card-textos">
-                        <h3 class="nome-produto">Placa-mãe</h3>
-                        <div class="box-valor-produto">
-                            <span class="valor-produto-simbolo"></span>
-                            <p class="valor-produto">1,500</p>
-                        </div>
-                    </div>
-                    <a class="botao-produto" href="./pages/produto.html">Comprar</a>
-                </div>
-                <div class="mais-vendidos__card desativado">
-                    <img src="./assets/img/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
-                    <div class="mais-vendidos__card-textos">
-                        <h3 class="nome-produto">Placa-mãe</h3>
-                        <div class="box-valor-produto">
-                            <span class="valor-produto-simbolo"></span>
-                            <p class="valor-produto">1,500</p>
-                        </div>
-                    </div>
-                    <a class="botao-produto" href="./pages/produto.html">Comprar</a>
-                </div>
-                <div class="mais-vendidos__card desativado">
-                    <img src="./assets/img/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
-                    <div class="mais-vendidos__card-textos">
-                        <h3 class="nome-produto">Placa-mãe</h3>
-                        <div class="box-valor-produto">
-                            <span class="valor-produto-simbolo"></span>
-                            <p class="valor-produto">1,500</p>
-                        </div>
-                    </div>
-                    <a class="botao-produto" href="./pages/produto.html">Comprar</a>
-                </div>
-                <div class="mais-vendidos__card desativado">
-                    <img src="./assets/img/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
-                    <div class="mais-vendidos__card-textos">
-                        <h3 class="nome-produto">Placa-mãe</h3>
-                        <div class="box-valor-produto">
-                            <span class="valor-produto-simbolo"></span>
-                            <p class="valor-produto">1,500</p>
-                        </div>
-                    </div>
-                    <a class="botao-produto" href="./pages/produto.html">Comprar</a>
-                </div>
-                <div class="mais-vendidos__card desativado">
-                    <img src="./assets/img/placa-mae.png" alt="Placa mãe" class="mais-vendidos__card-img">
-                    <div class="mais-vendidos__card-textos">
-                        <h3 class="nome-produto">Placa-mãe</h3>
-                        <div class="box-valor-produto">
-                            <span class="valor-produto-simbolo"></span>
-                            <p class="valor-produto">1,500</p>
-                        </div>
-                    </div>
-                    <a class="botao-produto" href="./pages/produto.html">Comprar</a>
-                </div>
             </div>
             </section>
         </main>

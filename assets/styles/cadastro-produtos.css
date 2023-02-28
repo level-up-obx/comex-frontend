@@ -3,6 +3,7 @@
 }
 
 .container h1{
+    color: var(--roxo);
     text-align: center;
     margin-bottom: 1.2rem;
 }
@@ -56,8 +57,8 @@
     width: 125px;
 }
 
-@media screen and (min-width: 1024px){
-    .container form select{
-        width: 300px;
+@media screen and (min-width: 720px){
+    .container h1{
+        font-size: 40px;
     }
 }

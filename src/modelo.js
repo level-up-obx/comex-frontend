@@ -14,13 +14,14 @@ export const criaCategoria = (nome) => {
     }
 }
 
-export const criaProduto = (nome, descricao, preco, quantidade, categoria) => {
+export const criaProduto = (nome, descricao, preco, url, quantidade, categoria) => {
     return{
         id: uuidv4(),
         nome,
         descricao,
         preco,
         quantidade,
+        url,
         categoria,
         criacao: data
     }

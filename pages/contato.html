@@ -15,19 +15,18 @@
     <link rel="stylesheet" href="../assets/styles/botaoCard.css">
     <link rel="stylesheet" href="../assets/styles/contato.css">
     <script src="https://kit.fontawesome.com/0d76fadde4.js" crossorigin="anonymous"></script>
-    <title>Contato</title>
+    <title>Comex</title>
 </head>
 <body>
     <header class="cabecalho menu-mobile">
         <nav class="menu">
-            <a href="#" class="logo"><img src="../assets/svg/logo.svg" alt="Comex logo" class="logo"></a>
+            <a href="../index.html" class="logo"><img src="../assets/svg/logo.svg" alt="Comex logo" class="logo"></a>
             <ul class="menu__lista menu__lista-disable">
                 <li class="menu__lista-item"><a href="../index.html">Home</a></li>
-                <li class="menu__lista-item">Categorias</li>
-                <li class="menu__lista-item">Buscar</li>
-                <li class="menu__lista-item">Contato</li>
+                <li class="menu__lista-item"><a href="./categorias.html">Categorias</a></li>
+                <li class="menu__lista-item"><a href="./produtos.html">Produtos</a></li>
                 <li class="menu__lista-item">Carrinho</li>
-                <li class="menu__lista-item">Entrar</li>
+                <li class="menu__lista-item"><a href="./clientes.html">Entrar</a></li>
             </ul>
             <button id="botao-menu" class="botao-menu"><img src="../assets/svg/menu.svg"></button>
         </nav>
@@ -38,17 +37,19 @@
     </header>
     <!-- menu desktop -->
     <header class="menu-desktop">
-        <a href="#" class="logo-mobile"><img src="../assets/svg/logo.svg" alt="Logo Comex"></a>
+        <a href="../index.html" class="logo-mobile"><img src="../assets/svg/logo.svg" alt="Logo Comex"></a>
         <ul class="cabecalho__lista">
             <li class="cabecalho__lista-item"><a href="../index.html">Home</a></li>
-            <li class="cabecalho__lista-item">Categorias</li>
-            <li class="cabecalho__lista-item">Contato</li>
+            <li class="cabecalho__lista-item"><a href="./categorias.html">Categorias</a></li>
+            <li class="cabecalho__lista-item"><a href="./produtos.html">Produtos</a></li>
         </ul>
         <div class="box-cabecalho-interativos">
             <input type="search" name="" id="" placeholder="Pesquise..." class="input-pesquisa-mobile">
             <ul class="cabecalho__lista">
                 <li class="cabecalho__lista-item"><img src="../assets/svg/carrinho-compras.svg" alt="Carrinho de compras"></li>
-                <li class="cabecalho__lista-item"><img src="../assets/svg/usuario.svg" alt="Perfil do usuário"></li>
+                <a href="./clientes.html">
+                    <li class="cabecalho__lista-item"><img src="../assets/svg/usuario.svg" alt="Perfil do usuário"></li>
+                </a>
             </ul>
         </div>
     </header>
@@ -67,7 +68,7 @@
     </main>
     <footer class="rodape">
         <div class="esquerda">
-            <a href="#"><img src="../assets/svg/logo.svg" alt="Logo Comex" class="logo-rodape"></a>
+            <a href="../index.html"><img src="../assets/svg/logo.svg" alt="Logo Comex" class="logo-rodape"></a>
             <ul class="rodape__lista">
                 <li class="rodape__lista-item"><a href="#"><img src="../assets/svg/instagram.svg" alt=""></a></li>
                 <li class="rodape__lista-item"><a href="#"><img src="../assets/svg/twitter.svg" alt=""></a></li>

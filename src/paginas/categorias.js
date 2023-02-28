@@ -1,15 +1,34 @@
 import { criaCategoria } from '../modelo.js'
-const botaoCategoria = document.querySelector('#botao-categoria')
-const input = document.querySelector('#input-categoria')
+import { apiPost } from '../consumoApi.js'
 
-function eventoInput(e){
-    e.preventDefault()
-    if(input.value.length > 0 && input.value === 'informática' || input.value === 'móveis' || input.value === 'livros') console.log(criaCategoria(input.value))
-    else console.log('Digite um valor válido')
-    input.value = ''
-    input.focus()
-    
+const form = document.querySelector('#form-categoria')
+const nome = document.querySelector('#input-categoria')
+const corpoTabela = document.querySelector('#corpo-tabela')
+
+function criaHTML(data) {
+    return `
+    <tr>
+        <td>${data.nome}</td>
+        <td>
+            <td class="celula-botoes"><button id="deleta"><i class="fa-solid fa-trash"></i></button> <button id="edita"><i class="fa-regular fa-pen-to-square"></i></button> <button id="bloqueia"><i class="fa-solid fa-ban"></i></button></td>
+        </td>
+    </tr>`
 }
 
-botaoCategoria.addEventListener('click', eventoInput)
-input.addEventListener('submit', eventoInput)
+fetch('http://localhost:3000/categorias')
+    .then(resp => resp.json())
+    .then(data => {
+        console.log(data)    
+        data.forEach(elemento => corpoTabela.innerHTML += criaHTML(elemento))
+    })
+    .catch(e => alert('Não foi possível recuperar as categorias'))
+
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
+    if(nome.value === 'Informática' || nome.value === 'Móveis' || nome.value === 'Livros')
+        apiPost(`categorias`, criaCategoria(nome.value))
+    else alert('Valor inválido')
+    nome.value = ''
+    nome.focus()
+
+})
