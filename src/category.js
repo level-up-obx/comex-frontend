@@ -51,13 +51,12 @@ function listCategory() {
     })
         .then(response => response.json())
         .then(categories => {
-            categories.forEach(category => {
-                let addList = categories.map(function(element){
-                   return addCategory(element)
-                })
-                .join('')
-                tableCategory.innerHTML = addList
-            });
+            let addList = categories.map(category => {
+
+                return addCategory(category)
+
+            }).join('')
+            tableCategory.innerHTML = addList;
         })
         .catch(error => {
             console.log(error)
