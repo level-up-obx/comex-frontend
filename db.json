@@ -22,14 +22,121 @@
   "produtos": [
     {
       "uuid": "2e7d4832-9a43-4c98-ac15-520f101db0f8",
-      "name": "monitor",
-      "description": "Monitor",
-      "price": "1000",
+      "name": "Placa-Mãe",
+      "description": "Placa-Mãe",
+      "price": "1.500",
       "qtd": "11",
       "category": "1",
       "createdAt": "2023-02-28",
-      "id": 1
+      "id": 1,
+      "img": "assets/img/product1.jpg"
+    },
+    {
+      "uuid": "ea91b025-688f-4911-93fa-f2bbca0dcebd",
+      "name": "Controle Super Nintendo",
+      "description": "Controle Super Nintendo",
+      "price": "1.900",
+      "qtd": "14",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 2,
+      "img": "assets/img/product2.jpg"
+    },
+    {
+      "uuid": "d27a7772-3abe-45be-91dd-536e4e5cb032",
+      "name": "Memória RAM",
+      "description": "Memória RAM",
+      "price": "1.000",
+      "qtd": "1",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 3,
+      "img": "assets/img/product3.jpg"
+    },
+    {
+      "uuid": "c4905bdb-f89e-429d-83ec-45474b5bec8b",
+      "name": "Fone Bluetooth",
+      "description": "Fone Bluetooth",
+      "price": "90.00",
+      "qtd": "11",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 4,
+      "img": "assets/img/product4.jpg"
+    },
+    {
+      "uuid": "e0c4b058-9c33-4b3d-b470-6e5b236c9195",
+      "name": "Controle PS (blue)",
+      "description": "Controle PS (blue)",
+      "price": "400",
+      "qtd": "2",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 5,
+      "img": "assets/img/product5.jpg"
+    },
+    {
+      "uuid": "345a28b2-f0cc-4a57-a86a-d6da4f6de4e8",
+      "name": "Controle PS (black)",
+      "description": "Controle PS (black)",
+      "price": "1.900",
+      "qtd": "5",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 6,
+      "img": "assets/img/product6.jpg"
+    },
+    {
+      "uuid": "05d833f8-2ed7-4d52-a88d-0c4ae3bf9d20",
+      "name": "Controle X-Box",
+      "description": "Controle X-Box",
+      "price": "1.900",
+      "qtd": "9",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 7,
+      "img": "assets/img/product7.jpg"
+    },
+    {
+      "uuid": "61e92c06-734b-4016-97a1-b9638d8e6d9f",
+      "name": "Processador",
+      "description": "Processador",
+      "price": "1.733",
+      "qtd": "7",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 8,
+      "img": "assets/img/product8.jpg"
+    },
+    {
+      "uuid": "4484b6cd-28ba-4676-a38f-52d718cf6a38",
+      "name": "Monitor",
+      "description": "Monitor",
+      "price": "1000",
+      "qtd": "75",
+      "category": "1",
+      "createdAt": "2023-02-28",
+      "id": 9,
+      "img": "assets/img/product9.jpg"
+    },
+    {
+      "uuid": "deee66db-b76c-4340-98ee-d0e32a68c842",
+      "name": "",
+      "description": "",
+      "price": "",
+      "qtd": "",
+      "category": "Selecione...",
+      "createdAt": "2023-02-28",
+      "id": 10
     }
   ],
-  "categorias": []
+  "categorias": [
+    {
+      "uuid": "ac0c4abe-596c-42f4-8ad2-a3ec54cf5747",
+      "name": "Informatica",
+      "status": "ATIVA",
+      "createdAt": "2023-02-28",
+      "id": 1
+    }
+  ]
 }

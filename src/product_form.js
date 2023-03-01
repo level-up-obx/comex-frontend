@@ -2,6 +2,8 @@ import { createProduct } from "./modelo.js"
 
 const form = document.getElementById("form_product")
 const URL_API = 'http://localhost:3000'
+const productSection = document.querySelector(".product_section")
+
 
 form.addEventListener("submit", (evento) => {
     evento.preventDefault()
@@ -40,7 +42,6 @@ function postProduct(product) {
             alert('Não foi possível salvar o produto! Aguarde uns minutos e tente novamente.')
         })
 }
-
 
 
 

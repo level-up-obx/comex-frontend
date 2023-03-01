@@ -4,10 +4,10 @@
     align-items: center;
     background-color: #8FA8FF;
     padding-inline: 10%;
-    padding-block: 5%; 
+    padding-block: 5%;
     margin-top: 2rem;
-    
-    
+
+
 }
 
 
@@ -16,7 +16,7 @@
     display: flex;
     width: 100%;
     font-family: var(--inter);
-    
+
 }
 
 .footer_left {
@@ -24,13 +24,17 @@
     justify-content: end;
     width: 50%;
     margin-right: 0.5rem;
+    text-decoration: none;
+    color: #ffffff;
 }
 
 .footer_right {
+    text-decoration: none;
     display: flex;
     justify-content: start;
     width: 50%;
-    margin-left: 0.5rem; 
+    margin-left: 0.5rem;
+    color: #ffffff;
 }
 
 .footer_inf {
@@ -54,7 +58,7 @@
     padding-top: 2rem;
     padding-bottom: 2rem;
     font-family: var(--inter);
-    
+
 }
 
 .contact_description {
@@ -62,39 +66,49 @@
 }
 
 .contato_comex {
+
     margin-top: 1rem;
+
 }
 
+.tel {
+    text-decoration: none;
+    color: #ffffff;
+}
 
+.email {
+    text-decoration: none;
+    color: #ffffff;
+}
 
 @media(max-width: 768px) {
     .footer_midia {
         padding-block: 15%;
-        
-        
+
+
     }
-    
+
     .footer_text {
         color: #ffffff;
         display: flex;
         width: 100%;
-        
+
     }
-    
+
     .footer_left {
         display: flex;
         justify-content: end;
         width: 50%;
         margin-right: 0.5rem;
     }
-    
+
     .footer_right {
         display: flex;
         justify-content: start;
         width: 50%;
-        margin-left: 0.5rem; 
+        margin-left: 0.5rem;
     }
-    
+
     .footer_inf {
         font-size: 0.8rem;
         color: #ffffff;
