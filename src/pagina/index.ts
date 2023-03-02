@@ -5,7 +5,7 @@ async function listaCategorias() {
         const produtos = await response.json();
 
         let html = '';
-        produtos.forEach(item => {
+        produtos.forEach((item: { url?: string, nome: string, preco: number }) => {
             html += /*html*/
                     `<div class="purchase-item">
                         <div class="ms-5 mt-3">
@@ -17,10 +17,17 @@ async function listaCategorias() {
                     </div>`;
         });
 
-        document.querySelector('.purchase').innerHTML = html;
+        const purchase = document.querySelector('.purchase');
+        if (purchase) {
+            purchase.innerHTML = html;
+        }
     } catch (err) {
-        document.querySelector('.purchase').innerHTML = 'Não foi possível recuperar as produtos.'
+        const purchase = document.querySelector('.purchase');
+        if (purchase) {
+            purchase.innerHTML = 'Não foi possível recuperar os produtos.';
+        }
     }
+
 
 }
 listaCategorias()

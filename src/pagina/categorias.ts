@@ -1,6 +1,13 @@
 import { criaCategoria } from '../modelo.js';
 
-function createContent(categorias) {
+interface Categoria {
+    id: string;
+    nome: string;
+    status: string;
+    criacao: string;
+}
+
+function createContent(categorias: Categoria[]) {
     let html = '';
     categorias.forEach(item => {
         html +=  /* html */ `
@@ -21,38 +28,38 @@ function createContent(categorias) {
 
 (async function listarCategorias() {
     try {
-        let categorias;
+        let categorias: Categoria[];
         let categoriasNoCache = localStorage.getItem('cache-categorias')
 
         if (categoriasNoCache) {
-            categorias = JSON.parse(categoriasNoCache)
-            return createContent(categorias)
-        }
+            categorias = JSON.parse(categoriasNoCache);
+            return createContent(categorias);
+          }
 
-        const response = await fetch('http://localhost:3000/categorias');
-        const newCategorias = await response.json();
-        localStorage.setItem('cache-categorias', JSON.stringify(newCategorias))
+          const response = await fetch('http://localhost:3000/categorias');
+          const newCategorias = await response.json();
+          localStorage.setItem('cache-categorias', JSON.stringify(newCategorias));
 
-        createContent(newCategorias)
+          createContent(newCategorias);
 
-        const deletarItem = async (uuid) => {
+          const deletarItem = async (uuid: string) => {
             try {
-                const response = await fetch(`http://localhost:3000/categorias/${uuid}`, { method: 'DELETE' });
-                const data = await response.json();
-                localStorage.removeItem('cache-categorias')
-                return data
+              const response = await fetch(`http://localhost:3000/categorias/${uuid}`, { method: 'DELETE' });
+              const data = await response.json();
+              localStorage.removeItem('cache-categorias');
+              return data;
             } catch (error) {
               console.error('Erro ao excluir o item: ', error);
             }
           };
 
-        document.querySelectorAll('button[id^="delete-btn-"]').forEach(btn => {
-            const id = btn.id.substring(11,50)
+          document.querySelectorAll('button[id^="delete-btn-"]').forEach((btn) => {
+            const id = btn.id.substring(11, 50);
             btn.addEventListener('click', () => {
-                deletarItem(id)
-                alert('item deletado com sucesso! atualize a página.')
+              deletarItem(id);
+              alert('item deletado com sucesso! atualize a página.');
             });
-        });
+          });
 
     } catch (err) {
         let msg = 'Não foi possível recuperar as categorias.'
@@ -61,8 +68,8 @@ function createContent(categorias) {
 
 })()
 
-const campoNome = document.querySelector("#nome")
-const form = document.querySelector("#formCategoria")
+const campoNome = document.querySelector<HTMLInputElement>('#nome');
+const form = document.querySelector<HTMLFormElement>('#formCategoria');
 
 function formattedDataCurrent() {
     const date = new Date();
