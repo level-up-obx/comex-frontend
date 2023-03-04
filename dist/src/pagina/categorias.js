@@ -1,4 +1,4 @@
-import { criaCategoria } from '../modelo.js';
+import { CriaCategoria } from '../modelo.js';
 class Categoria {
     id;
     nome;
@@ -40,13 +40,13 @@ class Categoria {
                 categorias = JSON.parse(categoriasNoCache);
                 return Categoria.createContent(categorias);
             }
-            const response = await fetch('http://localhost:3000/categorias');
+            const response = await fetch('http://localhost:4000/categorias');
             const newCategorias = await response.json();
             localStorage.setItem('cache-categorias', JSON.stringify(newCategorias));
             Categoria.createContent(newCategorias);
             const deletarItem = async (uuid) => {
                 try {
-                    const response = await fetch(`http://localhost:3000/categorias/${uuid}`, { method: 'DELETE' });
+                    const response = await fetch(`http://localhost:4000/categorias/${uuid}`, { method: 'DELETE' });
                     const data = await response.json();
                     localStorage.removeItem('cache-categorias');
                     return data;
@@ -81,9 +81,9 @@ class Categoria {
         const nome = this.campoNome.value;
         const status = 'ATIVO';
         const criacao = Categoria.formattedDataCurrent();
-        const novaCategoria = criaCategoria(nome, status, criacao);
+        const novaCategoria = new CriaCategoria(nome, status);
         try {
-            const response = await fetch('http://localhost:3000/categorias', {
+            const response = await fetch('http://localhost:4000/categorias', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(novaCategoria),

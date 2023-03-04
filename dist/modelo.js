@@ -1,23 +1,27 @@
-import { v4 as uuidv4 } from 'uuid';
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Produto = exports.CriaCategoria = void 0;
+const uuid_1 = require("uuid");
 class Pessoa {
     id;
     nome;
     criacao;
     constructor(nome) {
-        this.id = uuidv4();
+        this.id = (0, uuid_1.v4)();
         this.nome = nome;
         const today = new Date();
         this.criacao = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     }
 }
-export class CriaCategoria extends Pessoa {
+class CriaCategoria extends Pessoa {
     _status;
     constructor(nome, status) {
         super(nome);
         this._status = status;
     }
 }
-export class Produto extends Pessoa {
+exports.CriaCategoria = CriaCategoria;
+class Produto extends Pessoa {
     url;
     descricao;
     preco;
@@ -32,6 +36,7 @@ export class Produto extends Pessoa {
         this.categoria = categoria;
     }
 }
+exports.Produto = Produto;
 class Endereco {
     rua;
     numero;
@@ -56,3 +61,4 @@ class Cliente extends Pessoa {
         this.email = email;
     }
 }
+//# sourceMappingURL=modelo.js.map

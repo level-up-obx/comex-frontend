@@ -24,7 +24,7 @@ formProdutos.addEventListener('submit', (event: Event) => {
         categoria.value
     );
 
-    fetch('http://localhost:3000/produtos', {
+    fetch('http://localhost:4000/produtos', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(novoProduto),

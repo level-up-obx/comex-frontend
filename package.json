@@ -10,8 +10,8 @@
         "test:desejavel": "jest -t Desejavel",
         "test:desafio": "jest -t Desafio",
         "test:watch": "jest --watchAll",
-        "api:fake": "json-server --watch db.json",
-        "server": "lite-server"
+        "api:fake": "json-server --watch db.json --port 4000",
+        "server": "lite-server 3050"
     },
     "repository": {
         "type": "git",
