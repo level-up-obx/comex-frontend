@@ -10,7 +10,8 @@
         "test:desejavel": "jest -t Desejavel",
         "test:desafio": "jest -t Desafio",
         "test:watch": "jest --watchAll",
-        "api:fake": "json-server --watch db.json"
+        "api:fake": "json-server --watch db.json",
+        "server": "lite-server"
     },
     "repository": {
         "type": "git",
@@ -32,6 +33,7 @@
     "devDependencies": {
         "@types/uuid": "^9.0.1",
         "jest": "^29.4.1",
+        "lite-server": "^2.6.1",
         "typescript": "^4.9.5"
     },
     "dependencies": {

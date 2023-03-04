@@ -1,11 +1,12 @@
 {
     "compilerOptions": {
-        "target": "ES5",
-        "outDir": "dist/js",
-        "noEmitOnError": true,
-        "noImplicitAny": true,
-        "removeComments": true,
-        "strictNullChecks": false
+      "target": "ES2022",
+      "outDir": "dist/src",
+      "noEmitOnError": true,
+      "noImplicitAny": true,
+      "removeComments": true,
+      "strictNullChecks": false,
+      "moduleResolution": "node"
     },
     "include": ["src/**/*"]
-}
+  }

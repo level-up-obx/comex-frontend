@@ -1,25 +1,24 @@
 import { criaCategoria } from '../modelo.js';
-
 class Categoria {
-
-    private campoNome: HTMLInputElement;
-    private form: HTMLFormElement;
-
-    constructor (
-        private id: string,
-        private nome: string,
-        private status: string,
-        private criacao: string
-    ) {
-        this.campoNome = document.querySelector('#nome')
-        this.form = document.querySelector('#formCategoria')
+    id;
+    nome;
+    status;
+    criacao;
+    campoNome;
+    form;
+    constructor(id, nome, status, criacao) {
+        this.id = id;
+        this.nome = nome;
+        this.status = status;
+        this.criacao = criacao;
+        this.campoNome = document.querySelector('#nome');
+        this.form = document.querySelector('#formCategoria');
         this.form.addEventListener('submit', this.onSubmit.bind(this));
     }
-
-    static createContent(categorias: Categoria[]) {
+    static createContent(categorias) {
         let html = '';
         categorias.forEach(item => {
-            html +=  /* html */ `
+            html += `
                     <tr>
                         <td>${item.nome}</td>
                         <td>${item.status}</td>
@@ -31,90 +30,72 @@ class Categoria {
                         </td>
                     </tr>`;
         });
-
         document.querySelector('tbody').innerHTML = html;
     }
-
     async listarCategorias() {
         try {
-            let categorias: Categoria[];
-            let categoriasNoCache = localStorage.getItem('cache-categorias')
-
+            let categorias;
+            let categoriasNoCache = localStorage.getItem('cache-categorias');
             if (categoriasNoCache) {
                 categorias = JSON.parse(categoriasNoCache);
                 return Categoria.createContent(categorias);
-              }
-
-              const response = await fetch('http://localhost:3000/categorias');
-              const newCategorias = await response.json();
-              localStorage.setItem('cache-categorias', JSON.stringify(newCategorias));
-
-              Categoria.createContent(newCategorias);
-
-              const deletarItem = async (uuid: string) => {
+            }
+            const response = await fetch('http://localhost:3000/categorias');
+            const newCategorias = await response.json();
+            localStorage.setItem('cache-categorias', JSON.stringify(newCategorias));
+            Categoria.createContent(newCategorias);
+            const deletarItem = async (uuid) => {
                 try {
-                  const response = await fetch(`http://localhost:3000/categorias/${uuid}`, { method: 'DELETE' });
-                  const data = await response.json();
-                  localStorage.removeItem('cache-categorias');
-                  return data;
-                } catch (error) {
-                  console.error('Erro ao excluir o item: ', error);
+                    const response = await fetch(`http://localhost:3000/categorias/${uuid}`, { method: 'DELETE' });
+                    const data = await response.json();
+                    localStorage.removeItem('cache-categorias');
+                    return data;
                 }
-              };
-
-              document.querySelectorAll('button[id^="delete-btn-"]').forEach((btn) => {
+                catch (error) {
+                    console.error('Erro ao excluir o item: ', error);
+                }
+            };
+            document.querySelectorAll('button[id^="delete-btn-"]').forEach((btn) => {
                 const id = btn.id.substring(11, 50);
                 btn.addEventListener('click', () => {
-                  deletarItem(id);
-                  alert('item deletado com sucesso! atualize a página.');
+                    deletarItem(id);
+                    alert('item deletado com sucesso! atualize a página.');
                 });
-              });
-
-        } catch (err) {
-            let msg = 'Não foi possível recuperar as categorias.'
+            });
+        }
+        catch (err) {
+            let msg = 'Não foi possível recuperar as categorias.';
             document.querySelector('.erro-listar-categorias').innerHTML = msg;
         }
-
     }
-
     static formattedDataCurrent() {
         const date = new Date();
         const month = (date.getMonth() + 1).toString().padStart(2, '0');
         const day = date.getDate().toString().padStart(2, '0');
         const year = date.getFullYear();
         const formattedData = `${year}-${month}-${day}`;
-        return formattedData // exemplo de saída: "2023-02-15"
+        return formattedData;
     }
-
-    async onSubmit(event: Event) {
+    async onSubmit(event) {
         event.preventDefault();
-
         const nome = this.campoNome.value;
         const status = 'ATIVO';
         const criacao = Categoria.formattedDataCurrent();
-
         const novaCategoria = criaCategoria(nome, status, criacao);
-
         try {
-          const response = await fetch('http://localhost:3000/categorias', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify(novaCategoria),
-          });
-
-          const data = await response.json();
-
-          alert(`Categoria ${data.nome} cadastrada com sucesso! Atualize a página.`);
-
-          localStorage.removeItem('cache-categorias');
-          this.campoNome.value = '';
-          this.campoNome.focus();
-        } catch (error) {
-          console.error(
-            'Não foi possível salvar a categoria! Aguarde uns minutos e tente novamente.'
-          );
+            const response = await fetch('http://localhost:3000/categorias', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(novaCategoria),
+            });
+            const data = await response.json();
+            alert(`Categoria ${data.nome} cadastrada com sucesso! Atualize a página.`);
+            localStorage.removeItem('cache-categorias');
+            this.campoNome.value = '';
+            this.campoNome.focus();
         }
-      }
+        catch (error) {
+            console.error('Não foi possível salvar a categoria! Aguarde uns minutos e tente novamente.');
+        }
+    }
 }
-
-

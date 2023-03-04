@@ -1,44 +1,39 @@
 import { v4 as uuidv4 } from 'uuid';
-
 class Categoria {
-    id: string;
-    nome: string;
-    status: string;
-    criacao: string;
+    id;
+    nome;
+    status;
+    criacao;
 }
-
 export class Produto {
-    id: string;
-    nome: string;
-    url: string;
-    descricao: string;
-    preco: number;
-    quantidade_estoque: number;
-    categoria: string;
-    criacao: string;
+    id;
+    nome;
+    url;
+    descricao;
+    preco;
+    quantidade_estoque;
+    categoria;
+    criacao;
 }
-
 class Endereco {
-    rua: string;
-    numero: number;
-    bairro: string;
-    cidade: string;
-    estado: string;
-    cep: string;
-    complemento: string;
+    rua;
+    numero;
+    bairro;
+    cidade;
+    estado;
+    cep;
+    complemento;
 }
-
 class Cliente {
-    id: string;
-    nome: string;
-    sobrenome: string;
-    cpf: string;
-    telefone: string;
-    endereco: Endereco;
-    email: string;
+    id;
+    nome;
+    sobrenome;
+    cpf;
+    telefone;
+    endereco;
+    email;
 }
-
-export function criaCategoria(nome: string, status: string, criacao: string): Categoria {
+export function criaCategoria(nome, status, criacao) {
     return {
         id: uuidv4(),
         nome: nome,
@@ -46,11 +41,9 @@ export function criaCategoria(nome: string, status: string, criacao: string): Ca
         criacao: criacao
     };
 }
-
-export function criaProduto(nome: string, url: string, descricao: string, preco: number, quantidade_estoque: number, categoria: string): Produto {
+export function criaProduto(nome, url, descricao, preco, quantidade_estoque, categoria) {
     const today = new Date();
     const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-
     return {
         id: uuidv4(),
         nome: nome,
@@ -62,8 +55,7 @@ export function criaProduto(nome: string, url: string, descricao: string, preco:
         criacao: date
     };
 }
-
-export function criaCliente(nome: string, sobrenome: string, cpf: string, telefone: string, endereco: Endereco, email: string): Cliente {
+export function criaCliente(nome, sobrenome, cpf, telefone, endereco, email) {
     return {
         id: uuidv4(),
         nome: nome,
