@@ -1,4 +1,4 @@
-import { criaCategoria } from '../modelo.js';
+import { CriaCategoria } from '../modelo.js';
 
 class Categoria {
 
@@ -93,7 +93,7 @@ class Categoria {
         const status = 'ATIVO';
         const criacao = Categoria.formattedDataCurrent();
 
-        const novaCategoria = criaCategoria(nome, status, criacao);
+        const novaCategoria = new CriaCategoria(nome, status, criacao);
 
         try {
           const response = await fetch('http://localhost:3000/categorias', {

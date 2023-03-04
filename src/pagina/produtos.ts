@@ -1,4 +1,4 @@
-import { criaProduto, Produto } from '../modelo.js';
+import { Produto } from '../modelo.js';
 
 let formProdutos = document.querySelector<HTMLFormElement>('#formProdutos');
 
@@ -15,7 +15,7 @@ formProdutos.addEventListener('submit', (event: Event) => {
     let preco = parseInt(precoString.value)
     let quantidade = parseInt(quantidadeString.value)
 
-    let novoProduto: Produto = criaProduto(
+    let novoProduto: Produto = new Produto(
         nome.value,
         url.value,
         descricao.value,
