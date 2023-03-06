@@ -1,4 +1,4 @@
-import { criaProduto } from '../modelo.js'
+import { CriaProduto } from '../modelo.js'
 
 let formProdutos = document.querySelector('#formProdutos')
 
@@ -12,7 +12,7 @@ formProdutos.addEventListener('submit', (event) => {
     let quantidade = event.target.elements['quantidade']
     let categoria = event.target.elements['categoria']
 
-    let novoProduto = criaProduto(
+    let novoProduto = new CriaProduto(
         nome.value,
         url.value,
         descricao.value,

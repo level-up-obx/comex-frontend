@@ -1,4 +1,4 @@
-import { criaCategoria } from '../modelo.js';
+import { CriaCliente } from '../modelo.js';
 
 function createContent(categorias) {
     let html = '';
@@ -81,7 +81,7 @@ form.addEventListener("submit", function (event) {
     let status = "ATIVO"
     let criacao = formattedDataCurrent()
 
-    let novaCategoria = criaCategoria(nome, status, criacao)
+    let novaCategoria = new CriaCliente(nome, status, criacao)
 
     fetch('http://localhost:3000/categorias', {
         method: 'POST',

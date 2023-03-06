@@ -1,4 +1,4 @@
-import { criaCliente } from '../modelo.js'
+import { CriaCliente } from '../modelo.js';
 
 let formClientes = document.querySelector('#formClientes')
 
@@ -58,7 +58,7 @@ formClientes.addEventListener('submit', function (event) {
         complemento: event.target.elements['complemento'].value || null
     }
 
-    let novoCliente = criaCliente(
+    let novoCliente = new CriaCliente(
         nome.value,
         sobrenome.value,
         cpf,
