@@ -1,4 +1,4 @@
-import { CriaProduto } from '../modelo.js'
+import { CriaProduto } from '../../modelo.js'
 
 let formProdutos = document.querySelector('#formProdutos')
 

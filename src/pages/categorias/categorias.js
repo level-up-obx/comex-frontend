@@ -1,4 +1,4 @@
-import { CriaCliente } from '../modelo.js';
+import { CriaCliente } from '../../modelo.js';
 
 function createContent(categorias) {
     let html = '';

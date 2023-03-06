@@ -1,4 +1,4 @@
-import { CriaCliente } from '../modelo.js';
+import { CriaCliente } from '../../modelo.js';
 
 let formClientes = document.querySelector('#formClientes')
 
