@@ -42,5 +42,5 @@ class ListagemDeProdutos {
 }
 }
 
-const listagemDeProdutos = new ListagemDeProdutos('http://localhost:4000/produtos');
+const listagemDeProdutos = new ListagemDeProdutos('http://localhost:3000/produtos');
 listagemDeProdutos.listaProdutos();
