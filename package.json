@@ -2,15 +2,20 @@
     "name": "comex-frontend",
     "version": "1.0.0",
     "description": "Projeto frontend do melhor ecommerce do Brasil: Comex!",
-    "main": "/src/api.js",
+    "main": "index.js",
     "type": "module",
+    "@local/uuidv4": "file:./node_modules/uuid/dist/esm-browser/index.js",
     "scripts": {
         "test": "jest",
         "test:essencial": "jest -t Essencial",
         "test:desejavel": "jest -t Desejavel",
         "test:desafio": "jest -t Desafio",
         "test:watch": "jest --watchAll",
-        "api:fake": "json-server --watch db.json"
+        "api:fake": "json-server --watch db.json",
+        "server": "lite-server --baseDir=dist",
+        "start": "concurrently \"npm run watch\" \"npm run server\"",
+        "compile": "tsc",
+        "watch": "tsc -w"
     },
     "repository": {
         "type": "git",
@@ -30,11 +35,15 @@
     },
     "homepage": "https://github.com/level-up-obx/comex-frontend#readme",
     "devDependencies": {
-        "jest": "^29.4.1"
+        "@types/uuid": "^9.0.1",
+        "concurrently": "^6.0.0",
+        "lite-server": "^2.6.1",
+        "moment": "^2.24.0",
+        "typescript": "^4.2.2",
+        "uuid": "^9.0.0",
+        "uuidv4": "^6.2.13"
     },
     "dependencies": {
-        "json-server": "^0.17.2",
-        "uuid": "^9.0.0"
+        "json-server": "^0.17.2"
     }
-    
 }

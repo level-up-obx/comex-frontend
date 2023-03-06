@@ -1,18 +1,18 @@
-import { createCategory } from "./modelo.js"
+import { Category} from "./modelo.js"
 
-const input_category = document.getElementById("input_category")
-const URL_API = 'http://localhost:3000'
-const tableCategory = document.querySelector('#table_category tbody')
+const input_category = document.getElementById("input_category") as HTMLInputElement;
+const URL_API = 'http://localhost:3000';
+const tableCategory = document.querySelector('#table_category tbody') as HTMLElement;
 
 
-document.getElementById("btn_save").onclick = save;
-function save() {
-    const category = createCategory(input_category.value)
+
+function save():void {
+    const category = new Category(input_category.value);
     postCategory(category)
     console.log(category)
 }
 
-function postCategory(category) {
+function postCategory(category: Category): void {
     fetch(`${URL_API}/categorias`, {
         method: 'POST',
         headers: {
@@ -30,7 +30,7 @@ function postCategory(category) {
         })
 }
 
-function addCategory(category) {
+function addCategory(category: Category): String {
     return `<tr>
                 <th scope="row">${category.name}</th>
                 <td>${category.status}</td>
@@ -42,7 +42,7 @@ function addCategory(category) {
             </tr>`
 }
 
-function listCategory() {
+function listCategory(): void {
     fetch(`${URL_API}/categorias`, {
         method: 'GET',
         headers: {
@@ -51,7 +51,7 @@ function listCategory() {
     })
         .then(response => response.json())
         .then(categories => {
-            let addList = categories.map(category => {
+            let addList = categories.map((category: Category)=> {
 
                 return addCategory(category)
 

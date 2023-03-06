@@ -29,7 +29,7 @@
       "category": "1",
       "createdAt": "2023-02-28",
       "id": 1,
-      "img": "assets/img/product1.jpg"
+      "img": "/img/product1.jpg"
     },
     {
       "uuid": "ea91b025-688f-4911-93fa-f2bbca0dcebd",
@@ -40,7 +40,7 @@
       "category": "1",
       "createdAt": "2023-02-28",
       "id": 2,
-      "img": "assets/img/product2.jpg"
+      "img": "/img/product2.jpg"
     },
     {
       "uuid": "d27a7772-3abe-45be-91dd-536e4e5cb032",
@@ -51,7 +51,7 @@
       "category": "1",
       "createdAt": "2023-02-28",
       "id": 3,
-      "img": "assets/img/product3.jpg"
+      "img": "/img/product3.jpg"
     },
     {
       "uuid": "c4905bdb-f89e-429d-83ec-45474b5bec8b",
@@ -62,7 +62,7 @@
       "category": "1",
       "createdAt": "2023-02-28",
       "id": 4,
-      "img": "assets/img/product4.jpg"
+      "img": "/img/product4.jpg"
     },
     {
       "uuid": "e0c4b058-9c33-4b3d-b470-6e5b236c9195",
@@ -73,7 +73,7 @@
       "category": "1",
       "createdAt": "2023-02-28",
       "id": 5,
-      "img": "assets/img/product5.jpg"
+      "img": "/img/product5.jpg"
     },
     {
       "uuid": "345a28b2-f0cc-4a57-a86a-d6da4f6de4e8",
@@ -84,7 +84,7 @@
       "category": "1",
       "createdAt": "2023-02-28",
       "id": 6,
-      "img": "assets/img/product6.jpg"
+      "img": "/img/product6.jpg"
     },
     {
       "uuid": "05d833f8-2ed7-4d52-a88d-0c4ae3bf9d20",
@@ -95,7 +95,7 @@
       "category": "1",
       "createdAt": "2023-02-28",
       "id": 7,
-      "img": "assets/img/product7.jpg"
+      "img": "/img/product7.jpg"
     },
     {
       "uuid": "61e92c06-734b-4016-97a1-b9638d8e6d9f",
@@ -106,7 +106,7 @@
       "category": "1",
       "createdAt": "2023-02-28",
       "id": 8,
-      "img": "assets/img/product8.jpg"
+      "img": "/img/product8.jpg"
     },
     {
       "uuid": "4484b6cd-28ba-4676-a38f-52d718cf6a38",
@@ -117,7 +117,7 @@
       "category": "1",
       "createdAt": "2023-02-28",
       "id": 9,
-      "img": "assets/img/product9.jpg"
+      "img": "/img/product9.jpg"
     },
     {
       "uuid": "deee66db-b76c-4340-98ee-d0e32a68c842",

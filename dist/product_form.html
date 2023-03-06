@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -11,12 +11,13 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
 
-    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
-    <link rel="stylesheet" href="assets/css/navbar.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/buy_page.css">
+    <link rel="stylesheet" href="/css/navbar.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/category.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/product.css">
+
 
     <title>COMEX</title>
 </head>
@@ -24,7 +25,7 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <img src="assets/img/logo.svg" class="logo-white" />
+            <img src="/img/logo.svg" class="logo-white" />
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -61,72 +62,57 @@
         </div>
     </nav>
 
-    <main>
-        <!-- FOTO PRODUTO E TEXTO -->
-        <div class="container container_product">
-            <div class="product">
-                <figure class="panel">
-                    <img src="assets/img/product1.jpg" alt="Placa mãe" class="img_sell">
-                    <figcaption class="text_title">Placa Mãe Asus TUF GAMING B550M-PLUS AMD AM4 DDR4 mATX</figcaption>
-                </figure>
-                <!-- PREÇO -->
-                <div class="information">
-                    <div class="star">
-                        <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i
-                            class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
-                        <p class="mx-2">764 avaliações de cliente</p>
-                    </div>
-                    <p class="line"></p>
-                    <div>
-                        <div class="price">
-                            <i class="fa-sharp fa-solid fa-tag">1.500</i>
-                            <button type="button" class="btn btn-primary btn-lg btn_color">Comprar</button>
-                        </div>
-                        <div class="input-group cep_container ">
-                            <input type="text" class="form-control input_style  " placeholder="Digite o seu CEP"
-                                aria-label="Recipient's username" aria-describedby="button-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-primary freight btn-sm " type="button"
-                                    id="button-addon2">Calcular
-                                    frete</button>
-                            </div>
-                        </div>
-                    </div>
-                    <p class="line"></p>
-                </div>
-            </div>
-            <!-- Descrição tecnica -->
-            <div class="about_item">
-                <div class="item">
-                    <p>Sobre este item</p>
-                </div>
-                <ul class="list-group list-group-flush">
-                    <li class="list-group-item">Placa-mãe gaming micro ATX AMD B550 (Ryzen AM4) com PCIe 4.0, M.2 duplo, 10
-                        fases de alimentação com
-                        DrMOS, Rede de 2,5 Gb, HDMI, DisplayPort, SATA 6 Gbps, USB 3.2 Gen 2 Tipo-A e Tipo-C e suporte a
-                        iluminação RGB Aura Sync</li>
-                    <li class="list-group-item">Soquete AMD AM4: pronto para processadores AMD Ryzen de 3ª geração - Solução
-                        de energia aprimorada:
-                        8+2 fases de alimentação, conector ProCool, componentes TUF de nível militar e VRM Digi+ para máxima
-                        durabilidade</li>
-                    <li class="list-group-item">Refrigeração ampla: dissipadores de calor no VRM, dissipador de calor
-                        sem ventoinha no PCH,
-                        dissipador de calor M.2, header de ventoinha híbridos e utilitário Fan Xpert 2+ - Conectividade de
-                        última geração: suporte para PCIe 4.0 M.2, USB 3.2 Gen 2 Tipo-A e Tipo-C</li>
-                    <li class="list-group-item">Feita para jogos on-line: tecnologia de Rede de 2,5 Gb, TUF LANGuard e
-                        TurboLAN - Codec Realtek
-                        S1200A: qualidade de áudio cristalina sem precedentes, com taxa de sinal-ruído de 108 dB para saída
-                        estéreo e SNR de 103 dB para entrada</li>
-                    <li class="list-group-item">Microfone com cancelamento de ruído por AI: fornece comunicação de voz
-                        cristalina no jogo</li>
-                </ul>
-            </div>
-        </div>
+    <div class="container container_product">
+        <div class="product w-75"> 
+            <h1 class="title">Novo produto</h1>
 
-    </main>
+            <form id="form_product">
+                <div>
+                    <div class="product_1">
+                        <div class="infos_1">
+                            <label for="product_name">Nome:</label>
+                            <input type="text" class="form-control" id="product_name">
+                        </div>
+                        <div class="price">
+                            <label for="product_price">Preço:</label>
+                            <input type="text" class="form-control" id="product_price">
+                        </div>
+                        <div class="category_products">
+                            <label for="product_qtd">Quantidade em estoque:</label>
+                            <input type="text" class="form-control" id="product_qtd">
+                        </div>
+                    </div>
+
+                    <div class="product_2">
+                        <div class="infos_2">
+                            <label for="product_description">Descrição:</label>
+                            <textarea rows="5" class="form-control" id="product_description"></textarea>
+                        </div>
+                        <div class="category_products">
+                            <label for="product_category">Categoria:</label>
+                            <select class="form-select" aria-label="Default select example" id="product_category">
+                                <option selected>Selecione...</option>
+                                <option value="1">Informática</option>
+                                <option value="2">Livros</option>
+                                <option value="3">Móveis</option>
+                            </select>
+                        </div>
+        
+                    </div>
+                </div>
+
+                <div class="input_btn">
+                    <button type="submit" class="btn form_btn" id="form_btn">Salvar</button>
+                </div>
+            </form>
+
+
+        </div>
+    </div>
+
     <footer class="footer">
         <div class="footer_midia">
-            <img src="assets/img/logo.svg" class="logo-white" alt="Logo">
+            <img src="/img/logo.svg" class="logo-white" alt="Logo">
             <div>
                 <a class="btn logo-white" href="#!" role="button"><i class="fab fa-twitter"></i></a>
                 <a class="btn logo-white" href="#!" role="button"><i class="fab fa-instagram"></i></a>
@@ -135,7 +121,7 @@
             <div class="footer_text"><a href="" class="footer_left">Promoções</a><a href=""
                     class="footer_right">Contato</a>
             </div>
-            <div class="footer_text"><a href="" class="footer_left">Categorias</a><a href=""
+            <div class="footer_text"><a href="categorias.html" class="footer_left">Categorias</a><a href=""
                     class="footer_right">Carrinho</a>
             </div>
             <div class="footer_text"><a href="" class="footer_left">Buscar</a><a href="" class="footer_right">Entrar</a>
@@ -146,7 +132,6 @@
             <section class="contact">
                 <p class="contact_description">Um pouco mais sobre a Comex</p>
                 <address class="contact_address">
-                    <!-- quebra de linha entre endereço -->
                     Rua Arlindo Nogueira, 00 </br>
                     Centro, Teresina
                     <article class="contato_comex">
@@ -161,6 +146,9 @@
             </section>
         </div>
     </footer>
+
+    <script type="module" src="js/product_form.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 </body>
 
 </html>

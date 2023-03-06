@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "outDir": "dist/js",
+        "target": "ES2022",
+        "noEmitOnError": true,
+        "noImplicitAny": true,
+        "removeComments": true,
+        "strictNullChecks": true,
+        "allowSyntheticDefaultImports": true,
+        "moduleResolution": "node"
+
+    },
+    "include": ["app/**/*"]
+}

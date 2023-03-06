@@ -1,14 +1,24 @@
-import { createProduct } from "./modelo.js"
+import { Product } from "./modelo.js"
 
-const form = document.getElementById("form_product")
-const URL_API = 'http://localhost:3000'
-const productSection = document.querySelector(".product_section")
+// interface FormElements {
+//     day: HTMLInputElement;
+//     month: HTMLInputElement;
+//     year: HTMLInputElement;
+// }
+
+
+const form = document.getElementById("form_product") as HTMLFormElement;
+const URL_API = 'http://localhost:3000';
+const productSection = document.querySelector(".product_section") as HTMLElement;
+
 
 
 form.addEventListener("submit", (evento) => {
     evento.preventDefault()
 
-    const product = createProduct(form.product_name.value, form.product_description.value,
+    // var formProduct: FormElements = <FormElements>(<any> form.elements); 
+
+    const product = new Product(form.product_name.value, form.product_description.value,
         form.product_price.value, form.product_qtd.value, form.product_category.value)
 
     console.log(product)
@@ -25,7 +35,7 @@ form.addEventListener("submit", (evento) => {
 
 })
 
-function postProduct(product) {
+function postProduct(product: Product): void {
     fetch(`${URL_API}/produtos`, {
         method: 'POST',
         headers: {
