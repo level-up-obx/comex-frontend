@@ -1,10 +1,11 @@
-import { Category} from "./modelo.js"
+import { Category} from "../../modelo.js"
 
 const input_category = document.getElementById("input_category") as HTMLInputElement;
 const URL_API = 'http://localhost:3000';
 const tableCategory = document.querySelector('#table_category tbody') as HTMLElement;
+const btnSave = document.getElementById('btn_save') as HTMLButtonElement;
 
-
+btnSave.onclick = save;
 
 function save():void {
     const category = new Category(input_category.value);
@@ -24,6 +25,7 @@ function postCategory(category: Category): void {
             alert(`Categoria ${category.name} cadastrada com sucesso.`)
             input_category.value = ""
             input_category.focus()
+            listCategory()
         })
         .catch(error => {
             alert('Não foi possível salvar a categoria! Aguarde uns minutos e tente novamente.')

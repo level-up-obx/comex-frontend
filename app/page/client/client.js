@@ -1,4 +1,4 @@
-import { createClient } from "./modelo.js"
+import { Client } from "../../modelo.ts"
 
 document.getElementById("btn_cep").onclick = searchAddress;
 const form = document.getElementById("form_client")
@@ -8,7 +8,7 @@ const URL_API = 'http://localhost:3000'
 form.addEventListener("submit", (evento) => {
     evento.preventDefault()
 
-    const client = createClient(form.client_name.value, form.client_cpf.value, form.client_birth_date.value,
+    const client = new Client(form.client_name.value, form.client_cpf.value, form.client_birth_date.value,
         form.client_email.value, form.client_contact.value, form.client_cep.value, form.client_address.value,
         form.client_number.value, form.client_complement.value, form.client_district.value, form.client_city.value, form.client_state.value)
 

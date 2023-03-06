@@ -1,8 +1,8 @@
-import uuid  from 'uuidv4';
+import { v4 as uuidv4 } from 'uuid';
 import moment from 'moment';
 
 export function getUuid():String {
-    return uuid.uuid()
+    return uuidv4()
 }
 
 export function getDate(): String {

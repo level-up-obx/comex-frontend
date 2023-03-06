@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="../app/assets/css/navbar.css">
+  <link rel="stylesheet" href="../app/assets/css/cards.css">
+  <link rel="stylesheet" href="../app/assets/css/carousel.css">
+  <link rel="stylesheet" href="../app/assets/css/footer.css">
+  <link rel="stylesheet" href="../app/assets/css/style.css">
+
+  <title>COMEX</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@1,200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,900;1,200&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100&display=swap" rel="stylesheet">
+ 
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+      <img src="assets/img/logo.svg" class="logo-white" />
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"><i class="fa fa-navicon" style="color:#fff; font-size:30px"></i></i></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Promoções</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="page/category/category.html">Categorias</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Buscar</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Contato</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Carrinho</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Entrar</a>
+          </li>
+        </ul>
+        <form class="search-group disable_mobile">
+          <input class=" input-search" type="search" placeholder="Pesquisar..." aria-label="Search" />
+          <i class="fa-solid m-2 fa-cart-shopping"></i>
+          <i class="fa-solid m-2 fa-user"></i>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <main class="back_home">
+    <div class="container_home">
+      <div class="input_container disable_desktop">
+        <div class="input-group w-75">
+          <input type="text" class="form-control input_mobile" placeholder="Pesquisar..." aria-label="Recipient's username"
+            aria-describedby="button-addon2">
+          <button class="btn btn-outline-secondary btn_glass" type="button" id="button-addon2"><i
+              class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+      </div>
+      <div class="carousel_box">
+        <div id="carousel" class="carousel slide">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true"
+              aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img src="assets/img/carousel.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-content">
+                <h1>Confira as Promoções</h1>
+                <h5>E monte seu Setup</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/carousel.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-content">
+                <h1>Confira as Promoções</h1>
+                <h5>E monte seu Setup</h5>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img src="assets/img/carousel.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-content">
+                <h1>Confira as Promoções</h1>
+                <h5>E monte seu Setup</h5>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <h4 class="panel_title"> Produtos mais vendidos</h4>
+      <section class="product_section container-fluid">
+        <figure class="highlights_panel">
+          <div class="product_img">
+            <a href="page/product.html"><img src="/img/product1.jpg" alt="Placa-Mãe" class="panel_img"></a>
+          </div>
+          <div class="product_content">
+            <figcaption class="figcaption">Placa-Mãe</figcaption>
+            <figcaption><i class="fa-solid fa-dollar-sign"></i>1.500</figcaption>
+            <a href="page/product.html" class="btn btn-lg button_panel">Comprar</a>
+          </div>
+        </figure>
+        <figure class="highlights_panel">
+          <div class="product_img">
+            <a href="page/product.html"><img src="/img/product2.jpg" alt="Controle" class="panel_img"></a>
+          </div>
+          <div class="product_content">
+            <figcaption class="figcaption">Controle Super Nintendo</figcaption>
+            <figcaption><i class="fa-solid fa-dollar-sign"></i>1.900</figcaption>
+            <a href="page/product.html" class="btn btn-lg button_panel">Comprar</a>
+          </div>
+        </figure>
+        <figure class="highlights_panel">
+          <div class="product_img">
+            <a href="page/product.html"><img src="/img/product3.jpg" alt="Memoria" class="panel_img"></a>
+          </div>
+          <div class="product_content">
+            <figcaption class="figcaption">Memória RAM</figcaption>
+            <figcaption><i class="fa-solid fa-dollar-sign"></i>1.000</figcaption>
+            <a href="page/product.html" class="btn btn-lg button_panel">Comprar</a>
+          </div>
+        </figure>
+        <figure class="highlights_panel disable_mobile">
+          <div class="product_img">
+            <a href="page/product.html"><img src="/img/product4.jpg" alt="Fone" class="panel_img"></a>
+          </div>
+          <div class="product_content">
+            <figcaption class="figcaption">Fone Bluetooth</figcaption>
+            <figcaption><i class="fa-solid fa-dollar-sign"></i>90.00</figcaption>
+            <a href="page/product.html" class="btn btn-lg button_panel">Comprar</a>
+          </div>
+        </figure>
+        <figure class="highlights_panel disable_mobile">
+          <div class="product_img">
+            <a href="page/product.html"><img src="/img/product5.jpg" alt="Controle" class="panel_img"></a>
+          </div>
+          <div class="product_content">
+            <figcaption class="figcaption">Controle PS (blue)</figcaption>
+            <figcaption><i class="fa-solid fa-dollar-sign"></i>400</figcaption>
+            <a href="page/product.html" class="btn btn-lg button_panel">Comprar</a>
+          </div>
+        </figure>
+        <figure class="highlights_panel disable_mobile">
+          <div class="product_img">
+            <a href="page/product.html"><img src="/img/product6.jpg" alt="Controle" class="panel_img"></a>
+          </div>
+          <div class="product_content">
+            <figcaption class="figcaption">Controle PS (black)</figcaption>
+            <figcaption><i class="fa-solid fa-dollar-sign"></i>1.900</figcaption>
+            <a href="page/product.html" class="btn btn-lg button_panel">Comprar</a>
+          </div>
+        </figure>
+        <figure class="highlights_panel disable_mobile">
+          <div class="product_img">
+            <a href="page/product.html"><img src="/img/product7.jpg" alt="Controle" class="panel_img"></a>
+          </div>
+          <div class="product_content">
+            <figcaption class="figcaption">Controle X-Box</figcaption>
+            <figcaption><i class="fa-solid fa-dollar-sign"></i>1.900</figcaption>
+            <a href="page/product.html" class="btn btn-lg button_panel">Comprar</a>
+          </div>
+        </figure>
+        <figure class="highlights_panel disable_mobile">
+          <div class="product_img">
+            <a href="page/product.html"><img src="/img/product8.jpg" alt="Processador" class="panel_img"></a>
+          </div>
+          <div class="product_content">
+            <figcaption class="figcaption">Processador</figcaption>
+            <figcaption><i class="fa-solid fa-dollar-sign"></i>1.900</figcaption>
+            <a href="page/product.html" class="btn btn-lg button_panel">Comprar</a>
+          </div>
+        </figure>
+      </section>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer_midia">
+        <img src="assets/img/logo.svg" class="logo-white" alt="Logo">
+        <div>
+          <a class="btn logo-white" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+          <a class="btn logo-white" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+          <a class="btn logo-white" href="#!" role="button"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+        <div class="footer_text"><a href="" class="footer_left">Promoções</a><a href="" class="footer_right">Contato</a>
+        </div>
+        <div class="footer_text"><a href="categorias.html" class="footer_left">Categorias</a><a href="" class="footer_right">Carrinho</a>
+        </div>
+        <div class="footer_text"><a href="" class="footer_left">Buscar</a><a href="" class="footer_right">Entrar</a></div>
+
+      </section>
+
+      <section class="contact">
+        <p class="contact_description">Um pouco mais sobre a Comex</p>
+        <address class="contact_address">
+          Rua Arlindo Nogueira, 00 </br>
+          Centro, Teresina
+          <article class="contato_comex">
+            <p>
+              <a href="tel: +554100000000" class="tel">(41) 0000-0000</a> ou
+              <a href="mailto: contato@apeperia.com" class="email">contato@apeperia.com
+              </a>
+            </p>
+          </article>
+        </address>
+      </section>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+</body>
+
+</html>

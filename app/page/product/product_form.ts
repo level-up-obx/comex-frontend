@@ -1,4 +1,4 @@
-import { Product } from "./modelo.js"
+import { Product } from "../../modelo.js"
 
 // interface FormElements {
 //     day: HTMLInputElement;
