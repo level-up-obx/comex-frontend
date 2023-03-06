@@ -1,5 +1,5 @@
-import { createClient } from "../modelo.js";
-import { getCep, saveClient } from "../api.js";
+import { createClient } from "../../modelo.js";
+import { getCep, saveClient } from "../../api.js";
 
 const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");

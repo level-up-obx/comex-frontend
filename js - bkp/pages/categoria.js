@@ -1,5 +1,5 @@
-import { createCategory } from "../modelo.js";
-import { categoryList, deleteCategory, editCategory, saveCategory } from "../api.js";
+import { createCategory } from "../../modelo.js";
+import { categoryList, deleteCategory, editCategory, saveCategory } from "../../api.js";
 
 const categoryName = document.querySelector("#category-name");
 const form = document.querySelector("#category-form");

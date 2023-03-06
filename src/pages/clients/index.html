@@ -18,8 +18,8 @@
       crossorigin="anonymous"
     ></script>
     <!-- Local Styles -->
-    <link rel="stylesheet" href="./src/styles/base.css" />
-    <link rel="stylesheet" href="./src/styles/clientes.css" />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/clientes.css" />
     <!-- Box icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -32,7 +32,7 @@
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
           <img
-            src="src/assets/images/logo-comex.svg"
+            src="../../assets/images/logo-comex.svg"
             class="comex-logo"
             alt="Comex logo"
             title="Comex logo"
@@ -165,16 +165,16 @@
             <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
           <div class="d-flex align-items-start flex-column">
-            <label for="cep" class="text-white text-center fw-semibold"
+            <label for="zipcode" class="text-white text-center fw-semibold"
               >CEP</label
             >
             <input
               type="number"
-              name="cep"
-              id="cep"
+              name="zipcode"
+              id="zipcode"
               class="input-style rounded"
               required
-              data-input="cep"
+              data-input="zipcode"
             />
             <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
@@ -223,17 +223,17 @@
             />
           </div>
           <div class="d-flex align-items-start flex-column">
-            <label for="district" class="text-white text-center fw-semibold"
+            <label for="neighborhood" class="text-white text-center fw-semibold"
               >Bairro</label
             >
             <input
               type="text"
-              name="district"
-              id="district"
+              name="neighborhood"
+              id="neighborhood"
               class="input-style rounded"
               minlength="2"
               required
-              data-input="district"
+              data-input="neighborhood"
             />
             <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
@@ -280,7 +280,7 @@
     <!-- Footer -->
     <footer id="footer" class="bg-dark">
       <div class="footer-images">
-        <img src="./src/assets/images/logo-comex.svg" alt="Comex" />
+        <img src="../../assets/images/logo-comex.svg" alt="Comex" />
         <div class="footerImages-social">
           <i class="bx bx-sm bxl-twitter text-white"></i>
           <i class="bx bx-sm bxl-instagram text-white"></i>
@@ -316,7 +316,7 @@
         </div>
       </div>
     </footer>
-    <script src="./src/validator.js"></script>
-    <script src="./src/pages/cliente.js" type="module"></script>
+    <script src="./clients.ts" type="module"></script>
+    <script src="../../ts/validator.ts" type="module"></script>
   </body>
 </html>

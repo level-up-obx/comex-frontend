@@ -1,6 +1,6 @@
 /*================= Import principais =================*/
 import * as model from "./modelo.js";
-import * as api from "./api.js";
+import * as api from "../api.js";
 
 /*================= Exibicoes =================*/
 const showCategories = () => {

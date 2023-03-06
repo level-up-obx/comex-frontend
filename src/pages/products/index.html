@@ -18,8 +18,8 @@
       crossorigin="anonymous"
     ></script>
     <!-- Local Styles -->
-    <link rel="stylesheet" href="./src/styles/base.css" />
-    <link rel="stylesheet" href="./src/styles/produtos.css" />
+    <link rel="stylesheet" href="../../assets/css/base.css" />
+    <link rel="stylesheet" href="../../assets/css/produtos.css" />
     <!-- Box icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -32,7 +32,7 @@
       <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
         <div class="container-fluid">
           <img
-            src="src/assets/images/logo-comex.svg"
+            src="../../assets/images/logo-comex.svg"
             class="comex-logo"
             alt="Comex logo"
             title="Comex logo"
@@ -105,7 +105,7 @@
           </div>
           <div class="d-flex align-items-start flex-column">
             <label for="product-price" class="text-white text-center fw-semibold">Preço</label>
-            <input type="text" name="product-price" id="product-price" data-input="price" class="input-style rounded w-100" minlength="2" required>
+            <input type="number" name="product-price" id="product-price" data-input="price" class="input-style rounded w-100" minlength="2" required>
             <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
           </div>
           <div class="d-flex align-items-start flex-column">
@@ -136,7 +136,7 @@
     <!-- Footer -->
     <footer id="footer" class="bg-dark">
       <div class="footer-images">
-        <img src="./src/assets/images/logo-comex.svg" alt="Comex" />
+        <img src="../../assets/images/logo-comex.svg" alt="Comex" />
         <div class="footerImages-social">
           <i class="bx bx-sm bxl-twitter text-white"></i>
           <i class="bx bx-sm bxl-instagram text-white"></i>
@@ -172,8 +172,7 @@
         </div>
       </div>
     </footer>
-    <script src="./src/pages/produto.js" type="module"></script>
-    <script src="./node_modules/simple-mask-money/lib/simple-mask-money.js"></script>
-    <script src="./src/validator.js"></script>
+    <script src="./products.ts" type="module"></script>
+    <script src="../../ts/validator.ts" type="module"></script>
   </body>
 </html>

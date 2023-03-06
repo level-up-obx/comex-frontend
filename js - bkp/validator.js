@@ -32,19 +32,19 @@ const validate = (input) => {
 };
 
 inputs.forEach((input) => {
-  // Mascara para o valor monetário.
-  if(input.dataset.input === 'price') {
-    SimpleMaskMoney.setMask("#product-price", {
-      negativeSignAfter: false,
-      prefix: "R$: ",
-      suffix: "",
-      fixed: true,
-      fractionDigits: 2,
-      decimalSeparator: ",",
-      thousandsSeparator: ".",
-      cursor: "end",
-    });
-  }
+  // // Mascara para o valor monetário.
+  // if(input.dataset.input === 'price') {
+  //   SimpleMaskMoney.setMask("#product-price", {
+  //     negativeSignAfter: false,
+  //     prefix: "R$: ",
+  //     suffix: "",
+  //     fixed: true,
+  //     fractionDigits: 2,
+  //     decimalSeparator: ",",
+  //     thousandsSeparator: ".",
+  //     cursor: "end",
+  //   });
+  // }
   input.addEventListener("blur", (event) => {
     validate(event.target);
   });
