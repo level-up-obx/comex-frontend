@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+      "target": "ES2022",
+      "outDir": "dist/src",
+      "noEmitOnError": true,
+      "noImplicitAny": true,
+      "removeComments": true,
+      "strictNullChecks": false,
+      "moduleResolution": "node"
+    },
+    "include": ["src/**/*"]
+  }
