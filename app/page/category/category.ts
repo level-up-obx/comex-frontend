@@ -9,8 +9,8 @@ btnSave.onclick = save;
 
 function save():void {
     const category = new Category(input_category.value);
-    postCategory(category)
-    console.log(category)
+    postCategory(category);
+    console.log(category);
 }
 
 function postCategory(category: Category): void {
@@ -22,13 +22,13 @@ function postCategory(category: Category): void {
         body: JSON.stringify(category),
     })
         .then(response => {
-            alert(`Categoria ${category.name} cadastrada com sucesso.`)
-            input_category.value = ""
-            input_category.focus()
-            listCategory()
+            alert(`Categoria ${category.name} cadastrada com sucesso.`);
+            input_category.value = "";
+            input_category.focus();
+            listCategory();
         })
         .catch(error => {
-            alert('Não foi possível salvar a categoria! Aguarde uns minutos e tente novamente.')
+            alert('Não foi possível salvar a categoria! Aguarde uns minutos e tente novamente.');
         })
 }
 
@@ -55,16 +55,16 @@ function listCategory(): void {
         .then(categories => {
             let addList = categories.map((category: Category)=> {
 
-                return addCategory(category)
+                return addCategory(category);
 
             }).join('')
             tableCategory.innerHTML = addList;
         })
         .catch(error => {
             console.log(error)
-            alert('Não foi possível recuperar as categorias.')
+            alert('Não foi possível recuperar as categorias.');
         })
 
 }
 
-listCategory()
+listCategory();

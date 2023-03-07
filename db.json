@@ -1,25 +1,7 @@
 {
   "clientes": [
     {
-      "uuid": "f1c29657-758b-464d-8e9a-50c7604dea5e",
-      "name": "Alana",
-      "cpf": "06110234907",
-      "birth": "2023-02-09",
-      "email": "alanacarsten@gmail.com",
-      "contact": "(41) 998815-2928",
-      "address": {
-        "cep": "83508-400",
-        "address": "Rua Padre José Maurício",
-        "number": "",
-        "complement": "",
-        "district": "Tanguá",
-        "city": "Almirante Tamandaré",
-        "state": "PR"
-      },
-      "id": 1
-    },
-    {
-      "uuid": "252ecba7-ef74-40ea-bce9-3a9d72af7396",
+      "uuid": "cc2df3c1-af53-4db6-b78d-20b27c70edac",
       "name": "Alana",
       "cpf": "06110234907",
       "birth": "1997-06-27",
@@ -34,7 +16,7 @@
         "city": "Almirante Tamandaré",
         "state": "PR"
       },
-      "id": 2
+      "id": 1
     }
   ],
   "produtos": [
@@ -156,6 +138,26 @@
       "category": "1",
       "createdAt": "2023-03-06",
       "id": 11
+    },
+    {
+      "uuid": "9da09618-3904-4c86-b7b5-45e3abeb97d1",
+      "name": "monitor",
+      "description": "monitor",
+      "price": "1000",
+      "qtd": "14",
+      "category": "1",
+      "createdAt": "2023-03-07",
+      "id": 12
+    },
+    {
+      "uuid": "91e3951f-c15c-4edc-a015-ba0863c507d9",
+      "name": "",
+      "description": "monitor",
+      "price": "",
+      "qtd": "",
+      "category": "1",
+      "createdAt": "2023-03-07",
+      "id": 13
     }
   ],
   "categorias": [
@@ -179,6 +181,13 @@
       "status": "ATIVA",
       "createdAt": "2023-03-06",
       "id": 3
+    },
+    {
+      "name": "Informatica",
+      "uuid": "faf089c4-0644-4e86-87a1-9fb41d8c1d4d",
+      "status": "ATIVA",
+      "createdAt": "2023-03-07",
+      "id": 4
     }
   ]
 }

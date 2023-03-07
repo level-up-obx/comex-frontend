@@ -1,15 +1,15 @@
 import { Product } from "./modelo"
 
 const URL_API = 'http://localhost:3000'
-const productSection = document.querySelector(".product_section") as HTMLElement
+const productSection = document.querySelector(".product_section") as HTMLElement;
 
 
 
 function addProduct(product: Product, index: Number): string {
-    let classPanel = 'highlights_panel'
+    let classPanel = 'highlights_panel';
 
     if (index > 3) {
-        classPanel = classPanel + ' disable_mobile'
+        classPanel = classPanel + ' disable_mobile';
     }
 
     let htmlCard = `<figure class="${classPanel}">
@@ -23,7 +23,7 @@ function addProduct(product: Product, index: Number): string {
                 </div>
             </figure>`
 
-            return htmlCard
+    return htmlCard;
 }
 
 function listProduct(): void {
@@ -39,17 +39,17 @@ function listProduct(): void {
             let addCards = products.map((product: Product) => {
                 index++
                 if (index > 8) {
-                    return ''
+                    return '';
                 }
-                return addProduct(product, index)
+                return addProduct(product, index);
             }).join('')
             productSection.innerHTML = addCards;
         })
         .catch(error => {
-            console.log(error)
-            alert('Não foi possível recuperar os produtos.')
+            console.log(error);
+            alert('Não foi possível recuperar os produtos.');
         })
 
 }
 
-listProduct()
+listProduct();
