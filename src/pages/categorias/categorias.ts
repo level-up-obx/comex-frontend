@@ -1,5 +1,18 @@
 import { v4 as uuidv4 } from 'uuid'
-import { CriaCategoria } from '../../modelo.js';
+// import { CriaCategoria } from '../../modelo.js';
+
+class CriaCategoria {
+    private id: string
+
+    constructor(
+        id: string,
+        nome: string,
+        status: string,
+        criacao: string
+    ) {
+        this.id = uuidv4()
+    }
+}
 
 class Categorias {
     private _campoNome: HTMLInputElement;
@@ -18,7 +31,11 @@ class Categorias {
                         <td>${item.nome}</td>
                         <td>${item.status}</td>
                         <td>${item.criacao}</td>
-
+                        <td>
+                            <button class="btn border border-1" id="delete-btn-${item.id}">
+                                <svg width="20px" height="20px" viewBox="0 0 24.00 24.00" fill="none" stroke="#ff0000" transform="rotate(0)matrix(1, 0, 0, 1, 0, 0)"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M10 12V17" stroke="#ff0000" stroke-width="1.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M14 12V17" stroke="#ff0000" stroke-width="1.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M4 7H20" stroke="#ff0000" stroke-width="0.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M6 10V18C6 19.6569 7.34315 21 9 21H15C16.6569 21 18 19.6569 18 18V10" stroke="#ff0000" stroke-width="0.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> <path d="M9 5C9 3.89543 9.89543 3 11 3H13C14.1046 3 15 3.89543 15 5V7H9V5Z" stroke="#ff0000" stroke-width="0.8640000000000001" stroke-linecap="round" stroke-linejoin="round"></path> </g></svg>
+                            </button>
+                        </td>
                     </tr>`;
         });
 
@@ -106,3 +123,5 @@ class Categorias {
     }
 }
 
+const categorias = new Categorias('nome', 'formCategoria');
+categorias.listarCategorias();
