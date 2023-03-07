@@ -1,46 +1,37 @@
-// import { v4 as uuidv4 } from '/node_modules/uuid/dist/esm-browser/index.js'
-
-// export function criaCategoria(nome, status, criacao) {
-//     return {
-//         id: uuidv4(),
-//         nome: nome,
-//         status: status,
-//         criacao: criacao
-//     }
-// }
-
-// export function criaProduto(nome, url, descricao, preco, quantidade_estoque, categoria) {
-//     var today = new Date();
-//     var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-
-//      return {
-//         id: uuidv4(), //uuid gerado para o produto;
-//         nome: nome, //o nome do produto;
-//         url: url,
-//         descricao: descricao, //informações sobre as características do produto;
-//         preco: preco, //preço cobrado pelo produto;
-//         quantidade_estoque: quantidade_estoque, //quantos itens desse produto estão,
-//         categoria: categoria,
-//         criacao: date
-//      }
-// }
-
-// export function criaCliente(nome, sobrenome, cpf, telefone, endereco, email) {
-//     return {
-//         id: uuidv4(),
-//         nome: nome,
-//         sobrenome: sobrenome,
-//         cpf: cpf,
-//         telefone: telefone,
-//         endereco: {
-//             rua: endereco.rua,
-//             numero: endereco.numero,
-//             bairro: endereco.bairro,
-//             cidade: endereco.cidade,
-//             estado: endereco.estado,
-//             cep: endereco.cep,
-//             complemento: endereco.complemento
-//         },
-//         email: email
-//     }
-// }
+"use strict";
+exports.__esModule = true;
+exports.CriaCliente = exports.CriaProduto = exports.CriaCategoria = void 0;
+var uuid_1 = require("uuid");
+var CriaCategoria = /** @class */ (function () {
+    function CriaCategoria(id, nome, status, criacao) {
+        this.id = (0, uuid_1.v4)();
+    }
+    return CriaCategoria;
+}());
+exports.CriaCategoria = CriaCategoria;
+var CriaProduto = /** @class */ (function () {
+    function CriaProduto(nome, url, descricao, preco, quantidade_estoque, categoria) {
+        this._id = (0, uuid_1.v4)();
+        this._nome = nome;
+        this._url = url;
+        this._descricao = descricao;
+        this._preco = preco;
+        this._quantidade_estoque = quantidade_estoque;
+        this._categoria = categoria;
+        this._criacao = new Date().toISOString().substring(0, 10);
+    }
+    return CriaProduto;
+}());
+exports.CriaProduto = CriaProduto;
+var Endereco = /** @class */ (function () {
+    function Endereco() {
+    }
+    return Endereco;
+}());
+var CriaCliente = /** @class */ (function () {
+    function CriaCliente(nome, sobrenome, cpf, telefone, endereco, email) {
+        this._id = (0, uuid_1.v4)();
+    }
+    return CriaCliente;
+}());
+exports.CriaCliente = CriaCliente;
