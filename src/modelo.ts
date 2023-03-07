@@ -2,14 +2,19 @@ import { v4 as uuidv4 } from 'uuid';
 
 export class Categoria {
     private id: string
+    private nome: string
+    private status: string
+    private criacao: string
 
     constructor(
-        id: string,
         nome: string,
         status: string,
         criacao: string
     ) {
         this.id = uuidv4()
+        this.nome = nome
+        this.status = status
+        this.criacao = criacao
     }
 }
 

@@ -1,4 +1,3 @@
-import { v4 as uuidv4 } from 'uuid'
 import { Categoria } from '../../modelo.js';
 
 class Categorias {
@@ -6,8 +5,8 @@ class Categorias {
     private _form: HTMLFormElement;
 
     constructor(campoNome: string, form: string) {
-        this._campoNome = this._campoNome = document.querySelector("#nome")
-        this._form = this._form = document.querySelector("#formCategoria")
+        this._campoNome = document.querySelector("#nome")
+        this._form = document.querySelector("#formCategoria")
     }
 
     createContent(categorias: any[]): void {
@@ -79,16 +78,16 @@ class Categorias {
         return formattedData // exemplo de saída: "2023-02-15"
     }
 
+    get nome(): string { return this._campoNome.value }
+    get status(): string { return "ATIVO" }
+    get criacao(): string { return this.formattedDataCurrent() }
+
     adicionarCategoria() {
         this._form.addEventListener("submit", (event) => {
             event.preventDefault();
 
-            let id = uuidv4()
-            let nome = this._campoNome.value
-            let status = "ATIVO"
-            let criacao = this.formattedDataCurrent()
-
-            let novaCategoria = new Categoria(id, nome, status, criacao)
+            let novaCategoria = new Categoria(this.nome, this.status, this.criacao)
+            console.log(novaCategoria)
 
             fetch('http://localhost:3000/categorias', {
                 method: 'POST',
@@ -99,6 +98,7 @@ class Categorias {
             .then((data) => {
                 alert(`Categoria ${data.nome} cadastrada com sucesso! Atualize a página.`)
                 localStorage.removeItem('cache-categorias')
+                console.log(data)
             })
             .catch((error) => {
                 console.error('Não foi possível salvar a categoria! Aguarde uns minutos e tente novamente.');
@@ -112,3 +112,4 @@ class Categorias {
 
 const categorias = new Categorias('nome', 'formCategoria');
 categorias.listarCategorias();
+categorias.adicionarCategoria();
