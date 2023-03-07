@@ -1,9 +1,11 @@
+import { Product } from "./modelo"
+
 const URL_API = 'http://localhost:3000'
-const productSection = document.querySelector(".product_section")
+const productSection = document.querySelector(".product_section") as HTMLElement
 
 
 
-function addProduct(product, index) {
+function addProduct(product: Product, index: Number): string {
     let classPanel = 'highlights_panel'
 
     if (index > 3) {
@@ -24,7 +26,7 @@ function addProduct(product, index) {
             return htmlCard
 }
 
-function listProduct() {
+function listProduct(): void {
     fetch(`${URL_API}/produtos`, {
         method: 'GET',
         headers: {
@@ -34,7 +36,7 @@ function listProduct() {
         .then(response => response.json())
         .then(products => {
             let index = 0
-            let addCards = products.map(product => {
+            let addCards = products.map((product: Product) => {
                 index++
                 if (index > 8) {
                     return ''

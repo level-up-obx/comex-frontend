@@ -24,6 +24,7 @@ export class Product {
   public qtd: Number;
   public category: String;
   public createdAt: String;
+  public img: String;
 
   constructor(name: String, description: String, price: Number, qtd: Number, category: String) {
     this.uuid = getUuid();

@@ -1,11 +1,5 @@
 import { Product } from "../../modelo.js"
 
-// interface FormElements {
-//     day: HTMLInputElement;
-//     month: HTMLInputElement;
-//     year: HTMLInputElement;
-// }
-
 
 const form = document.getElementById("form_product") as HTMLFormElement;
 const URL_API = 'http://localhost:3000';
@@ -15,8 +9,6 @@ const productSection = document.querySelector(".product_section") as HTMLElement
 
 form.addEventListener("submit", (evento) => {
     evento.preventDefault()
-
-    // var formProduct: FormElements = <FormElements>(<any> form.elements); 
 
     const product = new Product(form.product_name.value, form.product_description.value,
         form.product_price.value, form.product_qtd.value, form.product_category.value)
