@@ -1,18 +1,5 @@
 import { v4 as uuidv4 } from 'uuid'
-// import { CriaCategoria } from '../../modelo.js';
-
-class CriaCategoria {
-    private id: string
-
-    constructor(
-        id: string,
-        nome: string,
-        status: string,
-        criacao: string
-    ) {
-        this.id = uuidv4()
-    }
-}
+import { Categoria } from '../../modelo.js';
 
 class Categorias {
     private _campoNome: HTMLInputElement;
@@ -101,7 +88,7 @@ class Categorias {
             let status = "ATIVO"
             let criacao = this.formattedDataCurrent()
 
-            let novaCategoria = new CriaCategoria(id, nome, status, criacao)
+            let novaCategoria = new Categoria(id, nome, status, criacao)
 
             fetch('http://localhost:3000/categorias', {
                 method: 'POST',
