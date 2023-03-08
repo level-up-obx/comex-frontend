@@ -53,11 +53,11 @@
             <div class="row">
                 <div class="col-3">
                   <label for="nome" class="form-label">Nome:</label>
-                  <input type="text" class="form-control" id="nome">
+                  <input type="text" class="form-control" id="nome" name="nome">
                 </div>
                 <div class="col-3">
                     <label for="url" class="form-label">Url:</label>
-                    <input type="text" class="form-control" id="url">
+                    <input type="text" class="form-control" id="url" name="url">
                   </div>
                 <div class="col-3">
                     <label for="preco" class="form-label" >Preço:</label>
@@ -65,6 +65,7 @@
                         type="text"
                         class="form-control"
                         id="preco"
+                        name="preco"
                         pattern='[0-9]+(\\.[0-9][0-9]?)?'
                         title="Digite somente números"
                     >
@@ -75,6 +76,7 @@
                         type="text"
                         class="form-control"
                         id="quantidade"
+                        name="quantidade"
                         pattern='[0-9]+(\\.[0-9][0-9]?)?'
                         title="Digite somente números"
                     >
@@ -83,11 +85,11 @@
             <div class="row">
                 <div class="col-9">
                     <label for="descricao" class="form-label">Descrição:</label>
-                    <textarea rows="4" class="form-control" id="descricao"></textarea>
+                    <textarea rows="4" class="form-control" id="descricao" name="descricao"></textarea>
                 </div>
                 <div class="col-3">
                     <label for="categoria" class="form-label">Categoria:</label>
-                    <select id="categoria" class="form-select" aria-label="Default select example">
+                    <select id="categoria" name="categoria" class="form-select" aria-label="Default select example">
                         <option hidden >Selecione...</option>
                         <option value="1">Informática</option>
                         <option value="2">Livros</option>
@@ -122,6 +124,6 @@
         </ul>
     </footer>
 
-    <script type="module" src="./produtos.js"></script>
+    <script type="module" src="./produtos.ts"></script>
 </body>
 </html>

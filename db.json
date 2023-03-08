@@ -48,6 +48,16 @@
       "quantidade_estoque": 33,
       "categoria": 3,
       "criacao": "2023-2-24"
+    },
+    {
+      "id": "89f4b55e-6a72-43a8-bd4b-9198291dc05a",
+      "nome": "teste",
+      "url": "https://acaonsfatima.org.br/wp-content/uploads/2021/09/informatica-conteudo-pagina-1.png",
+      "descricao": "teste",
+      "preco": 12,
+      "quantidade_estoque": 2,
+      "categoria": "2",
+      "criacao": "2023-03-08"
     }
   ],
   "categorias": [

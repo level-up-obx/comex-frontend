@@ -18,15 +18,15 @@ export class Categoria {
     }
 }
 
-export class CriaProduto {
-    private _id: string;
-    private _nome: string;
-    private _url: string;
-    private _descricao: string;
-    private _preco: number;
-    private _quantidade_estoque: number;
-    private _categoria: string;
-    private _criacao: string;
+export class Produto {
+    private id: string;
+    private nome: string;
+    private url: string;
+    private descricao: string;
+    private preco: number;
+    private quantidade_estoque: number;
+    private categoria: string;
+    private criacao: string;
 
     constructor(
       nome: string,
@@ -36,14 +36,14 @@ export class CriaProduto {
       quantidade_estoque: number,
       categoria: string,
     ) {
-      this._id = uuidv4();
-      this._nome = nome;
-      this._url = url;
-      this._descricao = descricao;
-      this._preco = preco;
-      this._quantidade_estoque = quantidade_estoque;
-      this._categoria = categoria;
-      this._criacao = new Date().toISOString().substring(0,10);
+      this.id = uuidv4();
+      this.nome = nome;
+      this.url = url;
+      this.descricao = descricao;
+      this.preco = preco;
+      this.quantidade_estoque = quantidade_estoque;
+      this.categoria = categoria;
+      this.criacao = new Date().toISOString().substring(0,10);
     }
   }
 
