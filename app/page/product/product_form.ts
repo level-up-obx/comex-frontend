@@ -23,18 +23,31 @@ form.addEventListener("submit", (evento) => {
 
     }
 
+    form.product_description.value = "";
+    form.product_category.value = "";
+
 })
 
 function postProduct(product: Product): void {
+    let productData = {
+        uuid: product.uuid,
+        name: product.name,
+        description: product.description,
+        price: product.price,
+        qtd: product.qtd,
+        category: product.category,
+        img: product.img,
+        createdAt: product.createdAt,
+    };
     fetch(`${URL_API}/produtos`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(product),
+        body: JSON.stringify(productData),
     })
         .then(response => {
-            alert(`Produto ${product.name} cadastrado com sucesso.`);
+            alert(`Produto ${productData.name} cadastrado com sucesso.`);
             form.product_name.value = "";
             form.product_name.focus();
         })

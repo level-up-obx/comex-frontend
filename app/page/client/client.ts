@@ -158,15 +158,34 @@ async function searchAddress() {
 }
 
 function postClient(client: Client): void {
+    let clientData = {
+        uuid: client.uuid,
+        name: client.name,
+        cpf: client.cpf,
+        birth: client.birth,
+        email: client.email,
+        contact: client.contact,
+        address: {
+            cep: client.address.cep,
+            address: client.address.address,
+            number: client.address.number,
+            complement: client.address.complement,
+            district: client.address.district,
+            city: client.address.city,
+            state: client.address.state
+            
+        }
+
+    };
     fetch(`${URL_API}/clientes`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(client),
+        body: JSON.stringify(clientData),
     })
         .then(response => {
-            alert(`Cliente ${client.name} cadastrado com sucesso.`);
+            alert(`Cliente ${clientData.name} cadastrado com sucesso.`);
             form.client_name.value = "";
             form.client_name.focus();
         })
@@ -198,7 +217,7 @@ function repeatedNumber(cpf: String): boolean {
             return false;
         }
         lastVal = val;
-        
+
     }
     return true;
 

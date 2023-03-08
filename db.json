@@ -1,7 +1,7 @@
 {
   "clientes": [
     {
-      "uuid": "cc2df3c1-af53-4db6-b78d-20b27c70edac",
+      "uuid": "54059881-dac1-4b4e-9102-c317eccebe44",
       "name": "Alana",
       "cpf": "06110234907",
       "birth": "1997-06-27",
@@ -33,7 +33,7 @@
     },
     {
       "uuid": "ea91b025-688f-4911-93fa-f2bbca0dcebd",
-      "name": "Controle Super Nintendo",
+      "name": "Controle Nintendo",
       "description": "Controle Super Nintendo",
       "price": "1.900",
       "qtd": "14",
@@ -107,87 +107,29 @@
       "createdAt": "2023-02-28",
       "id": 8,
       "img": "assets/img/product8.jpg"
-    },
-    {
-      "uuid": "4484b6cd-28ba-4676-a38f-52d718cf6a38",
-      "name": "Monitor",
-      "description": "Monitor",
-      "price": "1000",
-      "qtd": "75",
-      "category": "1",
-      "createdAt": "2023-02-28",
-      "id": 9,
-      "img": "assets/img/product9.jpg"
-    },
-    {
-      "uuid": "deee66db-b76c-4340-98ee-d0e32a68c842",
-      "name": "",
-      "description": "",
-      "price": "",
-      "qtd": "",
-      "category": "Selecione...",
-      "createdAt": "2023-02-28",
-      "id": 10
-    },
-    {
-      "uuid": "5c188f27-0c44-4131-bea5-a274590c4b4b",
-      "name": "monitor",
-      "description": "monitor",
-      "price": "1000",
-      "qtd": "11",
-      "category": "1",
-      "createdAt": "2023-03-06",
-      "id": 11
-    },
-    {
-      "uuid": "9da09618-3904-4c86-b7b5-45e3abeb97d1",
-      "name": "monitor",
-      "description": "monitor",
-      "price": "1000",
-      "qtd": "14",
-      "category": "1",
-      "createdAt": "2023-03-07",
-      "id": 12
-    },
-    {
-      "uuid": "91e3951f-c15c-4edc-a015-ba0863c507d9",
-      "name": "",
-      "description": "monitor",
-      "price": "",
-      "qtd": "",
-      "category": "1",
-      "createdAt": "2023-03-07",
-      "id": 13
     }
   ],
   "categorias": [
     {
-      "uuid": "ac0c4abe-596c-42f4-8ad2-a3ec54cf5747",
       "name": "Informatica",
+      "uuid": "fe18f128-ae9a-4d18-b365-13bd6376ac04",
       "status": "ATIVA",
-      "createdAt": "2023-02-28",
+      "createdAt": "2023-03-07",
       "id": 1
     },
     {
+      "uuid": "dafab413-03f0-4bad-85da-89feab41925a",
       "name": "Informatica",
-      "uuid": "1570ed97-dbbb-4435-8d8e-767fa8771200",
       "status": "ATIVA",
-      "createdAt": "2023-03-06",
+      "createdAt": "2023-03-07",
       "id": 2
     },
     {
+      "uuid": "8948b863-da44-4cba-b034-6f65c27538eb",
       "name": "Informatica",
-      "uuid": "afc74df3-325c-4df0-a5ef-972ed8d87da6",
-      "status": "ATIVA",
-      "createdAt": "2023-03-06",
-      "id": 3
-    },
-    {
-      "name": "Informatica",
-      "uuid": "faf089c4-0644-4e86-87a1-9fb41d8c1d4d",
       "status": "ATIVA",
       "createdAt": "2023-03-07",
-      "id": 4
+      "id": 3
     }
   ]
 }

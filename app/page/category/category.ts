@@ -1,5 +1,6 @@
 import { Category} from "../../modelo.js"
 
+
 const input_category = document.getElementById("input_category") as HTMLInputElement;
 const URL_API = 'http://localhost:3000';
 const tableCategory = document.querySelector('#table_category tbody') as HTMLElement;
@@ -14,15 +15,21 @@ function save():void {
 }
 
 function postCategory(category: Category): void {
+    let categoryData = {
+        uuid: category.uuid,
+        name: category.name,
+        status: category.status,
+        createdAt: category.createdAt
+    };
     fetch(`${URL_API}/categorias`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json",
         },
-        body: JSON.stringify(category),
+        body: JSON.stringify(categoryData),
     })
         .then(response => {
-            alert(`Categoria ${category.name} cadastrada com sucesso.`);
+            alert(`Categoria ${categoryData.name} cadastrada com sucesso.`);
             input_category.value = "";
             input_category.focus();
             listCategory();
@@ -33,6 +40,8 @@ function postCategory(category: Category): void {
 }
 
 function addCategory(category: Category): String {
+    console.log(category)
+    console.log(category.uuid)
     return `<tr>
                 <th scope="row">${category.name}</th>
                 <td>${category.status}</td>
@@ -52,9 +61,9 @@ function listCategory(): void {
         }
     })
         .then(response => response.json())
-        .then(categories => {
+        .then((categories: Category[]) => {
             let addList = categories.map((category: Category)=> {
-
+                console.log(category)
                 return addCategory(category);
 
             }).join('')
