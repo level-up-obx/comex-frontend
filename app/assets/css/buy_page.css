@@ -8,6 +8,7 @@
 }
 
 
+
 .panel {
     display: flex;
     flex-direction: column;
@@ -18,7 +19,6 @@
     width: 70%; 
     height: 10%; 
     font-family: var(--inter);
-    
 
 }
 

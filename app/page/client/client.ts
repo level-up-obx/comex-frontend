@@ -57,7 +57,6 @@ function validadeClientEmail(event: KeyboardEvent) {
     setInputError(input, msg);
 }
 
-// searchAddress
 
 function validateClientCEP(event: KeyboardEvent) {
     let input = event.target as HTMLInputElement;

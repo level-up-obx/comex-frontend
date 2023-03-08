@@ -1,4 +1,6 @@
-
+.title{
+    color: #ffffff;
+}
 
 .product_1 {
     display: flex;
@@ -27,7 +29,11 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    /* background-color: #8FA8FF; */
+    
 }
+
+
 
 .title {
     display: flex;
@@ -61,7 +67,6 @@
         width: 70%;
         box-sizing: border-box;
         background-color: #8FA8FF;
-        font-family: var(--inter);
     }
 
     .product_1 {

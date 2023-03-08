@@ -11,6 +11,14 @@
 
 }
 
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
 .logo-white {
     filter: invert(100%) sepia(100%) saturate(15%) hue-rotate(307deg) brightness(106%) contrast(103%);
 }

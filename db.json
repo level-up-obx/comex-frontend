@@ -17,6 +17,24 @@
         "state": "PR"
       },
       "id": 1
+    },
+    {
+      "uuid": "c113c88e-9b47-4add-b568-4a830f9cb55c",
+      "name": "Alana A ",
+      "cpf": "06110234907",
+      "birth": "1997-06-27",
+      "email": "alanacarsten@gmail.com",
+      "contact": "(41) 998815-2928",
+      "address": {
+        "cep": "83508-400",
+        "address": "Rua Padre José Maurício",
+        "number": "",
+        "complement": "",
+        "district": "Tanguá",
+        "city": "Almirante Tamandaré",
+        "state": "PR"
+      },
+      "id": 2
     }
   ],
   "produtos": [
@@ -98,15 +116,15 @@
       "img": "assets/img/product7.jpg"
     },
     {
-      "uuid": "61e92c06-734b-4016-97a1-b9638d8e6d9f",
+      "uuid": "e9d49607-7e07-490e-9d85-2ebbe57229a2",
       "name": "Processador",
       "description": "Processador",
       "price": "1.733",
       "qtd": "7",
       "category": "1",
-      "createdAt": "2023-02-28",
-      "id": 8,
-      "img": "assets/img/product8.jpg"
+      "img": "assets/img/product8.jpg",
+      "createdAt": "2023-03-08",
+      "id": 8
     }
   ],
   "categorias": [
@@ -130,6 +148,13 @@
       "status": "ATIVA",
       "createdAt": "2023-03-07",
       "id": 3
+    },
+    {
+      "uuid": "e8569b6f-6e56-4c02-b28d-737ef6022703",
+      "name": "Informatica",
+      "status": "ATIVA",
+      "createdAt": "2023-03-08",
+      "id": 4
     }
   ]
 }
