@@ -1,6 +1,7 @@
+import { Produto } from './typescript/modelo.js'
 const produtosMaisVendidos = document.querySelector('.box-mais-vendidos-card')
 
-function criaHtml(data) {
+function criaHtml(data: Produto): string {
     return `
         <div class="mais-vendidos__card">
             <img src="${data.url}" alt="Texto alternativo da imagem" class="mais-vendidos__card-img">
@@ -18,7 +19,5 @@ function criaHtml(data) {
 
 fetch('http://localhost:3000/produtos')
     .then(resp => resp.json())
-    .then(data => {
-        data.forEach(elemento => produtosMaisVendidos.innerHTML += criaHtml(elemento))
-    })
+    .then(data => data.forEach((elemento: Produto) => produtosMaisVendidos.innerHTML += criaHtml(elemento)))
     .catch(e => alert('Não foi possível recuperar os produtos.'))

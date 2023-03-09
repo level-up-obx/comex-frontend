@@ -1,4 +1,4 @@
-export default function CPFValido(campo) {
+export default function CPFValido(campo: HTMLInputElement): boolean {
     const cpf = campo.value.replace(/\.|-/g, '')
 
     if(validaNumerosRepetidos(cpf) || primeiroDigito(cpf) || segundoDigito(cpf)) return true
@@ -6,7 +6,7 @@ export default function CPFValido(campo) {
 
 } 
 
-function validaNumerosRepetidos(cpf) {
+function validaNumerosRepetidos(cpf: string): boolean {
     const numerosRepetidos = [
         '00000000000',
         '11111111111',
@@ -23,7 +23,7 @@ function validaNumerosRepetidos(cpf) {
     return numerosRepetidos.includes(cpf)
 }
 
-function primeiroDigito(cpf){
+function primeiroDigito(cpf: any): boolean{
     let soma = 0
     let multiplicador = 10
 
@@ -39,9 +39,9 @@ function primeiroDigito(cpf){
     return soma != cpf[9] 
 }
 
-function segundoDigito(cpf){
-    let soma = 0
-    let multiplicador = 11
+function segundoDigito(cpf: any): boolean{
+    let soma: number = 0
+    let multiplicador: number = 11
 
     for (let i = 0; i < 10; i++) {
         soma += cpf[i] * multiplicador

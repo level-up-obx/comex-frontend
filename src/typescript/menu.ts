@@ -1,8 +1,7 @@
-const btnMenu = document.querySelector('#botao-menu')
-const listaMenu = document.querySelector('.menu__lista')
+const btnMenu: HTMLButtonElement = document.querySelector('#botao-menu')
+const listaMenu: Element = document.querySelector('.menu__lista')
 
 btnMenu.addEventListener('click', () => switchMenu())
-
 
 function switchMenu(){
     if(listaMenu.classList.contains('menu__lista-disable')){

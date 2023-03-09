@@ -7,48 +7,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./assets/styles/style.css">
-    <link rel="stylesheet" href="./assets/styles/menu.css">
-    <link rel="stylesheet" href="./assets/styles/carrossel.css">
-    <link rel="stylesheet" href="./assets/styles/produtos.css">
-    <link rel="stylesheet" href="./assets/styles/rodape.css">
+    <link rel="stylesheet" href="./src/assets/styles/style.css">
+    <link rel="stylesheet" href="./src/assets/styles/menu.css">
+    <link rel="stylesheet" href="./src/assets/styles/carrossel.css">
+    <link rel="stylesheet" href="./src/assets/styles/produtos.css">
+    <link rel="stylesheet" href="./src/assets/styles/rodape.css">
     <title>Comex</title>
-    <script src="./src/paginas/principal.js" type="module" defer></script>
+    <script src="./src/main.ts" defer></script>
 </head>
 <body>
     <!-- menu mobile -->
     <header class="cabecalho menu-mobile">
         <nav class="menu">
-            <a href="#" class="logo"><img src="./assets/svg/logo.svg" alt="Comex logo" class="logo"></a>
+            <a href="#" class="logo"><img src="./src/assets/svg/logo.svg" alt="Comex logo" class="logo"></a>
             <ul class="menu__lista menu__lista-disable">
-                <li class="menu__lista-item"><a href="./pages/produtos.html">Produtos</a></li>
-                <li class="menu__lista-item"><a href="./pages/categorias.html">Categorias</a></li>
-                <li class="menu__lista-item"><a href="./pages/contato.html">Contato</a></li>
+                <li class="menu__lista-item"><a href="./src/produtos/index.html">Produtos</a></li>
+                <li class="menu__lista-item"><a href="./src/categorias/index.html">Categorias</a></li>
+                <li class="menu__lista-item"><a href="./src/contato.html">Contato</a></li>
                 <li class="menu__lista-item">Buscar</li>
                 <li class="menu__lista-item">Carrinho</li>
-                <li class="menu__lista-item"><a href="./pages/clientes.html"></a></li>
+                <li class="menu__lista-item"><a href="./src/clientes/index.html"></a></li>
             </ul>
-            <button id="botao-menu" class="botao-menu"><img src="./assets/svg/menu.svg"></button>
+            <button id="botao-menu" class="botao-menu"><img src="./src/assets/svg/menu.svg"></button>
         </nav>
         <div class="search-bar">
             <input type="search" name="" id="" placeholder="Pesquisar..." class="cabecalho__input">
-            <img src="./assets/svg/search.svg" alt="">
+            <img src="./src/assets/svg/search.svg" alt="">
         </div>
     </header>
     <!-- menu desktop -->
     <header class="menu-desktop">
-        <a href="#" class="logo-mobile"><img src="./assets/svg/logo.svg" alt="Logo Comex"></a>
+        <a href="#" class="logo-mobile"><img src="./src/assets/svg/logo.svg" alt="Logo Comex"></a>
         <ul class="cabecalho__lista">
-            <li class="cabecalho__lista-item"><a href="./pages/produtos.html">Produtos</a></li>
-            <li class="cabecalho__lista-item"><a href="./pages/categorias.html">Categorias</a></li>
-            <li class="cabecalho__lista-item"><a href="./pages/contato.html">Contato</a></li>
+            <li class="cabecalho__lista-item"><a href="./src/produtos/index.html">Produtos</a></li>
+            <li class="cabecalho__lista-item"><a href="./src/categorias/index.html">Categorias</a></li>
+            <li class="cabecalho__lista-item"><a href="./src/contato.html">Contato</a></li>
         </ul>
         <div class="box-cabecalho-interativos">
             <input type="search" name="" id="" placeholder="Pesquise..." class="input-pesquisa-mobile">
             <ul class="cabecalho__lista">
-                <li class="cabecalho__lista-item"><img src="./assets/svg/carrinho-compras.svg" alt="Carrinho de compras"></li>
-                <a href="./pages/clientes.html">
-                    <li class="cabecalho__lista-item"><img src="./assets/svg/usuario.svg" alt="Perfil do usuário"></li>
+                <li class="cabecalho__lista-item"><img src="./src/assets/svg/carrinho-compras.svg" alt="Carrinho de compras"></li>
+                <a href="./paginas/clientes/index.html">
+                    <li class="cabecalho__lista-item"><img src="./src/assets/svg/usuario.svg" alt="Perfil do usuário"></li>
                 </a>
             </ul>
         </div>
@@ -56,16 +56,16 @@
     <main class="principal">
         <section class="baner">
             <div class="container">
-                <img src="./assets/img/baner-img-mobile.jpg" alt="" class="img-baner img-baner-mobile">
-                <img src="./assets/img/baner-img-tablet.png" alt="" class="img-baner img-baner-tablet">
+                <img src="./src/assets/img/baner-img-mobile.jpg" alt="" class="img-baner img-baner-mobile">
+                <img src="./src/assets/img/baner-img-tablet.png" alt="" class="img-baner img-baner-tablet">
                 <div class="conteudo-baner">
                     <h1 class="titulo__principal">Confira as Promoções</h1>
                     <h2 class="titulo__secundario">e monte seu satup</h2>
                     <div class="botoes-baner">
-                        <button class="botao botao-baner__esquerda"><img src="./assets/svg/seta-esquerda.svg" alt=""></button>
-                        <button class="botao botao-baner__direita"><img src="./assets/svg/seta-direita.svg" alt=""></button>
+                        <button class="botao botao-baner__esquerda"><img src="./src/assets/svg/seta-esquerda.svg" alt=""></button>
+                        <button class="botao botao-baner__direita"><img src="./src/assets/svg/seta-direita.svg" alt=""></button>
                     </div>
-                    <a class="seta-baixo" href="#mais-vendidos"><img src="./assets/svg/seta-botao.svg" alt=""></a>
+                    <a class="seta-baixo" href="#mais-vendidos"><img src="./src/assets/svg/seta-botao.svg" alt=""></a>
                 </div>
                 <div class="seletor-pagina">
                     <div class="container">
@@ -87,11 +87,11 @@
         </main>
     <footer class="rodape">
         <div class="esquerda">
-            <a href="#"><img src="./assets/svg/logo.svg" alt="Logo Comex" class="logo-rodape"></a>
+            <a href="#"><img src="./src/assets/svg/logo.svg" alt="Logo Comex" class="logo-rodape"></a>
             <ul class="rodape__lista">
-                <li class="rodape__lista-item"><a href="#"><img src="./assets/svg/instagram.svg" alt=""></a></li>
-                <li class="rodape__lista-item"><a href="#"><img src="./assets/svg/twitter.svg" alt=""></a></li>
-                <li class="rodape__lista-item"><a href="#"><img src="./assets/svg/linkedin.svg" alt=""></a></li>
+                <li class="rodape__lista-item"><a href="#"><img src="./src/assets/svg/instagram.svg" alt=""></a></li>
+                <li class="rodape__lista-item"><a href="#"><img src="./src/assets/svg/twitter.svg" alt=""></a></li>
+                <li class="rodape__lista-item"><a href="#"><img src="./src/assets/svg/linkedin.svg" alt=""></a></li>
             </ul>
         </div>
         
@@ -108,6 +108,6 @@
             </ul>
         </div>
     </footer>
-    <script src="./assets/js/menu.js"></script>
+    <script src="./src/typescript/menu.ts"></script>
 </body>
 </html>

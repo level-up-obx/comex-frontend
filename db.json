@@ -20,14 +20,16 @@
       "url": "https://images.unsplash.com/photo-1543973277-5020ef836640?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
       "categoria": "1",
       "criacao": "2023-02-27"
+    },
+    {
+      "_nome": "Controle xbox one",
+      "_descricao": "Controle xbox one",
+      "_preco": "355,00",
+      "_url": "https://images.unsplash.com/photo-1543973277-5020ef836640?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",
+      "_quantidade": "6",
+      "_categoria": "1",
+      "id": "D_gC2H9"
     }
   ],
-  "categorias": [
-    {
-      "id": "dd396d50-e120-4f02-a12d-a9f522c780c2",
-      "nome": "Informática",
-      "status": "ATIVO",
-      "data": "2023-02-28"
-    }
-  ]
+  "categorias": []
 }
