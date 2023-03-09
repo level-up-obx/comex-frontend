@@ -5,12 +5,8 @@ body {
   font-family: "Roboto", sans-serif;
 }
 
-/* Fontsize */
-.fs-7 {
-  font-size: 0.8rem!important;
-}
 /* Navbar */
-.text-whites {
+.navbar__icons {
   display: none;
 }
 .card:nth-child(4),
@@ -45,14 +41,6 @@ body {
   gap: .5rem;
 }
 
-/* Input */
-.input-style {
-  color: white;
-  outline: 0;
-  background-color: #181818;
-  border: 2px solid #212529;
-  padding: 5px;
-}
 /* Removendo o incrementador e decrementador dos inputs */
 input[type=number]::-webkit-inner-spin-button { 
   -webkit-appearance: none;
@@ -77,7 +65,7 @@ input[type=number] {
 
 @media (min-width: 1024px) {
       /* Navbar */
-      .text-whites {
+      .navbar__icons {
         display: flex;
         flex-direction: row;
         align-items: center;

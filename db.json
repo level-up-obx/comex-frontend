@@ -1,31 +1,22 @@
 {
-  "clientes": [],
-  "produtos": [
+  "clientes": [
     {
-      "uuid": "38e15683-d352-41ce-85c2-244f0d0942fd",
-      "name": "Notebook",
-      "description": "adasdasjdkasjdasjdasjdkasj",
-      "price": 1000,
-      "quantity": 10,
-      "category": "product-category",
-      "photo": "https://www.lenovo.com/medias/lenovo-laptop-ideapad-3i-15in-hero.png?context=bWFzdGVyfHJvb3R8MzM3NTg5fGltYWdlL3BuZ3xoM2MvaDExLzE0MTkxNTE3NDAxMTE4LnBuZ3w4OTg2YTg5YzQ0ZmFiZDYzOTdjZTkzNDJjNDY3MTJlODM4YTQ2ODdlMGVmZTFlYjBiODRjYWFmY2JjOTBkODNj",
+      "uuid": "0919c33c-0b81-4ee4-af0f-3b8a08804ed4",
+      "name": "João Victor",
+      "lastName": "Bezerra",
+      "cpf": "50642983828",
+      "telephone": "1333",
+      "address": {
+        "street": "Rua João Ramalho",
+        "number": 50,
+        "complement": "1",
+        "neighborhood": "Centro",
+        "city": "São Vicente",
+        "state": "SP"
+      },
       "id": 1
     }
   ],
-  "categorias": [
-    {
-      "uuid": "f5a2a2b7-8e17-4406-9c64-4fa57af23bec",
-      "name": "Móveis",
-      "status": "Ativa",
-      "createdAt": "2023-8-3",
-      "id": 1
-    },
-    {
-      "uuid": "c4d7de71-a52f-4498-b89b-416aad742379",
-      "name": "Informática",
-      "status": "Ativa",
-      "createdAt": "2023-8-3",
-      "id": 2
-    }
-  ]
+  "produtos": [],
+  "categorias": []
 }

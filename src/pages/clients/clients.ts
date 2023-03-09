@@ -1,18 +1,18 @@
 import { Address, Client } from './../../ts/model.js';
 import { cep, saveClient } from '../../ts/api.js'
 
-const firstName: HTMLInputElement = <HTMLInputElement>document.getElementById("first-name")
-const lastName: HTMLInputElement = <HTMLInputElement>document.getElementById("last-name")
-const cpf: HTMLInputElement = <HTMLInputElement>document.getElementById("cpf")
-const telephone: HTMLInputElement = <HTMLInputElement>document.getElementById("telephone")
-const zipcode: HTMLInputElement = <HTMLInputElement>document.getElementById("zipcode")
-const street: HTMLInputElement = <HTMLInputElement>document.getElementById("street")
-const number: HTMLInputElement = <HTMLInputElement>document.getElementById("number")
-const complement: HTMLInputElement = <HTMLInputElement>document.getElementById("complement")
-const neighborhood: HTMLInputElement = <HTMLInputElement>document.getElementById("neighborhood")
-const city: HTMLInputElement = <HTMLInputElement>document.getElementById("city")
-const state: HTMLInputElement = <HTMLInputElement>document.getElementById("state")
-const form: HTMLFormElement = <HTMLFormElement>document.getElementById("client-form")
+const firstName: HTMLInputElement = <HTMLInputElement>document.getElementById("client__firstName")
+const lastName: HTMLInputElement = <HTMLInputElement>document.getElementById("client__lastName")
+const cpf: HTMLInputElement = <HTMLInputElement>document.getElementById("client__cpf")
+const telephone: HTMLInputElement = <HTMLInputElement>document.getElementById("client__telephone")
+const zipcode: HTMLInputElement = <HTMLInputElement>document.getElementById("client__zipCode")
+const street: HTMLInputElement = <HTMLInputElement>document.getElementById("address__street")
+const number: HTMLInputElement = <HTMLInputElement>document.getElementById("address__number")
+const complement: HTMLInputElement = <HTMLInputElement>document.getElementById("address__complement")
+const neighborhood: HTMLInputElement = <HTMLInputElement>document.getElementById("address__neighborhood")
+const city: HTMLInputElement = <HTMLInputElement>document.getElementById("address__city")
+const state: HTMLInputElement = <HTMLInputElement>document.getElementById("address__state")
+const form: HTMLFormElement = <HTMLFormElement>document.getElementById("client__form")
 
 function clearInputs() {
   firstName.value = '';

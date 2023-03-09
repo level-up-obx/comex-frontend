@@ -1,13 +1,13 @@
 import { Product } from './../../ts/model';
 import { saveProduct, listCategory } from '../../ts/api.js'
 
-const name: HTMLInputElement = <HTMLInputElement>document.getElementById("product-name")
-const price: HTMLInputElement = <HTMLInputElement>document.getElementById("product-price")
-const quantity: HTMLInputElement = <HTMLInputElement>document.getElementById("product-stock")
-const description: HTMLInputElement = <HTMLInputElement>document.getElementById("product-description")
-const inputProductPhoto: HTMLInputElement = <HTMLInputElement>document.getElementById("product-url")
-const category: HTMLOptionElement = <HTMLOptionElement>document.getElementById("product-category")
-const form: HTMLFormElement = <HTMLFormElement>document.getElementById("product-form")
+const name: HTMLInputElement = <HTMLInputElement>document.getElementById("product__name")
+const price: HTMLInputElement = <HTMLInputElement>document.getElementById("product__price")
+const quantity: HTMLInputElement = <HTMLInputElement>document.getElementById("product__stock")
+const description: HTMLInputElement = <HTMLInputElement>document.getElementById("product__description")
+const inputProductPhoto: HTMLInputElement = <HTMLInputElement>document.getElementById("product__url")
+const category: HTMLOptionElement = <HTMLOptionElement>document.getElementById("product__category")
+const form: HTMLFormElement = <HTMLFormElement>document.getElementById("product__form")
 
 // Listagem das categorias como opção
 listCategory().then(categories => {

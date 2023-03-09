@@ -3,14 +3,6 @@
     flex-direction: column;
     gap: 2rem;
 }
-/* Carousel */
-.carousel-dark .carousel-control-next-icon, .carousel-dark .carousel-control-prev-icon {
-    filter: none;
-}
-.carousel-dark .carousel-caption {
-    color: #ffffff;
-}
-
 /* Cards */
 .containerCards {
     display: flex;

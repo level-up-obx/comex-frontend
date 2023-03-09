@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,7 +19,6 @@
     ></script>
     <!-- Local Styles -->
     <link rel="stylesheet" href="../../assets/css/base.css" />
-    <link rel="stylesheet" href="../../assets/css/produtos.css" />
     <!-- Box icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -51,13 +50,18 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="./index.html">Home</a>
+                <a
+                  class="nav-link active"
+                  aria-current="page"
+                  href="./index.html"
+                  >Home</a
+                >
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Promoções</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./categorias.html" >Categorias</a>
+                <a class="nav-link" href="./categorias.html">Categorias</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link">Buscar</a>
@@ -79,9 +83,13 @@
                 placeholder="Search"
                 aria-label="Search"
               />
-              <div class="text-whites">
-                <a href="./produtos.html"><i class='bx bx-cart bx-sm text-white'></i></a>
-                <a href="./clientes.html"><i class="bx bxs-user bx-sm text-white"></i></a>
+              <div class="navbar__icons">
+                <a href="./produtos.html"
+                  ><i class="bx bx-cart bx-sm text-white"></i
+                ></a>
+                <a href="./clientes.html"
+                  ><i class="bx bxs-user bx-sm text-white"></i
+                ></a>
               </div>
               <button class="btn btn-outline-primary btn-search" type="submit">
                 Search
@@ -94,44 +102,45 @@
     </header>
     <!-- Página de produto -->
     <main id="product-page" class="d-flex align-items-center flex-column">
-      <h2 class="text-white mb-4">Novo produto</h2>
-        <form action="#" id="product-form">
-          <div class="input-fields">
-
-          <div class="d-flex align-items-start flex-column">
-            <label for="product-name" class="text-white text-center fw-semibold">Nome</label>
-            <input type="text" name="product-name" id="product-name" class="input-style rounded w-100" minlength="2" required>
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
-          </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="product-price" class="text-white text-center fw-semibold">Preço</label>
-            <input type="number" name="product-price" id="product-price" data-input="price" class="input-style rounded w-100" minlength="2" required>
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
-          </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="product-stock" class="text-white text-center fw-semibold">Quantidade em estoque</label>
-            <input type="number" name="product-stock" id="product-stock" class="input-style rounded w-100" minlength="2" required>
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
-          </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="product-description" class="text-white text-center fw-semibold">Descrição</label>
-            <textarea name="product-description" id="product-description" cols="30" rows="4" class="input-style rounded w-100" minlength="20" required></textarea>
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
-          </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="product-url" class="text-white text-center fw-semibold">Foto do produto(URL)</label>
-            <input type="text" name="product-url" id="product-url" class="input-style rounded w-100" minlength="2" required>
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
-          </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="product-category" class="text-white text-center fw-semibold">Categoria</label>
-            <select name="product-category" id="product-category" class="input-style rounded w-100">
-              <!-- As categorias serão dinâmicas -->
-            </select>
-          </div>
-        </div>
-          <button class="btn btn-primary align-self-center" type="submit">Salvar</button>
-        </form>
+      <h3 class="text-white mb-4">Cadastrar novo produto</h3>
+<div class="container">
+  <form id ="product__form" class="row g-3 needs-validation justify-content-center">
+    <div class="col-md-3">
+      <label for="product__name" class="form-label">Nome</label>
+      <input type="text" class="form-control" id="product__name" minlength="2" data-type="input" required>
+      <div class="invalid-feedback"></div>
+    </div>
+    <div class="col-md-3">
+      <label for="product__price" class="form-label">Preço</label>
+      <input type="number" class="form-control" id="product__price" data-type="input" required>
+      <div class="invalid-feedback">Looks good!</div>
+    </div>
+    <div class="col-md-2">
+      <label for="product__stock" class="form-label">Quantidade</label>
+      <input type="number" class="form-control" id="product__stock" data-type="input" required>
+      <div class="invalid-feedback">Looks good!</div>
+    </div>
+    <div class="col-md-8">
+      <label for="product__description" class="form-label">Descrição</label>
+      <input type="text" class="form-control" id="product__description" minlength="10" data-type="input" required>
+      <div class="invalid-feedback">Looks good!</div>
+    </div>
+    <div class="col-md-5">
+      <label for="product__url" class="form-label">Foto do produto(URL)</label>
+      <input type="url" class="form-control" id="product__url" data-type="input" data-type="input" required>
+      <div class="invalid-feedback">Looks good!</div>
+    </div>
+    <div class="col-md-3">
+      <label for="product__category" class="form-label">Categoria</label>
+      <select class="form-select" id="product__category">
+      </select>
+    </div>
+    <div class="d-flex justify-content-center">
+      <button class="btn btn-primary" type="submit">Incluir</button>
+    </div>
+  </form> 
+</div>
+      
     </main>
     <!-- Footer -->
     <footer id="footer" class="bg-dark">
@@ -173,6 +182,6 @@
       </div>
     </footer>
     <script src="./products.ts" type="module"></script>
-    <script src="../../ts/validator.ts" type="module"></script>
+    <script src="../../ts/validations.ts" type="module"></script>
   </body>
 </html>

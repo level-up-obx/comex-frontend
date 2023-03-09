@@ -11,10 +11,11 @@
         "test:desafio": "jest -t Desafio",
         "test:watch": "jest --watchAll",
         "api:fake": "json-server --watch db.json",
-        "compile": "tsc",
-        "watch": "tsc -w",
+        "ts:compile": "tsc",
+        "ts:watch": "tsc -w",
         "dev": "vite",
-        "build": "tsc && vite build"
+        "build": "tsc && vite build",
+        "preview": "npm run build && vite preview"
     },
     "repository": {
         "type": "git",

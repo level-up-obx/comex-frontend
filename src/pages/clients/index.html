@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" data-bs-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,7 +19,6 @@
     ></script>
     <!-- Local Styles -->
     <link rel="stylesheet" href="../../assets/css/base.css" />
-    <link rel="stylesheet" href="../../assets/css/clientes.css" />
     <!-- Box icons -->
     <link
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
@@ -84,7 +83,7 @@
                 placeholder="Search"
                 aria-label="Search"
               />
-              <div class="text-whites">
+              <div class="navbar__icons">
                 <a href="./produtos.html"
                   ><i class="bx bx-cart bx-sm text-white"></i
                 ></a>
@@ -103,179 +102,73 @@
     </header>
     <!-- Página de Clientes -->
     <main id="client-page" class="d-flex align-items-center flex-column">
-      <h2 class="text-white mb-4">Novo Cliente</h2>
-      <form action="#" id="client-form">
-        <div class="input-fields">
-          <div class="d-flex align-items-start flex-column">
-            <label for="first-name" class="text-white text-center fw-semibold"
-              >Nome</label
-            >
-            <input
-              type="text"
-              name="first-name"
-              id="first-name"
-              class="input-style rounded"
-              minlength="2"
-              required
-              data-input="firstName"
-            />
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
+      <h3 class="text-white mb-4">Cadastrar novo cliente</h3>
+      <div class="container">
+        <form id="client__form">
+          <div class="row g-3">
+            <div class="col-md-3">
+              <label for="client__firstName" class="form-label">Nome</label>
+              <input type="text" class="form-control" id="client__firstName" minlength="2" data-type="input" required>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="col-md-3">
+              <label for="client__lastName" class="form-label">Sobrenome</label>
+              <input type="text" class="form-control" id="client__lastName" minlength="2" data-type="input" required>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="col-md-3">
+              <label for="client__cpf" class="form-label">CPF</label>
+              <input type="text" class="form-control" id="client__cpf" data-type="input" required>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="col-md-3">
+              <label for="client__telephone" class="form-label">Telefone</label>
+              <input type="text" class="form-control" id="client__telephone" minlength="12" data-type="input" required>
+              <div class="invalid-feedback"></div>
+            </div>
           </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="last-name" class="text-white text-center fw-semibold"
-              >Sobrenome</label
-            >
-            <input
-              type="text"
-              name="last-name"
-              id="last-name"
-              class="input-style rounded"
-              minlength="2"
-              required
-              data-input="lastName"
-            />
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
+          <div class="row g-3 mt-1">
+            <div class="col-md-4">
+              <label for="client__zipCode" class="form-label">CEP</label>
+              <input type="text" class="form-control" id="client__zipCode" minlength="9" data-type="input" required>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="col-md-8">
+              <label for="address__street" class="form-label">Rua</label>
+              <input type="text" class="form-control" id="address__street" data-type="input" minlength="3" required>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="col-md-2">
+              <label for="address__number" class="form-label">Número</label>
+              <input type="text" class="form-control" id="address__number" data-type="input" required>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="col-md-2">
+              <label for="address__complement" class="form-label">Complemento</label>
+              <input type="text" class="form-control" id="address__complement">
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="col-md-2">
+              <label for="address__neighborhood" class="form-label">Bairro</label>
+              <input type="text" class="form-control" id="address__neighborhood" minlength="2" data-type="input" required>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="col-md-4">
+              <label for="address__city" class="form-label">Cidade</label>
+              <input type="text" class="form-control" id="address__city" minlength="2" data-type="input" required>
+              <div class="invalid-feedback"></div>
+            </div>
+            <div class="col-md-2">
+              <label for="address__state" class="form-label">Estado</label>
+              <input type="text" class="form-control" id="address__state" data-type="input" required>
+              <div class="invalid-feedback"></div>
+            </div>
           </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="cpf" class="text-white text-center fw-semibold"
-              >CPF</label
-            >
-            <input
-              type="number"
-              name="cpf"
-              id="cpf"
-              class="input-style rounded"
-              required
-              data-input="cpf"
-            />
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
+          <div class="d-flex justify-content-center mt-4">
+            <button class="btn btn-primary" type="submit">Incluir</button>
           </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="telephone" class="text-white text-center fw-semibold"
-              >Telefone</label
-            >
-            <input
-              type="number"
-              name="telephone"
-              id="telephone"
-              class="input-style rounded"
-              required
-              data-input="telephone"
-            />
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
-          </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="zipcode" class="text-white text-center fw-semibold"
-              >CEP</label
-            >
-            <input
-              type="number"
-              name="zipcode"
-              id="zipcode"
-              class="input-style rounded"
-              required
-              data-input="zipcode"
-            />
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
-          </div>
-        </div>
-        <h2 class="text-white">Endereço</h2>
-        <div class="input-fields">
-          <div class="d-flex align-items-start flex-column">
-            <label for="street" class="text-white text-center fw-semibold"
-              >Rua</label
-            >
-            <input
-              type="text"
-              name="street"
-              id="street"
-              class="input-style rounded"
-              minlength="3"
-              required
-              data-input="street"
-            />
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
-          </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="number" class="text-white text-center fw-semibold"
-              >Numero</label
-            >
-            <input
-              type="number"
-              name="number"
-              id="number"
-              class="input-style rounded"
-              required
-              data-input="number"
-            />
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
-          </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="complement" class="text-white text-center fw-semibold"
-              >Complemento</label
-            >
-            <input
-              type="text"
-              name="complement"
-              id="complement"
-              class="input-style rounded"
-              data-input="complement"
-            />
-          </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="neighborhood" class="text-white text-center fw-semibold"
-              >Bairro</label
-            >
-            <input
-              type="text"
-              name="neighborhood"
-              id="neighborhood"
-              class="input-style rounded"
-              minlength="2"
-              required
-              data-input="neighborhood"
-            />
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
-          </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="city" class="text-white text-center fw-semibold"
-              >Cidade</label
-            >
-            <input
-              type="text"
-              name="city"
-              id="city"
-              class="input-style rounded"
-              minlength="2"
-              required
-              data-input="city"
-            />
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
-          </div>
-          <div class="d-flex align-items-start flex-column">
-            <label for="state" class="text-white text-center fw-semibold"
-              >Estado</label
-            >
-            <input
-              type="text"
-              name="state"
-              id="state"
-              class="input-style rounded"
-              minlength="2"
-              required
-              data-input="state"
-            />
-            <span id="form__message__error" class="text-danger visually-hidden fs-7"></span>
-          </div>
-        </div>
-        <button
-          class="btn btn-primary align-self-center"
-          id="client-button"
-          type="submit"
-        >
-          Salvar
-        </button>
-      </form>
+        </form>
+      </div>
     </main>
     <!-- Footer -->
     <footer id="footer" class="bg-dark">
@@ -317,6 +210,6 @@
       </div>
     </footer>
     <script src="./clients.ts" type="module"></script>
-    <script src="../../ts/validator.ts" type="module"></script>
+    <script src="../../ts/validations.ts" type="module"></script>
   </body>
 </html>
