@@ -1,22 +1,25 @@
-import { criaCliente } from "../modelo.js";
+// import { criaCliente } from "../modelo.js";
+import { Cliente } from '../models/clientes.js'
+import { Endereco } from '../models/endereco.js'
 
-const clienteBtn = document.querySelector('.cliente__btn')
-const cepBtn = document.querySelector('.cliente__input-cep-btn')
 
-const logradouro = document.querySelector('#logradouro')
-const bairro = document.querySelector('#bairro')
-const cidade = document.querySelector('#cidade')
-const numero = document.querySelector('#numero')
+const clienteBtn = document.querySelector('.cliente__btn') as HTMLButtonElement
+const cepBtn = document.querySelector('.cliente__input-cep-btn') as HTMLButtonElement
 
-const nome = document.querySelector('#nome')
-const sobrenome = document.querySelector('#sobrenome')
-const cpf = document.querySelector('#cpf')
-const telefone = document.querySelector('#telefone')
+const logradouro = document.querySelector('#logradouro') as HTMLInputElement
+const bairro = document.querySelector('#bairro') as HTMLInputElement
+const cidade = document.querySelector('#cidade') as HTMLInputElement
+const numero = document.querySelector('#numero') as HTMLInputElement
 
-const cep = document.querySelector('#cep')
+const nome = document.querySelector('#nome') as HTMLInputElement
+const sobrenome = document.querySelector('#sobrenome') as HTMLInputElement
+const cpf = document.querySelector('#cpf') as HTMLInputElement
+const telefone = document.querySelector('#telefone') as HTMLInputElement
+
+const cep = document.querySelector('#cep') as HTMLInputElement
 
 document.querySelectorAll('.validate').forEach(i => {
-  i.onblur = e => inputValidate(e.target)
+  i.addEventListener('blur', e => inputValidate(e.target))
 })
 
 let inputsNotEmpty = true
@@ -24,8 +27,8 @@ let inputsLengthOk = true
 let inputCpfOk = true
 let inputTelefoneOk = true
 
-function inputValidate(input) {
-  const errorElement = input.parentElement.querySelector('.cliente__error')
+function inputValidate(input: any) {
+  const errorElement = input.parentElement.querySelector('.cliente__error') as HTMLElement
   if (!input.validity.valid) {
     if (input.validity.valueMissing) {
       errorElement.innerText = 'Campo obrigatório.'
@@ -43,9 +46,9 @@ function inputValidate(input) {
   }
 }
 
-cpf.onblur = e => cpfValidation(e)
+cpf.addEventListener('blur', e => cpfValidation(e)) 
 
-function cpfValidation(e) {
+function cpfValidation(e: any) {
   const errorElement = e.target.parentElement.querySelector('.cliente__error')
   const cpfValue = e.target.value.replace(/\D+/g, '')
   
@@ -97,9 +100,9 @@ function cpfValidation(e) {
   inputCpfOk = true
 }
 
-telefone.onblur = e => telefoneValidation(e)
+telefone.addEventListener('blur', e => telefoneValidation(e))
 
-function telefoneValidation(e) {
+function telefoneValidation(e: any) {
   const errorElement = e.target.parentElement.querySelector('.cliente__error')
 
   if (e.target.value) {
@@ -117,7 +120,7 @@ function telefoneValidation(e) {
 }
 
 
-function formatCpf(cpf) {
+function formatCpf(cpf: string) {
   const firstPart = cpf.split('').splice(0, 3).join('')
   const secondPart = cpf.split('').splice(3, 3).join('')
   const thirdPart = cpf.split('').splice(6, 3).join('')
@@ -126,7 +129,7 @@ function formatCpf(cpf) {
   return `${firstPart}.${secondPart}.${thirdPart}-${lastPart}`
 }
 
-function formatTelefone(telefone) {
+function formatTelefone(telefone: string) {
   if (telefone) {
     const firstPart = telefone.split('').splice(0, 2).join('')
     const secondPart = telefone.split('').splice(2, 5).join('')
@@ -137,30 +140,37 @@ function formatTelefone(telefone) {
   return ``
 }
 
-clienteBtn.onclick = () => {
+clienteBtn.addEventListener('click', () => {
   if (!nome.value || !sobrenome.value || !cpf.value || !logradouro.value || !bairro.value || !cidade.value || !numero.value || !inputsNotEmpty || !inputsLengthOk || !inputCpfOk || !inputTelefoneOk) {
     alert("Preencha todos os campos corretamente antes de enviar.")
     return
   }
   
-  const endereco = {
-    logradouro: logradouro.value,
-    bairro: bairro.value,
-    cidade: cidade.value,
-    numero: numero.value
-  }
+  // const endereco = {
+  //   logradouro: logradouro.value,
+  //   bairro: bairro.value,
+  //   cidade: cidade.value,
+  //   numero: numero.value
+  // }
+
+  const endereco = new Endereco(
+    logradouro.value,
+    bairro.value,
+    cidade.value,
+    numero.value
+  ).criaEndereco()
   
   saveClient(endereco)
-}
+})
 
-function saveClient(endereco) {
+function saveClient(endereco: object) {
   clienteBtn.disabled = true
   fetch('http://localhost:3000/clientes', {
     method: 'POST', 
     headers: {
       'content-type': 'application/json'
     },
-    body: JSON.stringify(criaCliente(nome.value, sobrenome.value, formatCpf(cpf.value), formatTelefone(telefone.value), endereco))
+    body: JSON.stringify(new Cliente(nome.value, sobrenome.value, formatCpf(cpf.value), formatTelefone(telefone.value), endereco).criaCliente())
   })
   .then(resp => {
     if (resp.status === 201) {

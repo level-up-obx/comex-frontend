@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos</title>
+  <script src="./produto.js" defer></script>
+  <!-- <script src="./produto.js" defer type="module"></script> -->
+  <!-- <script src="./src/pagina/categorias.js" defer type="module"></script> -->
+  
+  
+  
+  
+  
+  
+  <script type="module" crossorigin src="/assets/produtos-2df10b68.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/index-78858509.js">
+  <link rel="stylesheet" href="/assets/index-8e477ea6.css">
+  <link rel="stylesheet" href="/assets/index-74bda1f8.css">
+  <link rel="stylesheet" href="/assets/style-864237a1.css">
+  <link rel="stylesheet" href="/assets/categorias-9b565390.css">
+</head>
+<body>
+  <header>
+    <div class="container">
+      <img src="/assets/primaria-1d225b61.svg" alt="Logo Comex" class="logo" onclick="location.href = location.origin + '/index.html'">
+    </div>
+  </header>
+  <!-- <section class="product-page-container container"></section> -->
+
+  <section class="container produto">
+    <form action="" class="produto__form">
+
+      <div class="produto__input-container">
+        <label for="nome" class="produto__label">Nome:</label>
+        <input type="text" id="nome" class="produto__input">
+      </div>
+
+      <div class="produto__input-container">
+        <label for="preco" class="produto__label">Preco:</label>
+        <input type="number" id="preco" class="produto__input">
+      </div>
+      
+      <div class="produto__input-container">
+        <label for="estoque" class="produto__label">Estoque:</label>
+        <input type="number" id="estoque" class="produto__input">
+      </div>
+      
+      <div class="produto__input-container">
+        <label for="descricao" class="produto__label">Descricao:</label>
+        <textarea id="descricao" cols="50" rows="10" class="produto__textarea"></textarea>
+      </div>
+
+      <div class="produto__input-container">
+        <label for="categorias" class="produto__label">Categoria:</label>
+        <select id="categoria" class="produto__select">
+          <!-- <option class="produto__input" value="LIVROS">LIVROS</option>
+          <option class="produto__input" value="INFORMATICA">INFORMATICA</option>
+          <option class="produto__input" value="MOVEIS">MOVEIS</option> -->
+        </select>
+      </div>
+
+    </form>
+    <button class="produto__btn">Salvar</button>
+  </section>
+
+  <!-- <section class="products-actions container">
+    <div class="products-actions-input-container">
+      <input type="text" placeholder="Digite o CEP"><button>Calcular Frente</button><br>
+    </div>
+    <button class="buy-btn">Adicionar ao carrinho</button>
+
+  </section> -->
+
+  <footer>
+    <div class="container">
+      <img src="/assets/primaria-1d225b61.svg" alt="Logo Comex" class="logo" onclick="location.href = location.origin + '/index.html'">
+      <div class="footer-social-media">
+        <img src="/assets/Twitter-1c3f8712.svg" alt="Logo Twitter">
+        <img src="/assets/_Instagram-0a2cb696.svg" alt="Logo Instagram">
+        <img src="/assets/_Linkedin-c1cee9d8.svg" alt="Logo Linkedin">
+      </div>
+      <div class="footer-list-container">
+        <ul>
+          <li>Promoções</li>
+          <li>Categorias</li>
+          <li>Buscar</li>
+        </ul>
+
+        <ul>
+          <li>Contato</li>
+          <li>Carrinho</li>
+          <li>Entrar</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

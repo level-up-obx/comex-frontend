@@ -1,12 +1,13 @@
 import { criaCategoria } from "../modelo.js";
+import { Categoria } from '../models/categoria.js'
 
 const categoryBtn = document.querySelector('.categoria__btn')
 const table = document.querySelector('.table tbody')
-let input = document.querySelector('.categoria__input')
+let input = document.querySelector('.categoria__input') as HTMLInputElement
 
 window.addEventListener('load', () => fetchCategorys())
 
-function deleteCategory(id) {
+function deleteCategory(id: string) {
   fetch(`http://localhost:3000/categorias/${id}`, {
     method: 'DELETE'
   })
@@ -23,7 +24,7 @@ function adjustTable() {
 function fetchCategorys() {
   fetch('http://localhost:3000/categorias')
     .then(resp => resp.json())
-    .then(data => data.forEach(category => addToTable(category)))
+    .then(data => data.forEach((category: object) => addToTable(category)))
     .catch(err => {
       alert('Não foi possível recuperar as categorias.')
       console.log('fetchError::', err)
@@ -31,7 +32,7 @@ function fetchCategorys() {
 }
 
 
-function addToTable(data) {
+function addToTable(data: any) {
   const row = document.createElement('tr')
   const idCell = document.createElement('td')
   const categoriaCell = document.createElement('td')
@@ -65,7 +66,7 @@ const handleCategoryAdd = () => {
     headers: {
       'content-type': 'application/json'
     },
-    body: JSON.stringify({categoria: input.value})
+    body: JSON.stringify(new Categoria(input.value).criaCategoria())    
   })
     .then(resp => {
       if (resp.status === 201) {
@@ -78,8 +79,8 @@ const handleCategoryAdd = () => {
   input.focus()
 }
 
-categoryBtn.onclick = () => {
+categoryBtn.addEventListener('click', () => {
   handleCategoryAdd()
-}
+})
 
-input.onkeydown = e => e.code === 'Enter' ? handleCategoryAdd() : null
+input.addEventListener('keydown', e => e.code === 'Enter' ? handleCategoryAdd() : null)

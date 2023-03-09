@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ES6",
+    "outDir": "dist/js",
+    "noEmit": true,
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "removeComments": true
+  },
+  "include": [
+    "src/**/*"
+  ]
+}

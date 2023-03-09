@@ -1,18 +1,18 @@
-const menu = document.querySelector('#menu-icon')
-const nav = document.querySelector('#nav')
+const menu = document.querySelector('#menu-icon') as HTMLElement
+const nav = document.querySelector('#nav') as HTMLElement
 
 let menuController = false
 
 window.onload = () => {
   fetch('http://localhost:3000/produtos')
     .then(r => r.json())
-    .then(products => products.forEach(p => {
+    .then(products => products.forEach((p: any) => {
       createCard(p)
     }))
 }
 
-function createCard(product) {
-  document.querySelector('.products-container').innerHTML += `
+function createCard(product: any) {
+  document.querySelector('.products-container')!.innerHTML += `
   <article class="products">
     <img src=${product.imagem.url} alt=${product.imagem.alt} class="product__image">
     <p>
@@ -39,7 +39,7 @@ Array.from(document.querySelectorAll('#nav a')).map(a => {
   })
 })
 
-const setProduct = (e) => {  
+const setProduct = (e: any) => {  
   let currentElement = e.target
   let tagName = currentElement.localName
   

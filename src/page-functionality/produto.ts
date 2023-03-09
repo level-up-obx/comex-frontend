@@ -1,12 +1,12 @@
 const queryString = window.location.search
 const params = new URLSearchParams(queryString)
-const children = params.get('children')
+const children: any = params.get('children')
 const parsedChildren = JSON.parse(decodeURIComponent(children))
-const content = document.querySelector('.product-page-container')
+const content = document.querySelector('.product-page-container') as HTMLElement
 
 content.innerHTML = parsedChildren
 
-const productText = document.querySelector('.products-text')
+const productText = document.querySelector('.products-text') as HTMLElement
 
 console.log('productText::', productText)
 

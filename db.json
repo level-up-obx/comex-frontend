@@ -55,6 +55,48 @@
         "numero": "98"
       },
       "criacao": "2023-02-26"
+    },
+    {
+      "id": "84fe4a6d-8b01-4bbd-3850-813636259a68",
+      "nome": "Jose",
+      "sobrenome": "Ribeiro",
+      "cpf": "416.916.398-26",
+      "telefone": "(11) 98769-5889",
+      "endereco": {
+        "logradouro": "Rua Dom Romualdo Coelho",
+        "bairro": "Vila Missionária",
+        "cidade": "São Paulo",
+        "numero": "20"
+      },
+      "criacao": "2023-03-08"
+    },
+    {
+      "id": "1f7683a5-7bb4-41d5-aece-dd23d0dff5d7",
+      "nome": "Romario",
+      "sobrenome": "Silva",
+      "cpf": "416.916.398-26",
+      "telefone": "(11) 26262-6263",
+      "endereco": {
+        "logradouro": "Rua Dom Romualdo Coelho",
+        "bairro": "Vila Missionária",
+        "cidade": "São Paulo",
+        "numero": "30"
+      },
+      "criacao": "2023-03-08"
+    },
+    {
+      "id": "bb374716-6ad6-46e0-98b0-4c020f156594",
+      "nome": "Romario",
+      "sobrenome": "Silva",
+      "cpf": "416.916.398-26",
+      "telefone": "(11) 95656-2020",
+      "endereco": {
+        "logradouro": "Rua Dom Romualdo Coelho",
+        "bairro": "Vila Missionária",
+        "cidade": "São Paulo",
+        "numero": "26"
+      },
+      "criacao": "2023-03-09"
     }
   ],
   "produtos": [
@@ -97,6 +139,10 @@
     {
       "categoria": "moveis",
       "id": 3
+    },
+    {
+      "categoria": "brinquedos",
+      "id": 4
     }
   ]
 }
