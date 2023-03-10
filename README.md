@@ -12,3 +12,21 @@ g.Vuex.
 
 Nome: Rick Rios
 Email: rick.rios@dne.com.br/rick.rios@onebox.one
+
+# Rodar projeto:
+
+    npm install
+
+*** scripts editados em packjson, esses comandos usam vite, tsc, json server.
+### rodar api fake
+
+    npm run api:fake
+
+### rodar em ambiente de dev
+
+    npm run dev
+
+### rodar buildar
+
+    npm run build
+
