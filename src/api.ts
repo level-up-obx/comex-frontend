@@ -1,46 +1,28 @@
-class Categoria {
-  nome: string;
-  descricao: string;
+export class SalvaCategorias {
+    private categorias: any[] = [];
+    constructor(categorias: any[]) { this.categorias = categorias }
+
+    salvaCategorias(novaCategorias: any[]): number {return this.categorias.push(...novaCategorias)}
+    listaCategorias(): any[] { return this.categorias }
 }
 
-const categorias: Categoria[] = [];
+export class SalvaProdutos{
+    private produtos: any[] = [];
+    constructor(produtos: any[]) { this.produtos = produtos }
 
-export function salvaCategorias(novaCategoria: Categoria): number {
-  return categorias.push(novaCategoria);
+    salvaProdutos(novoProduto: any[]): number {return this.produtos.push(...novoProduto)}
+    listaProdutos(): any[] { return this.produtos }
 }
 
-export function listaCategorias(): Categoria[] {
-  return categorias;
+export class SalvaClientes {
+    private clientes: any[] = [];
+    constructor(clientes: any[]) { this.clientes = clientes }
+
+    salvaClientes(novoCliente: any[]): number {return this.clientes.push(...novoCliente)}
+    listaClientes(): any[] { return this.clientes }
 }
 
-class Produto {
-  nome: string;
-  descricao: string;
-  preco: number;
-}
+// const tal =[{id: 1, nome: 'joao'}]
 
-const produtos: Produto[] = [];
-
-export function salvaProdutos(novoProduto: Produto): number {
-  return produtos.push(novoProduto);
-}
-
-export function listaProdutos(): Produto[] {
-  return produtos;
-}
-
-class Cliente {
-  nome: string;
-  email: string;
-  telefone: string;
-}
-
-const clientes: Cliente[] = [];
-
-export function salvaClientes(novoCliente: Cliente): number {
-  return clientes.push(novoCliente);
-}
-
-export function listaClientes(): Cliente[] {
-  return clientes;
-}
+// const result = new SalvaCategorias(tal)
+//console.log(result['categorias'])

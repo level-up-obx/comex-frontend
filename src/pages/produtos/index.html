@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="../../assets/css/reset.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
     <title>Comex</title>
 </head>
 <body>
@@ -15,7 +15,7 @@
     <header>
           <nav class="navbar navbar-expand-lg navbar-dark">
                 <div class="offset-1">
-                    <img src="./imgs/icons/comex.png" alt="imagem-comex">
+                    <img src="../../assets/imgs/icons/comex.png" alt="imagem-comex">
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -37,8 +37,8 @@
                             <form class="pe-2">
                                 <input class="form-control" type="search" placeholder="Pesquisar" aria-label="Search">
                             </form>
-                            <img class="pe-1 m-2" src="./imgs/icons/carrinho.png" alt="icon-carrinho">
-                            <img class="pe-1 m-2" src="./imgs/icons/user.png" alt="icon-usuario">
+                            <img class="pe-1 m-2" src="../../assets/imgs/icons/carrinho.png" alt="icon-carrinho">
+                            <img class="pe-1 m-2" src="../../assets/imgs/icons/user.png" alt="icon-usuario">
                         </div>
                     </div>
                 </div>
@@ -53,11 +53,11 @@
             <div class="row">
                 <div class="col-3">
                   <label for="nome" class="form-label">Nome:</label>
-                  <input type="text" class="form-control" id="nome">
+                  <input type="text" class="form-control" id="nome" name="nome">
                 </div>
                 <div class="col-3">
                     <label for="url" class="form-label">Url:</label>
-                    <input type="text" class="form-control" id="url">
+                    <input type="text" class="form-control" id="url" name="url">
                   </div>
                 <div class="col-3">
                     <label for="preco" class="form-label" >Preço:</label>
@@ -65,6 +65,7 @@
                         type="text"
                         class="form-control"
                         id="preco"
+                        name="preco"
                         pattern='[0-9]+(\\.[0-9][0-9]?)?'
                         title="Digite somente números"
                     >
@@ -75,6 +76,7 @@
                         type="text"
                         class="form-control"
                         id="quantidade"
+                        name="quantidade"
                         pattern='[0-9]+(\\.[0-9][0-9]?)?'
                         title="Digite somente números"
                     >
@@ -83,11 +85,11 @@
             <div class="row">
                 <div class="col-9">
                     <label for="descricao" class="form-label">Descrição:</label>
-                    <textarea rows="4" class="form-control" id="descricao"></textarea>
+                    <textarea rows="4" class="form-control" id="descricao" name="descricao"></textarea>
                 </div>
                 <div class="col-3">
                     <label for="categoria" class="form-label">Categoria:</label>
-                    <select id="categoria" class="form-select" aria-label="Default select example">
+                    <select id="categoria" name="categoria" class="form-select" aria-label="Default select example">
                         <option hidden >Selecione...</option>
                         <option value="1">Informática</option>
                         <option value="2">Livros</option>
@@ -105,7 +107,7 @@
 
     <footer>
         <div>
-            <img src="./imgs/icons/comex.png" alt="imagem-comex">
+            <img src="../../assets/imgs/icons/comex.png" alt="imagem-comex">
         </div>
         <div class="addres-contact">
             <address>Endereço: Rua tal, nº 50</address>
@@ -114,14 +116,14 @@
         <ul class="navbar-dark">
             <li class="nav-item">
                 <a class="nav-link active" aria-current="page" href="#">
-                    <img class="pe-3" src="./imgs/icons/tweter.svg">
-                    <img class="pe-3" src="./imgs/icons/instagram.svg">
-                    <img class="pe-3" src="./imgs/icons/linkedin.png">
+                    <img class="pe-3" src="../../assets/imgs/icons/tweter.svg">
+                    <img class="pe-3" src="../../assets/imgs/icons/instagram.svg">
+                    <img class="pe-3" src="../../assets/imgs/icons/linkedin.png">
                 </a>
             </li>
         </ul>
     </footer>
 
-    <script type="module" src="./dist/src/pagina/produtos.js"></script>
+    <script type="module" src="./produtos.ts"></script>
 </body>
 </html>

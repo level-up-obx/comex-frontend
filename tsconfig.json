@@ -1,8 +1,8 @@
 {
     "compilerOptions": {
       "target": "ES2022",
-      "outDir": "dist/src",
-      "noEmitOnError": true,
+      "outDir": "dist/js",
+      "noEmit": true,
       "noImplicitAny": true,
       "removeComments": true,
       "strictNullChecks": false,
