@@ -1,9 +1,9 @@
 import { Produto } from '../../modelo.js';
 
-class Produtos {
+class ProdutosController {
     private _form: HTMLFormElement;
 
-    constructor(form: string) {
+    constructor() {
         this._form = document.querySelector("#formProdutos")
     }
 
@@ -60,5 +60,5 @@ class Produtos {
 
 }
 
-const produtos = new Produtos('formProdutos');
+const produtos = new ProdutosController();
 produtos.adicionarProduto();

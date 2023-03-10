@@ -1,7 +1,7 @@
 import { Cliente } from '../../modelo.js';
 import IMask from 'imask';
 
-class Clientes {
+class ClientesContoller {
     private formClientes: HTMLFormElement;
     private inputTelefone: HTMLInputElement;
     private inputCpf: HTMLInputElement;
@@ -10,15 +10,7 @@ class Clientes {
     maskCpf: IMask.InputMask<{ mask: string }>
     maskCep: IMask.InputMask<{ mask: string }>
 
-    constructor(
-        formClientes: string,
-        inputTelefone: string,
-        inputCpf: string,
-        inputCep: string,
-        maskTelefone: string,
-        maskCpf: string,
-        maskCep: string,
-    ) {
+    constructor() {
         this.formClientes = document.querySelector('#formClientes')
         this.inputTelefone = document.getElementById('telefone') as HTMLInputElement
         this.inputCpf = document.getElementById('cpf') as HTMLInputElement
@@ -157,10 +149,10 @@ class Clientes {
           }
     }
     onblurCep() {
-        let getThis = this;
-        this.inputCep.onblur = async function(){
+        // let getThis = this;
+        this.inputCep.onblur = async () => {
             try {
-                let enderecoViaCep: any = await getThis.searchAddress()
+                let enderecoViaCep: any = await this.searchAddress()
 
                 let logradouro = document.getElementById('logradouro') as HTMLInputElement
                 let complemento = document.getElementById('complemento') as HTMLInputElement
@@ -183,14 +175,6 @@ class Clientes {
     }
 }
 
-const clientes = new Clientes(
-    'formProdutos',
-    'inputTelefone',
-    'inputCpf',
-    'inputCep',
-    'maskTelefone',
-    'maskCpf',
-    'maskCep',
-);
+const clientes = new ClientesContoller();
 clientes.adicionarCliente();
 clientes.onblurCep();

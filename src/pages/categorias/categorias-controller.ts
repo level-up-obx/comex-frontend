@@ -1,6 +1,6 @@
 import { Categoria } from '../../modelo.js';
 
-class Categorias {
+class CategoriasController {
     private _campoNome: HTMLInputElement;
     private _form: HTMLFormElement;
 
@@ -110,6 +110,6 @@ class Categorias {
     }
 }
 
-const categorias = new Categorias('nome', 'formCategoria');
+const categorias = new CategoriasController('nome', 'formCategoria');
 categorias.listarCategorias();
 categorias.adicionarCategoria();
