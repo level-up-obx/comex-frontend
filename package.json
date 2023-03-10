@@ -6,7 +6,6 @@
     "type": "module",
     "scripts": {
         "test": "jest",
-        "test:watch": "jest --watchAll",
         "api:fake": "json-server --watch db.json",
         "server": "lite-server",
         "compile": "tsc",
