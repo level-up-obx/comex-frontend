@@ -1,4 +1,4 @@
-import { CriaCliente } from '../../modelo.js';
+import { Cliente } from '../../modelo.js';
 import IMask from 'imask';
 
 class Clientes {
@@ -61,15 +61,19 @@ class Clientes {
         return true;
       }
 
+      get maskTelefoneInput() {return this.maskTelefone}
+      get maskCpfInput() {return this.maskCpf}
+
       adicionarCliente() {
+          let getThis = this;
           this.formClientes.addEventListener('submit', function (event: Event & { target: HTMLFormElement }) {
               event.preventDefault()
 
               let nome = event.target.elements.namedItem('nome') as HTMLInputElement;
               // let nome = event.target.elements['nome']
               let sobrenome = event.target.elements.namedItem('sobrenome') as HTMLInputElement;
-              let cpf = this.maskCpf.unmaskedValue
-              let telefone = this.maskTelefone.unmaskedValue
+              let cpf = getThis.maskCpfInput.unmaskedValue
+              let telefone = getThis.maskTelefoneInput.unmaskedValue
               let email = event.target.elements.namedItem('email') as HTMLInputElement;
 
               let logradouro = event.target.elements.namedItem('logradouro') as HTMLInputElement;
@@ -90,7 +94,7 @@ class Clientes {
                   complemento: complemento.value || null
               }
 
-              let novoCliente = new CriaCliente(
+              let novoCliente = new Cliente(
                   nome.value,
                   sobrenome.value,
                   cpf,
@@ -102,13 +106,12 @@ class Clientes {
               const cpfInput = document.getElementById('cpf');
               const cpfError = document.getElementById('cpf-error');
 
-              if (!this.validarCpf(cpf)) {
+              if (!getThis.validarCpf(cpf)) {
                   cpfError.style.display = 'block';
                   cpfInput.classList.add('invalid');
               }  else {
                   cpfError.style.display = 'none';
                   cpfInput.classList.remove('invalid');
-
                   fetch('http://localhost:3000/clientes', {
                           method: 'POST', // or 'PUT'
                           headers: { 'Content-Type': 'application/json' },
@@ -122,15 +125,17 @@ class Clientes {
                           console.error('Não foi possível cadastrar o cliente! Aguarde uns minutos e tente novamente.');
                       });
 
-                  console.log(novoCliente)
+                //   console.log('novoCliente', novoCliente)
                 }
 
           })
       }
 
-      async searchAddress() {
+      get maskCepInput() {return this.maskCep}
+
+      async searchAddress(): Promise<any> {
         try {
-            const url = `https://viacep.com.br/ws/${this.maskCep.unmaskedValue}/json/`;
+            const url = `https://viacep.com.br/ws/${this.maskCepInput.unmaskedValue}/json/`;
 
             const options: RequestInit = {
                 method: 'GET',
@@ -151,32 +156,41 @@ class Clientes {
                 throw error
           }
     }
+    onblurCep() {
+        let getThis = this;
+        this.inputCep.onblur = async function(){
+            try {
+                let enderecoViaCep: any = await getThis.searchAddress()
 
-    getInputCep.onblur = async function(){
-        try {
-            let enderecoViaCep = await searchAddress()
+                let logradouro = document.getElementById('logradouro') as HTMLInputElement
+                let complemento = document.getElementById('complemento') as HTMLInputElement
+                let uf = document.getElementById('uf') as HTMLInputElement
+                let bairro = document.getElementById('bairro') as HTMLInputElement
+                let localidade = document.getElementById('localidade') as HTMLInputElement
 
-            let logradouro = document.getElementById('logradouro') as HTMLInputElement
-            let complemento = document.getElementById('complemento') as HTMLInputElement
-            let uf = document.getElementById('uf') as HTMLInputElement
-            let bairro = document.getElementById('bairro') as HTMLInputElement
-            let localidade = document.getElementById('localidade') as HTMLInputElement
-
-            if (enderecoViaCep) {
-                logradouro.value = enderecoViaCep.logradouro
-                complemento.value = enderecoViaCep.complemento
-                uf.value = enderecoViaCep.uf
-                bairro.value = enderecoViaCep.bairro
-                localidade.value = enderecoViaCep.localidade
-                // console.log(enderecoViaCep)
+                if (enderecoViaCep) {
+                    logradouro.value = enderecoViaCep.logradouro
+                    complemento.value = enderecoViaCep.complemento
+                    uf.value = enderecoViaCep.uf
+                    bairro.value = enderecoViaCep.bairro
+                    localidade.value = enderecoViaCep.localidade
+                    // console.log(enderecoViaCep)
+                }
+            } catch (err) {
+                console.log(err)
             }
-        } catch (err) {
-            console.log(err)
         }
     }
 }
 
-function searchAddress () {
-    throw new Error('Function not implemented.')
-}
-
+const clientes = new Clientes(
+    'formProdutos',
+    'inputTelefone',
+    'inputCpf',
+    'inputCep',
+    'maskTelefone',
+    'maskCpf',
+    'maskCep',
+);
+clientes.adicionarCliente();
+clientes.onblurCep();

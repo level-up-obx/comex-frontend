@@ -58,8 +58,14 @@ export class Produto {
     complemento: string;
   }
 
-  export class CriaCliente {
+  export class Cliente {
     private _id: string;
+    private nome: string;
+    private sobrenome: string;
+    private cpf: string;
+    private telefone: string;
+    private endereco: Endereco;
+    private email: string;
 
     constructor(
         nome: string,
@@ -69,6 +75,12 @@ export class Produto {
         endereco: Endereco,
         email: string,
     ) {
-        this._id = uuidv4();
+        this._id = uuidv4(),
+        this.nome = nome
+        this.sobrenome = sobrenome
+        this.cpf = cpf
+        this.telefone = telefone
+        this.endereco = endereco
+        this.email = email
     }
 }
