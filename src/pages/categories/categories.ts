@@ -18,9 +18,9 @@ export function createTableRow(category: Category): string {
   return `
         <tr>
             <td scope="row" class="table-dark">${category.name}</td>
-            <td class="table-dark px-0">${category.status}</td>
-            <td class="table-dark px-0">${category.createdAt}</td>
-            <td class="table-dark px-0 d-flex justify-content-center"><i class='bx bx-trash bx-sm text-danger'></i></td>
+            <td class="table-dark">${category.status}</td>
+            <td class="table-dark">${category.createdAt}</td>
+            <td class="table-dark d-flex justify-content-center"><i class='bx bx-trash bx-sm text-danger'></i></td>
       </tr>
     `;
 }

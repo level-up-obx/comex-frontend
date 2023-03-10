@@ -50,18 +50,13 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link" href="./index.html">Home</a>
+                <a class="nav-link" href="../../index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Promoções</a>
               </li>
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./categorias.html"
-                  >Categorias</a
-                >
+                <a class="nav-link active" aria-current="page" href="./index.html">Categorias</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link">Buscar</a>
@@ -105,10 +100,13 @@
       id="category-page"
       class="gap-4 d-flex flex-column align-items-center"
     >
+    <div class="container d-flex flex-column align-items-center gap-3">
+
+    <h3>Incluir nova categoria</h3>
       <!-- Categoria -->
-        <form id="category__form" class="row g-3 needs-validation">
+        <form id="category__form" class="d-flex">
           <div class="col-sm">
-            <label for="category__name" class="form-label">Nome da categoria</label>
+            <!-- <label for="category__name" class="form-label">Nome da categoria</label> -->
             <input type="text" class="form-control" id="category__name" placeholder="Ex: Móveis" required>
             <div class="valid-feedback"></div>
           </div>
@@ -121,16 +119,17 @@
         <table class="table table-hover mb-0 text-center">
           <thead>
             <tr>
-              <th scope="col" class="table-dark px-0">Nome</th>
-              <th scope="col" class="table-dark px-0">Status</th>
-              <th scope="col" class="table-dark px-0">Data de criação</th>
-              <th scope="col" class="table-dark px-0">Ação</th>
+              <th scope="col" class="table-dark">Nome</th>
+              <th scope="col" class="table-dark">Status</th>
+              <th scope="col" class="table-dark">Data de criação</th>
+              <th scope="col" class="table-dark">Ação</th>
             </tr>
           </thead>
           <tbody id="category-table"></tbody>
         </table>
       </div>
-    </main>
+    </div>
+  </main>
     <!-- Footer -->
     <footer id="footer" class="bg-dark">
       <div class="footer-images">
@@ -148,7 +147,7 @@
               <a class="text-white text-decoration-none" href="">Promoções</a>
             </li>
             <li>
-              <a class="text-white text-decoration-none" href="">Categorias</a>
+              <a class="text-white text-decoration-none" href="./index.html">Categorias</a>
             </li>
             <li>
               <a class="text-white text-decoration-none" href="">Buscar</a>
@@ -161,7 +160,7 @@
               <a class="text-white text-decoration-none" href="">Carrinho</a>
             </li>
             <li>
-              <a class="text-white text-decoration-none" href="">Carrinho</a>
+              <a class="text-white text-decoration-none" href="../products/index.html">Produtos</a>
             </li>
             <li>
               <a class="text-white text-decoration-none" href="">Entrar</a>

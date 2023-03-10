@@ -40,7 +40,9 @@ body {
   flex-direction: row;
   gap: .5rem;
 }
-
+.footer-list ul li {
+  list-style-type: none;
+}
 /* Removendo o incrementador e decrementador dos inputs */
 input[type=number]::-webkit-inner-spin-button { 
   -webkit-appearance: none;

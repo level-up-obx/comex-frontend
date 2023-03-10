@@ -1,5 +1,6 @@
 import { Address, Client } from './../../ts/model.js';
 import { cep, saveClient } from '../../ts/api.js'
+import { cpfMask, telephoneMask, cepMask, numberMask } from '../../ts/mask.js'
 
 const firstName: HTMLInputElement = <HTMLInputElement>document.getElementById("client__firstName")
 const lastName: HTMLInputElement = <HTMLInputElement>document.getElementById("client__lastName")
@@ -13,6 +14,11 @@ const neighborhood: HTMLInputElement = <HTMLInputElement>document.getElementById
 const city: HTMLInputElement = <HTMLInputElement>document.getElementById("address__city")
 const state: HTMLInputElement = <HTMLInputElement>document.getElementById("address__state")
 const form: HTMLFormElement = <HTMLFormElement>document.getElementById("client__form")
+
+const maskedCpf: IMask.InputMask<{ mask: string; }> = cpfMask(cpf)
+const maskedTelephone: IMask.InputMask<{ mask: string; }> = telephoneMask(telephone)
+const maskedCep: IMask.InputMask<{ mask: string }> = cepMask(zipcode)
+const maskedNumber: IMask.InputMask<{ mask: string }> = numberMask(number)
 
 function clearInputs() {
   firstName.value = '';
@@ -31,7 +37,7 @@ function clearInputs() {
 
 zipcode.addEventListener('blur', () => {
   if (zipcode.value != "") {
-    cep(parseInt(zipcode.value))
+    cep(parseInt(maskedCep.unmaskedValue))
       .then(response => {
         if (response.logradouro != undefined) {
           street.value = response.logradouro;
@@ -55,13 +61,13 @@ form.addEventListener('submit', (event) => {
   event.preventDefault()
   const clientAddress = new Address(
     street.value,
-    parseInt(number.value),
+    parseInt(maskedNumber.unmaskedValue),
     complement.value,
     neighborhood.value,
     city.value,
     state.value
   )
-  const newClient = new Client(firstName.value, lastName.value, cpf.value, telephone.value, clientAddress)
+  const newClient = new Client(firstName.value, lastName.value, maskedCpf.unmaskedValue, maskedTelephone.unmaskedValue, clientAddress)
   saveClient(newClient);
   clearInputs()
 })

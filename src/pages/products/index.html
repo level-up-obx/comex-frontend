@@ -50,18 +50,13 @@
           <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a
-                  class="nav-link active"
-                  aria-current="page"
-                  href="./index.html"
-                  >Home</a
-                >
+                <a class="nav-link" href="../../index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="#">Promoções</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./categorias.html">Categorias</a>
+                <a class="nav-link" href="../categories/index.html">Categorias</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link">Buscar</a>
@@ -102,7 +97,7 @@
     </header>
     <!-- Página de produto -->
     <main id="product-page" class="d-flex align-items-center flex-column">
-      <h3 class="text-white mb-4">Cadastrar novo produto</h3>
+      <h3>Cadastrar novo produto</h3>
 <div class="container">
   <form id ="product__form" class="row g-3 needs-validation justify-content-center">
     <div class="col-md-3">
@@ -112,23 +107,23 @@
     </div>
     <div class="col-md-3">
       <label for="product__price" class="form-label">Preço</label>
-      <input type="number" class="form-control" id="product__price" data-type="input" required>
-      <div class="invalid-feedback">Looks good!</div>
+      <input type="text" class="form-control" id="product__price" minlength="1" data-type="input" required>
+      <div class="invalid-feedback"></div>
     </div>
     <div class="col-md-2">
       <label for="product__stock" class="form-label">Quantidade</label>
-      <input type="number" class="form-control" id="product__stock" data-type="input" required>
-      <div class="invalid-feedback">Looks good!</div>
+      <input type="text" class="form-control" id="product__stock" minlength="1" data-type="input" required>
+      <div class="invalid-feedback"></div>
     </div>
     <div class="col-md-8">
       <label for="product__description" class="form-label">Descrição</label>
       <input type="text" class="form-control" id="product__description" minlength="10" data-type="input" required>
-      <div class="invalid-feedback">Looks good!</div>
+      <div class="invalid-feedback"></div>
     </div>
     <div class="col-md-5">
       <label for="product__url" class="form-label">Foto do produto(URL)</label>
       <input type="url" class="form-control" id="product__url" data-type="input" data-type="input" required>
-      <div class="invalid-feedback">Looks good!</div>
+      <div class="invalid-feedback"></div>
     </div>
     <div class="col-md-3">
       <label for="product__category" class="form-label">Categoria</label>
@@ -159,7 +154,7 @@
               <a class="text-white text-decoration-none" href="">Promoções</a>
             </li>
             <li>
-              <a class="text-white text-decoration-none" href="">Categorias</a>
+              <a class="text-white text-decoration-none" href="../categories/index.html">Categorias</a>
             </li>
             <li>
               <a class="text-white text-decoration-none" href="">Buscar</a>
@@ -172,7 +167,7 @@
               <a class="text-white text-decoration-none" href="">Carrinho</a>
             </li>
             <li>
-              <a class="text-white text-decoration-none" href="">Carrinho</a>
+              <a class="text-white text-decoration-none" href="../products/index.html">Produtos</a>
             </li>
             <li>
               <a class="text-white text-decoration-none" href="">Entrar</a>

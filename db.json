@@ -15,8 +15,35 @@
         "state": "SP"
       },
       "id": 1
+    },
+    {
+      "uuid": "588704dc-a2a7-49f1-b6f6-4a5355db3216",
+      "name": "Daiana Elen",
+      "lastName": "Pedro Andrade",
+      "cpf": "30278174850",
+      "telephone": "13996000201",
+      "address": {
+        "street": "Rua João Ramalho",
+        "number": 50,
+        "complement": "Ap13",
+        "neighborhood": "Centro",
+        "city": "São Vicente",
+        "state": "SP"
+      },
+      "id": 2
     }
   ],
-  "produtos": [],
+  "produtos": [
+    {
+      "uuid": "c3e6c666-9eb2-4fbf-9123-8927de843d40",
+      "name": "Notebook",
+      "description": "Notebook Gamer",
+      "price": 10000,
+      "quantity": 10,
+      "category": "",
+      "photo": "https://m.media-amazon.com/images/I/71cs1KSJt7L._AC_SX679_.jpg",
+      "id": 1
+    }
+  ],
   "categorias": []
 }
