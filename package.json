@@ -6,9 +6,6 @@
     "type": "module",
     "scripts": {
         "test": "jest",
-        "test:essencial": "jest -t Essencial",
-        "test:desejavel": "jest -t Desejavel",
-        "test:desafio": "jest -t Desafio",
         "test:watch": "jest --watchAll",
         "api:fake": "json-server --watch db.json",
         "server": "lite-server",
