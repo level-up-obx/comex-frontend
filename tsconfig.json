@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "outDir": "dist/js",
+        "target": "ES2022",
+        "noEmit": true,
+        // "noImplicitAny": true,
+        "moduleResolution": "node"
+    },
+    "include": [
+        "src"
+    ]
+}

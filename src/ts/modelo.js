@@ -1,4 +1,4 @@
-import { v4 as uuidv4 } from '/node_modules/uuid/dist/esm-browser/index.js';
+import { v4 as uuidv4 } from 'uuid';
 
 function dataFormat() {
     const data = new Date();
@@ -7,12 +7,12 @@ function dataFormat() {
     let dia = data.getDate();
 
     if (mes < 10) {
-        mes = `0${mes}`
+        mes = `0${mes}`;
     }
     if (dia < 10) {
-        dia = `0${dia}`
+        dia = `0${dia}`;
     }
-    return `${ano}/${mes}/${dia}`
+    return `${ano}/${mes}/${dia}`;
 }
 
 export function criaCategoria(categoria) {
@@ -21,7 +21,7 @@ export function criaCategoria(categoria) {
         nome: categoria,
         status: 'ATIVA',
         criacao: dataFormat()
-    }
+    };
 }
 
 export function categoriaFormatada(categoria) {
@@ -39,8 +39,9 @@ export function criaProduto(nome, descricao, preco, quantidade, categoria, url) 
         categoria: categoria,
         url: url,
         criacao: dataFormat()
-    }
+    };
 }
+
 
 export function produtoFormatado(produto) {
     return `\n PRODUTO: \n 
@@ -59,7 +60,7 @@ export function criaCliente(nome, sobrenome, cpf, telefone, email, endereco) {
         telefone: telefone,
         email: email,
         endereco: endereco
-    }
+    };
 }
 
 export function clienteFormatado(cliente) {
@@ -76,4 +77,3 @@ export function clienteFormatado(cliente) {
                 ${cliente.endereco.uf}
                 ${cliente.endereco.ddd}`;
 }
-

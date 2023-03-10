@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Comex Clientes</title>
+    <title>Comex</title>
     <!-- Bootstrap css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- FIM -->
-    <link rel="stylesheet" href="./assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/contato.css">
+    
+  <script type="module" crossorigin src="/assets/index-8693d49a.js"></script>
+  <link rel="modulepreload" crossorigin href="/assets/api-d99e4e66.js">
+  <link rel="stylesheet" href="/assets/api-31f28805.css">
 </head>
 
 <body>
+
     <header>
         <div>
             <nav class="navbar navbar-expand-lg">
@@ -50,107 +53,122 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <div>
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item me-1">
-                                    <a class="nav-link text-white" aria-current="page" href="/index.html">Inicio</a>
-                                </li>
-                            </ul>
-
-                        </div>
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item me-1">
+                                <a class="nav-link text-white" aria-current="page" href="#">Promoções</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="./pagina/categorias/index.html">Categorias</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="./pagina/produtos/index.html">Cadastrar
+                                    produtos</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-white" href="./pagina/clientes/index.html">Cadastrar
+                                    Cliente</a>
+                            </li>
+                            <li class="nav-item">
+                                <!-- Button trigger modal -->
+                                <a data-bs-toggle="modal" class="nav-link text-white" href="#"
+                                    data-bs-target="#enderecoModal">
+                                    Endereço
+                                </a>
+                                <!-- Modal -->
+                                <div class="modal fade" id="enderecoModal" tabindex="-1"
+                                    aria-labelledby="enderecoModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h1 class="modal-title fs-5" id="enderecoModalLabel">Endereço</h1>
+                                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                    aria-label="Close"></button>
+                                            </div>
+                                            <div class="modal-body">
+                                                Rua Tenente Negrão, 140, Itaim Bibi - SP.
+                                            </div>
+                                            <div class="modal-footer">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <form class="d-flex formulario" role="search" id="buscar">
+                            <input class="form-control me-2" type="search" placeholder="Pesquisar..."
+                                aria-label="Search">
+                        </form>
+                        <a class="header__icone" href="#"><box-icon name='cart' color='#ffffff'></box-icon></a>
+                        <a class="header__icone" href="#" id="user"><box-icon name='user'
+                                color='#ffffff'></box-icon></a>
                     </div>
                 </div>
             </nav>
         </div>
     </header>
 
-    <main class="container">
-        <h2 class="text-center mt-3">Cliente</h2>
-        <form action="#" method="post" id="formulario-cliente">
-            <div class="d-flex">
-                <div class="col-md-5 me-3">
-                    <label for="nomeCliente" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nomeCliente" name="nomeCliente" required minlength="2">
-                </div>
-                <div class="col me-3">
-                    <label for="sobrenomeCliente" class="form-label">Sobrenome</label>
-                    <input type="text" class="form-control" id="sobrenomeCliente" name="sobrenomeCliente" required
-                        minlength="2">
-                </div>
-                <div class="col">
-                    <label for="cpfCliente" class="form-label">CPF</label>
-                    <input type="text" class="form-control" id="cpfCliente" name="cpfCliente" data-regra="cpf" required>
-                    <span id="msgAlerta"></span>
-                </div>
-            </div>
-            <div class="d-flex mt-3">
-                <div class="me-3 col">
-                    <label for="telefoneCliente" class="form-label">Telefone</label>
-                    <input type="text" class="form-control" id="telefoneCliente" name="telefoneCliente">
-                </div>
-                <div class="me-3 col">
-                    <label for="emailCliente" class="form-label">Email</label>
-                    <input type="text" class="form-control" id="emailCliente" name="emailCliente" required
-                        pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$">
-                </div>
-                <div class="col">
-                    <div>
-                        <label for="cepCliente" class="form-label">CEP</label>
-                        <div class="d-flex">
-                            <input type="text" class="form-control rounded-0 rounded-start-2" id="cepCliente"
-                                name="cepCliente" required>
-                            <button type="submit" class="btn btn-primary rounded-0 rounded-end-2"
-                                id="buscarCEP">Buscar</button>
+    <main>
+        <!-- Banner -->
+        <section>
+            <div class="container mt-3">
+                <div id="auto-slide" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#indicadores-slide" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#indicadores-slide" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#indicadores-slide" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="/assets/gamer-be66345a.jpg" class="d-block w-100" alt="banner central 1">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>CONFIRA AS PROMOÇÕES</h5>
+                                    <p class="fs-4 text-light">Monte seu setup</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/razer-e1a934d9.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>CONFIRA AS PROMOÇÕES</h5>
+                                    <p class="fs-4 text-light">Monte seu setup</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="/assets/personagens-0d45f712.jpg" class="d-block w-100" alt="...">
+                            <div class="carousel-caption d-none d-md-block">
+                                <h2>CONFIRA AS PROMOÇÕES</h5>
+                                    <p class="fs-4 text-light">Monte seu setup</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
+        <!-- FIM Banner -->
 
-
-            <div class="endereco mt-3">
-                <div class="d-flex">
-                    <div class="col-md-4 me-3">
-                        <label for="cidade" class="form-label">Cidade</label>
-                        <input type="text" class="form-control" id="cidade" name="cidade" required disabled>
-                    </div>
-                    <div class="col me-3">
-                        <label for="bairro" class="form-label">Bairro</label>
-                        <input type="text" class="form-control" id="bairro" name="bairro" required>
-                    </div>
-                    <div class="col me-3">
-                        <label for="bairro" class="form-label">Logradouro</label>
-                        <input type="text" class="form-control" id="logradouro" name="logradouro" required>
-                    </div>
-                    <div class="col-md-1 me-3">
-                        <label for="estado" class="form-label">UF</label>
-                        <input type="text" class="form-control" id="estado" name="estado" required disabled
-                            minlength="2" maxlength="2">
-                    </div>
+        <!-- Produtos -->
+        <section>
+            <div class="container mt-5">
+                <div class="promocoes">
+                    <box-icon name='star' type='solid' color='#8fa8ff'></box-icon>
+                    <h3 class="titulo-promocoes">Produtos mais vendidos</h3>
                 </div>
-
-                <div class="d-flex mt-3">
-                    <div class="col-auto me-3">
-                        <label for="numero" class="form-label">Numero</label>
-                        <input type="text" class="form-control" id="numero" name="numero">
-                    </div>
-                    <div class="col-auto me-3">
-                        <label for="complemento" class="form-label">Complemento</label>
-                        <input type="text" class="form-control" id="complemento" name="complemento">
+                <div class="cards">
+                    <div class="row">
+                        <!-- JS preenche os cards -->
                     </div>
                 </div>
             </div>
-            <div class="col-auto text-center mt-3">
-                <button type="submit" class="btn btn-primary ps-5 pe-5" id="enviarCliente">Salvar</button>
-            </div>
-
-        </form>
+        </section>
+        <!-- FIM Produtos -->
     </main>
 
-    <footer class="fixed-bottom">
-        <div class="container">
-            <div class="p-3 text-center">
+    <footer>
+        <div class="container rodape">
+            <div class="rodape-esquerda">
                 <svg width="116" height="43" viewBox="0 0 116 43" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M36.162 35.9367C33.231 38.9122 29.4835 40.9518 25.3934 41.7975C21.3033 42.6432 17.0543 42.257 13.1836 40.6879C9.31293 39.1187 5.99451 36.437 3.64796 32.9818C1.3014 29.5267 0.0321155 25.4533 0.000601397 21.2768C-0.0309127 17.1003 1.17676 13.0082 3.47091 9.51805C5.76506 6.0279 9.04264 3.29641 12.8892 1.66901C16.7357 0.0416127 20.9785 -0.408609 25.0809 0.375281C29.1833 1.15917 32.9611 3.14196 35.9367 6.07293L34.0796 7.95818C31.477 5.3945 28.1725 3.66018 24.5842 2.97452C20.9959 2.28886 17.2848 2.68266 13.9203 4.10613C10.5557 5.5296 7.68889 7.91879 5.68223 10.9716C3.67556 14.0244 2.61922 17.6037 2.64679 21.2568C2.67435 24.91 3.78458 28.4729 5.83709 31.4951C7.88959 34.5173 10.7922 36.8629 14.1778 38.2355C17.5634 39.608 21.28 39.9458 24.8576 39.206C28.4352 38.4663 31.7131 36.6823 34.2767 34.0796L36.162 35.9367Z"
@@ -174,6 +192,23 @@
                         d="M110.579 12.8587C110.146 12.8587 109.929 13.0968 109.929 13.5729C109.929 14.0274 110.14 14.2546 110.562 14.2546H112.202L107.706 20.8934L103.242 14.2546H105.644C106.066 14.2546 106.277 14.0274 106.277 13.5729C106.277 13.0968 106.061 12.8587 105.628 12.8587H100.174C99.7412 12.8587 99.5248 13.0968 99.5248 13.5729C99.5248 14.0274 99.7358 14.2546 100.158 14.2546H101.489L106.829 22.1919L101.18 30.535H99.8008C99.3787 30.535 99.1677 30.7569 99.1677 31.2005C99.1677 31.6442 99.3841 31.866 99.817 31.866H105.466C105.898 31.866 106.115 31.6442 106.115 31.2005C106.115 30.7569 105.904 30.535 105.482 30.535H103.063L107.771 23.5879L112.461 30.535H109.929C109.68 30.535 109.486 30.6054 109.345 30.746C109.204 30.8759 109.134 31.0274 109.134 31.2005C109.134 31.3845 109.204 31.5414 109.345 31.6712C109.486 31.8011 109.686 31.866 109.946 31.866H115.334C115.778 31.866 116 31.6388 116 31.1843C116 30.7515 115.789 30.535 115.367 30.535H114.182L108.647 22.3056L114.101 14.2546H115.286C115.708 14.2546 115.919 14.0274 115.919 13.5729C115.919 13.0968 115.702 12.8587 115.27 12.8587H110.579Z"
                         fill="#FFFFFF" />
                 </svg>
+                <div class="esquerda-logo">
+                    <box-icon name='twitter' type='logo' color='#ffffff'></box-icon>
+                    <box-icon name='instagram' type='logo' color='#ffffff'></box-icon>
+                    <box-icon name='linkedin' type='logo' color='#ffffff'></box-icon>
+                </div>
+            </div>
+            <div class="rodape-direita">
+                <div class="direita-info--direita">
+                    <a href="#">promoções</a>
+                    <a href="#">Produtos</a>
+                    <a href="#buscar">Buscar</a>
+                </div>
+                <div class="direita-info--esquerda">
+                    <a href="/contato.html">Contato</a>
+                    <a href="#">Carrinho</a>
+                    <a href="#user">Entrar</a>
+                </div>
             </div>
         </div>
     </footer>
@@ -184,9 +219,9 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <!-- FIM -->
-    <script src="https://unpkg.com/imask"></script>
     <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-    <script src="src/pagina/clientes.js" type="module"></script>
+    
+
 </body>
 
 </html>

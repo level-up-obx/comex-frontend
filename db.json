@@ -23,6 +23,23 @@
       "cpf": "888.999.555-00",
       "telefone": "(11) 99992-2222",
       "email": "batman@gmail.com"
+    },
+    {
+      "nome": "Marcos",
+      "sobrenome": "Leonardo",
+      "cpf": "222.111.908-77",
+      "telefone": "(13) 90772-7771",
+      "email": "santos@gmail.com",
+      "endereco": {
+        "cep": "01001-001",
+        "cidade": "São Paulo",
+        "bairro": "Sé",
+        "logradouro": "Praça da Sé",
+        "uf": "SP",
+        "complemento": "22",
+        "numero": "lado par"
+      },
+      "id": "5bd03232-1396-4bd4-be13-c0a7b5d3ad69"
     }
   ],
   "produtos": [
@@ -55,29 +72,54 @@
       "categoria": "3",
       "url": "https://images.unsplash.com/photo-1512820790803-83ca734da794?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=898&q=80",
       "criacao": "2023/02/28"
+    },
+    {
+      "nome": "Headphone",
+      "descricao": "HeadPhone rosa de orelhinhas",
+      "preco": "399,00",
+      "quantidade": 3,
+      "url": "https://a-static.mlcdn.com.br/800x560/fone-ouvido-headphone-orelha-gato-bluetooth-infantil-p2-led-cat-ear/eideias/815-1117/314627a74d23d23e84bce5e78c3f9b84.jpeg",
+      "categoria": "1",
+      "criacao": "2023-8-3",
+      "id": "3ceada6e-f8c3-4ee1-9fd0-e166f19b7458"
     }
   ],
   "categorias": [
     {
-      "uuid": "5b69bcc0-65fc-4874-8295-06c0eb193620",
+      "nome": "Celulares",
+      "id": "77ec74d5-a42d-48a4-af47-50a2697dec22",
+      "status": "INATIVA",
+      "criacao": "2023-10-3"
+    },
+    {
       "nome": "Móveis",
-      "status": "ATIVA",
-      "criacao": "2023/02/28",
-      "id": 1
+      "id": "9e10dade-35bf-4f40-83c6-48b32a5d8733",
+      "status": "INATIVA",
+      "criacao": "2023-10-3"
     },
     {
-      "uuid": "de877357-f3e8-450d-888a-def7b48d5e1e",
       "nome": "Informática",
+      "id": "c9f8949c-b336-4d60-b758-b5a6deb692a2",
       "status": "ATIVA",
-      "criacao": "2023/02/28",
-      "id": 2
+      "criacao": "2023-10-3"
     },
     {
-      "uuid": "e716e0b0-b889-4080-a31a-f174d591f224",
       "nome": "Livros",
+      "id": "5534e1e4-7714-4bae-b3d2-b7029d30783c",
+      "status": "INATIVA",
+      "criacao": "2023-10-3"
+    },
+    {
+      "nome": "Jogos",
+      "id": "d7bfe368-ac8f-4091-9905-ea1f4e2a15b6",
       "status": "ATIVA",
-      "criacao": "2023/02/28",
-      "id": 3
+      "criacao": "2023-10-3"
+    },
+    {
+      "nome": "Higiene",
+      "id": "c9b80773-1410-4eb9-a8cd-61c7fe340e6c",
+      "status": "INATIVA",
+      "criacao": "2023-10-3"
     }
   ]
 }
