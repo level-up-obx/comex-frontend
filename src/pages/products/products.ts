@@ -1,4 +1,4 @@
-import { InputMask } from 'imask';
+import { InputMask } from "imask";
 import { Product } from "./../../ts/model";
 import { saveProduct, listCategory } from "../../ts/api.js";
 import { moneyMask, quantityMask } from "../../ts/mask.js";
@@ -25,13 +25,13 @@ const form: HTMLFormElement = <HTMLFormElement>(
   document.getElementById("product__form")
 );
 
-const maskedMoney: InputMask<{ mask: string }> = moneyMask(price)
-const maskedQuantity: InputMask<{ mask: string }> = quantityMask(quantity)
+const maskedMoney: InputMask<{ mask: string }> = moneyMask(price);
+const maskedQuantity: InputMask<{ mask: string }> = quantityMask(quantity);
 
 // Listagem das categorias como opção
 listCategory().then((categories) => {
   categories.forEach((_category) => {
-    category.innerHTML += `<option value="${category.id}">${_category.name}</option>`;
+    category.innerHTML += `<option value="${_category.id}">${_category.name}</option>`;
   });
 });
 
@@ -45,7 +45,6 @@ form.addEventListener("submit", (e) => {
     category.value,
     inputProductPhoto.value
   );
-  console.log(newProduct)
   saveProduct(newProduct);
   clearInputs();
 });
