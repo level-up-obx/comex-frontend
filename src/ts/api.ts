@@ -78,6 +78,15 @@ export function editCategoryStatus(id: number, status: string): Promise<void> {
     })
 }
 
+export function editCategoryName(id: number, category: Category): Promise<void> {
+  return doRequisition(`/categorias/${id}`, "PUT", category)
+    .then((response) => {
+      if(response.status == 200) {
+        localStorage.removeItem("categories")
+      }
+    })
+}
+
 /*====================== Produto ======================*/
 import { Product } from "./model.js";
 

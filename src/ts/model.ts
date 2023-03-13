@@ -2,11 +2,10 @@ import { v4 as uuidv4 } from "uuid";
 
 function today(): string {
   return new Date()
-    .toLocaleDateString("en-US")
+    .toLocaleDateString("pt-BR")
     .split(",")[0]
     .split("/")
-    .reverse()
-    .join("-");
+    .join("/");
 };
 
 
@@ -38,7 +37,7 @@ export class Client {
 /*====================== Modelo categoria ======================*/
 export class Category {
   public readonly uuid: string;
-  public readonly name: string;
+  public name: string;
   public readonly status: string;
   public readonly createdAt: string;
   public readonly id: number;

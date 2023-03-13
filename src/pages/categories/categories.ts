@@ -39,32 +39,11 @@ function createTableRow(category: Category) {
         </td>
 `;
   row.querySelector(".delete")!.addEventListener("click", e => deleteCategory(category.id));
-  row.querySelector("._active")!.addEventListener("click", e => editStatus(category.id, category.status))
-  row.querySelector(".desactive")!.addEventListener("click", e => editStatus(category.id, category.status))
+  row.querySelector("._active")!.addEventListener("click", e => editStatus(category.id, category.status));
+  row.querySelector(".desactive")!.addEventListener("click", e => editStatus(category.id, category.status));
+  row.querySelector(".edit")!.addEventListener("click", e => editName(category))
   return row;
 }
-
-
-if (getLocalStorage) {
-  getLocalStorage.forEach((category) => {
-    table.appendChild(createTableRow(category));
-  });
-} else {
-  api.listCategory().then((categories) => {
-    localStorage.setItem("categories", JSON.stringify(categories));
-    categories.forEach((category) => {
-      table.appendChild(createTableRow(category));
-    });
-  });
-}
-
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const newCategory = new Category(name.value);
-  api.saveCategory(newCategory);
-  table.appendChild(createTableRow(newCategory));
-  name.value = "";
-});
 
 function deleteCategory(id: number): void {
   const confirmation = window.confirm("Tem certeza que deseja deletar essa categoria?")
@@ -91,3 +70,38 @@ function editStatus(id: number, status?: string): void {
     }
   }
 }
+
+function editName(category: Category): void {
+  const newName = prompt("Digite o novo nome da categoria:")
+  if(newName) {
+    let newCategory = category;
+    newCategory.name = newName
+    api.editCategoryName(newCategory.id, newCategory)
+    location.reload()
+  } else {
+    if(newName == "") {
+      alert("O nome não pode ser vazio")
+    }
+  }
+}
+
+if (getLocalStorage) {
+  getLocalStorage.forEach((category) => {
+    table.appendChild(createTableRow(category));
+  });
+} else {
+  api.listCategory().then((categories) => {
+    localStorage.setItem("categories", JSON.stringify(categories));
+    categories.forEach((category) => {
+      table.appendChild(createTableRow(category));
+    });
+  });
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const newCategory = new Category(name.value);
+  api.saveCategory(newCategory);
+  table.appendChild(createTableRow(newCategory));
+  name.value = "";
+});

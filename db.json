@@ -74,24 +74,31 @@
   "categorias": [
     {
       "uuid": "bed8cf7f-5e12-4e4b-9d99-88374da248e0",
-      "name": "Móveis",
-      "status": "Ativa",
-      "createdAt": "2023-12-3",
+      "name": "Software",
+      "status": "Inativa",
+      "createdAt": "12/03/2023",
       "id": 1
     },
     {
       "uuid": "7b0d9dc0-c2a2-4d2d-8f14-8afd39f19d79",
       "name": "Informática",
-      "status": "Ativa",
-      "createdAt": "2023-12-3",
+      "status": "Inativa",
+      "createdAt": "12/03/2023",
       "id": 2
     },
     {
       "uuid": "4c6a5c66-b1e3-4867-8261-229bd3358de3",
       "name": "Livros",
-      "status": "Ativa",
-      "createdAt": "2023-12-3",
+      "status": "Inativa",
+      "createdAt": "12/03/2023",
       "id": 3
+    },
+    {
+      "uuid": "70e325a5-bd04-4de3-b4fc-982f80c6de78",
+      "name": "Móveis",
+      "status": "Ativa",
+      "createdAt": "12/03/2023",
+      "id": 4
     }
   ]
 }
