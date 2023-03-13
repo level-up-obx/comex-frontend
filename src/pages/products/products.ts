@@ -31,7 +31,9 @@ const maskedQuantity: InputMask<{ mask: string }> = quantityMask(quantity);
 // Listagem das categorias como opção
 listCategory().then((categories) => {
   categories.forEach((_category) => {
-    category.innerHTML += `<option value="${_category.id}">${_category.name}</option>`;
+    if(_category.status == "Ativa") {
+      category.innerHTML += `<option value="${_category.id}">${_category.name}</option>`;
+    }
   });
 });
 

@@ -24,23 +24,23 @@ function createTableRow(category: Category) {
         <td class="table-dark">${category.status}</td>
         <td class="table-dark">${category.createdAt}</td>
         <td class="table-dark">
-          <button class="btn btn-outline-info btn-xs px-2 py-1">
+          <button class="btn btn-outline-info btn-xs px-2 py-1 edit">
           <i class='bx bx-pencil bx-xs'></i>
           </button>
-          <button class="btn btn-outline-success btn-xs px-2 py-1 ${showActive}" >
-          <i class='bx bx-lock-open-alt bx-xs'></i>
-          </button>
-          <button class="btn btn-outline-warning btn-xs px-2 py-1 ${showDesactive}" >
+          <button class="btn btn-outline-warning btn-xs px-2 py-1 ${showActive} desactive" >
           <i class='bx bx-lock-alt bx-xs'></i>
+          </button>
+          <button class="btn btn-outline-success btn-xs px-2 py-1 ${showDesactive} _active" >
+          <i class='bx bx-lock-open-alt bx-xs'></i>
           </button>
           <button class="btn btn-outline-danger btn-xs px-2 py-1 delete" >
           <i class='bx bxs-trash bx-xs'></i>
           </button>
         </td>
 `;
-  row.querySelector(".delete")!.addEventListener("click", () => {
-    deleteCategory(category.id)
-  })
+  row.querySelector(".delete")!.addEventListener("click", e => deleteCategory(category.id));
+  row.querySelector("._active")!.addEventListener("click", e => editStatus(category.id, category.status))
+  row.querySelector(".desactive")!.addEventListener("click", e => editStatus(category.id, category.status))
   return row;
 }
 
@@ -73,5 +73,21 @@ function deleteCategory(id: number): void {
     api.deleteCategory(id)
     alert("Categoria deletada com sucesso!")
     location.reload()
+  }
+}
+
+function editStatus(id: number, status?: string): void {
+  if(status == 'Ativa') {
+    const confirmation = window.confirm("Tem certeza que deseja desativar essa categoria?")
+    if(confirmation) {
+      api.editCategoryStatus(id, "Inativa")
+      location.reload()
+    }
+  } else {
+    const confirmation = window.confirm("Tem certeza que deseja ativar essa categoria?")
+    if(confirmation) {
+      api.editCategoryStatus(id, "Ativa")
+      location.reload()
+    }
   }
 }

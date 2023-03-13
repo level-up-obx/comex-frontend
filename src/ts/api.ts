@@ -61,12 +61,23 @@ export function deleteCategory(id: number): Promise<void> {
   .then((response) => {
     if(response.status == 200) {
       localStorage.removeItem("categories");
-      return response.json()
     } else {
       return;
     }
   })
 }
+
+export function editCategoryStatus(id: number, status: string): Promise<void> {
+  return doRequisition(`/categorias/${id}`, "PATCH", { status })
+    .then((response) => {
+      if(response.status == 200) {
+        localStorage.removeItem("categories")
+      } else {
+        return;
+      }
+    })
+}
+
 /*====================== Produto ======================*/
 import { Product } from "./model.js";
 

@@ -73,25 +73,25 @@
   ],
   "categorias": [
     {
-      "uuid": "899ae83f-7dbb-40f9-89a2-d4d2eaec3612",
-      "name": "Livros",
+      "uuid": "bed8cf7f-5e12-4e4b-9d99-88374da248e0",
+      "name": "Móveis",
+      "status": "Ativa",
+      "createdAt": "2023-12-3",
+      "id": 1
+    },
+    {
+      "uuid": "7b0d9dc0-c2a2-4d2d-8f14-8afd39f19d79",
+      "name": "Informática",
       "status": "Ativa",
       "createdAt": "2023-12-3",
       "id": 2
     },
     {
-      "uuid": "26bd3dee-5f2e-4c3d-b707-bdaca5bcf2af",
-      "name": "Informática",
+      "uuid": "4c6a5c66-b1e3-4867-8261-229bd3358de3",
+      "name": "Livros",
       "status": "Ativa",
       "createdAt": "2023-12-3",
       "id": 3
-    },
-    {
-      "uuid": "686c4399-0351-44a9-911a-ff1e8b6705d1",
-      "name": "Software",
-      "status": "Ativa",
-      "createdAt": "2023-12-3",
-      "id": 4
     }
   ]
 }
