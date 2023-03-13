@@ -1,5 +1,4 @@
 import { Client } from "./model";
-import { createTableRow } from "../pages/categories/categories.js";
 
 /*====================== URL API ======================*/
 const api: string = "http://localhost:3000";
@@ -57,6 +56,17 @@ export function listCategory(): Promise<Category[]> {
   });
 }
 
+export function deleteCategory(id: number): Promise<void> {
+  return doRequisition(`/categorias/${id}`, "DELETE")
+  .then((response) => {
+    if(response.status == 200) {
+      localStorage.removeItem("categories");
+      return response.json()
+    } else {
+      return;
+    }
+  })
+}
 /*====================== Produto ======================*/
 import { Product } from "./model.js";
 
